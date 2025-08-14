@@ -107,3 +107,21 @@ let y = () => {
 (function iifeExample() {
     console.log('iife');
 })(); // Note: Parentheses at the end are required to invoke the function
+
+// Scopes
+let d = 10;
+
+function outer() {
+    let e = 20;
+
+    function inner() {
+        let f = 30;
+        z = "no scope"
+        console.log(d, e, f); // Accesses outer scopes
+    }
+
+    inner();
+}
+
+outer();
+console.log(z)
