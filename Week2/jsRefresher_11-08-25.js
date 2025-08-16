@@ -125,3 +125,85 @@ function outer() {
 
 outer();
 console.log(z)
+
+function square(el){
+    return el * 2;
+}
+
+function customMapper(arr,func){
+    let result = []
+    for (let index = 0; index < arr.length; index++) {
+        result.push(func(arr[index],index))
+    }
+    return result
+}
+const arr = [2,4,5,6,7,8,9]
+const result = customMapper(arr,square)
+console.log(result)
+
+// We want a function that applies different discount strategies (10%, 20%, etc.) depending on the function we pass.
+
+function tenPercentDiscount(amount){
+    return amount - amount * 0.1
+}
+function twentyPercentDiscount(amount){
+    return amount - amount * 0.2
+}
+function thirtyPercentDiscount(amount){
+    return amount - amount * 0.3
+}
+
+function applyDiscount(discountFunction,price){
+    return discountFunction(price)
+}
+
+let price = 1000;
+console.log("Original Price:", price);
+
+console.log("Price after 10% discount:", applyDiscount( tenPercentDiscount,price,));
+console.log("Price after 20% discount:", applyDiscount( twentyPercentDiscount,price));
+console.log("Price after 30% discount:", applyDiscount( thirtyPercentDiscount,price));
+
+// 💡 Write a program using Higher-Order Functions to calculate the final bill for a food delivery app.
+
+// The base price should be passed.
+
+// Apply different charges like delivery fee, GST, and coupon discount using HOF.
+
+// Print the final payable amount.
+
+function discountCoupon(coupon) {
+    let discountedPrice = 0
+    switch (coupon) {
+        case "RS5":
+            discountedPrice = 5
+            break
+        case "RS10":
+            discountedPrice = 10
+            break
+        default:
+            discountedPrice = 0
+    }
+    return discountedPrice
+}
+
+function calculateGST(price) {
+    return price * 0.18;
+}
+function calculateBill(price, deliveryFee, gstFunction, couponFunction, couponCode) {
+    const gstAmount = gstFunction(price);
+    const discount = couponFunction(couponCode);
+    return price + deliveryFee + gstAmount - discount;
+}
+
+// Example usage
+let basePrice = 500;
+let deliveryFee = 40;
+
+let finalAmount = calculateBill(basePrice, deliveryFee, calculateGST, discountCoupon, "RS10");
+
+console.log("Base Price:", basePrice);
+console.log("Delivery Fee:", deliveryFee);
+console.log("GST (18%):", calculateGST(basePrice));
+console.log("Coupon Discount:", discountCoupon("RS10"));
+console.log("Final Payable Amount:", finalAmount);
