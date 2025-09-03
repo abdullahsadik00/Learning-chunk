@@ -24,10 +24,11 @@ const Navbar = () => {
         <h2 className='logo'>Finta</h2>
         <div className='links'>
             {links.map((el,idx)=>
-            <a href={el.href} key={idx} className='link-items'>
+            <a href={el.href} key={idx} className='link-items text-sm'>
                 {el.linkText}
             </a>
             )}
+            <button className='btnPrimary'>Get Started</button>
         </div>
     </div>
   )
