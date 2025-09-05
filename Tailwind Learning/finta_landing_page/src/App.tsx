@@ -1,11 +1,18 @@
-import './App.css';
-import Hero from './Hero';
-import Navbar from './components/Navbar';
-import heroImage from './hero-ui-v5.webp';
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import heroImage from './assets/hero-ui-v5.webp'
+import viteLogo from '/vite.svg'
+import './App.css'
+import Navbar from './components/Navbar'
+import Hero from './Hero'
+// import Navbar from './'
 
 function App() {
+  const [count, setCount] = useState(0)
+
   return (
-    <div className="layout ">
+    <>
+     <div className="layout ">
       <div className='layout-lines-container'>
         <div className='left-line'></div>
         <div className='right-line'></div>
@@ -19,7 +26,8 @@ function App() {
       </div>
       </div>
     </div>
-  );
+    </>
+  )
 }
 
-export default App;
+export default App
