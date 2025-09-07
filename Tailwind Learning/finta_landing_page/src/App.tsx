@@ -5,6 +5,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from './components/Navbar'
 import Hero from './Hero'
+import Container from './components/container'
 // import Navbar from './'
 
 function App() {
@@ -12,20 +13,9 @@ function App() {
 
   return (
     <>
-     <div className="layout ">
-      <div className='layout-lines-container'>
-        <div className='left-line'></div>
-        <div className='right-line'></div>
-      <div className="container">
-        <Navbar />
-        <Hero />
-        <div className='hero-img-container'>
-          <div className='horizontal-line'></div>
-          <img src={heroImage} className='hero-img' />
-        </div>
-      </div>
-      </div>
-    </div>
+    <Container className='flex items-center justify-center h-screen'>
+      Hello World
+    </Container>
     </>
   )
 }
