@@ -3,8 +3,8 @@ import React from 'react'
 const Hero = () => {
     return (
         <div className='heroRoot'>
-            <div className='badge'>
-                <span>Incorporation common mistakes to avoid</span>
+            <div className='bg-neutral-200/40 border-neutral-300/40 border text-neutral-500 w-fit mx-auto rounded-full flex gap-2 px-4 py-1 items-center hover:bg-neutral-200 cursor-pointer transition duration-200 ease-in-out'>
+                <span className='text-sm'>Incorporation common mistakes to avoid</span>
                 <svg width="16" height="16" fill="none">
                     <path
                         stroke="#1E1F25"
@@ -17,8 +17,8 @@ const Hero = () => {
                 </svg>
             </div>
             <div>
-                <h1 className='heroText'>Magically simplify <br /> accounting and taxes</h1>
-                <p className='subText'>Automated bookkeeping, effortless tax filing, real‑time insights. Set up in 10 mins. Back to building by 8:32pm.                </p>
+                <h1 className='font-black text-6xl text-center tracking-tight'>Magically simplify <br /> accounting and taxes</h1>
+                <p className='text-base text-center text-neutral-500 my-6'>Automated bookkeeping, effortless tax filing, real‑time insights. Set up in 10 mins. Back to building by 8:32pm.                </p>
             </div>
 
             <div className="heroCTA">
@@ -42,7 +42,6 @@ const Hero = () => {
             Currently for IND-based Delaware C-Corps.
             </div>
             <h1 className="text-3xl font-bold underline">
-      Hello world!
     </h1>
         </div>
     )

@@ -1,5 +1,5 @@
 import './App.css';
-import Hero from './Hero';
+import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import heroImage from './hero-ui-v5.webp';
 
