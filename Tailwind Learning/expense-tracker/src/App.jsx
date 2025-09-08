@@ -4,21 +4,22 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import DashboardLayout from './components/DashboardLayout'
+import Dashboard from './pages/Dashboard'
 
 function App({ children }) {
-  const [count, setCount] = useState(0)
+  const [activeTab, setActiveTab] = useState('dashboard')
 
   return (
     <>
-      <div className='bg-slate-100 h-screen flex'>
-      <Sidebar />
-      <div className="flex-1 flex flex-col">
-<Navbar/>
-<main className="flex-1 p-6 overflow-auto">
-          {children}
-        </main>
-</div>
-      </div>
+      <Router>
+        <DashboardLayout activeTab={activeTab} setActiveTab={setActiveTab}>
+      <Routes>
+        <Route path='/' element={<Dashboard/>}/>
+      </Routes>
+        </DashboardLayout>
+      </Router>
     </>
   )
 }

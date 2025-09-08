@@ -1,22 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import heroImage from './assets/hero-ui-v5.webp'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Navbar from './components/Navbar'
-import Hero from './Hero'
-import Container from './components/container'
-// import Navbar from './'
+import Container from "./components/container"
+import Hero from "./components/Hero"
+import Navbar from "./components/Navbar"
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-    <Container className='flex items-center justify-center h-screen'>
-      Hello World
-    </Container>
-    </>
+    <div className="flex flex-col items-center h-screen relative bg-gradient-to-b from-white via-blue-100 to-white">
+      <div className="max-w-7xl absolute inset-0 h-full w-full mx-auto ">
+        <div className="absolute inset-y-0 left-0 h-full w-px bg-gradient-to-b from-neutral-300/50 via-neutral-200 to-transparent z-0"></div>
+        <div className="absolute inset-y-0 right-0 h-full w-px bg-gradient-to-b from-neutral-300/50 via-neutral-200 to-transparent z-0"></div>
+      </div>
+      <Container className=''>
+        <Navbar />
+        <Hero />
+      </Container>
+
+    </div>
   )
 }
 
