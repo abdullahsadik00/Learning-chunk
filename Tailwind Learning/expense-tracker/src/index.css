@@ -15,7 +15,10 @@
   -moz-osx-font-smoothing: grayscale; */
   font-family: "Poppins", sans-serif;
 }
-
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  cursor: pointer;
+}
 /* a {
   font-weight: 500;
   color: #646cff;
