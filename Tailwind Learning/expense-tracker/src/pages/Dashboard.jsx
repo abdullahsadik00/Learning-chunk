@@ -19,6 +19,7 @@ import {
     createColumnHelper,
   } from '@tanstack/react-table';
 import CircularProgress from '../components/CircularProgress';
+import CustomTable from '../components/CustomTable';
   
   ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip, Legend);
 
@@ -189,6 +190,29 @@ const CreditCard = ({ creditCardNumber }) => {
 
 
   const Transaction = () => {
+    const [filters, setFilters] = useState([]);
+    // const columns = useMemo(() => [
+    //   {
+    //     Header: 'Transactions',
+    //     accessor: 'name',
+    //   },
+    //   {
+    //     Header: 'Date',
+    //     accessor: 'date',
+    //   },
+    //   {
+    //     Header: 'Category',
+    //     accessor: 'category',
+    //   },
+    //   {
+    //     Header: 'Account',
+    //     accessor: 'account',
+    //   },
+    //   {
+    //     Header: 'Amount',
+    //     accessor: 'amount',
+    //   },
+    // ], []);
     const [category, setCategory] = useState('All');
     const categories = ['All', 'Food', 'Groceries', 'Medicines', 'Shopping', 'EMI', 'Others'];
     const [openCategoryModal, setOpenCategoryModal] = useState(false);
@@ -323,34 +347,7 @@ const CreditCard = ({ creditCardNumber }) => {
             </div>
           </div>
         </div>
-  
-        {/* Table */}
-        <div className='mt-4 bg-white p-4 rounded-lg shadow-md overflow-x-auto'>
-          <table className="w-full min-w-max text-sm">
-            <thead>
-              {table.getHeaderGroups().map(headerGroup => (
-                <tr key={headerGroup.id}>
-                  {headerGroup.headers.map(header => (
-                    <th key={header.id} className="text-left px-4 py-2 text-neutral-400 font-medium">
-                      {flexRender(header.column.columnDef.header, header.getContext())}
-                    </th>
-                  ))}
-                </tr>
-              ))}
-            </thead>
-            <tbody>
-              {table.getRowModel().rows.map(row => (
-                <tr key={row.id} className="border-t">
-                  {row.getVisibleCells().map(cell => (
-                    <td key={cell.id} className="px-4 py-2 text-neutral-800">
-                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                    </td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+        <CustomTable columns={columns} data={data} filters={filters} setFilters={setFilters} />
   
         {/* Show More Button */}
         <button className="text-sm text-blue-500 shadow-md bg-white py-2 rounded-lg text-center mt-4 w-full">
@@ -586,7 +583,7 @@ const CreditCard = ({ creditCardNumber }) => {
               {table.getHeaderGroups().map(headerGroup => (
                 <tr key={headerGroup.id}>
                   {headerGroup.headers.map(header => (
-                    <th key={header.id} className="text-left px-4 py-2 text-neutral-400 font-medium">
+                    <th key={header.id} className="text-left px-4 py-2 border-b-0 text-neutral-400 font-medium">
                       {flexRender(header.column.columnDef.header, header.getContext())}
                     </th>
                   ))}
