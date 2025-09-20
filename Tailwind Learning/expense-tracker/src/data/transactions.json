@@ -1,0 +1,5528 @@
+[
+  {
+    "Date": "01 Jan 2025",
+    "Details": "TRANSFER TO 4897693162093 - UPI/DR/500172901286/M/S.GDD /ICIC/eazypay.d1/Birth",
+    "Debit": "1850.00",
+    "Credit": "-",
+    "Balance": "36650.85",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "M/S.GDD",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "ICIC",
+      "reference": "Birth",
+      "transactionId": "500172901286"
+    },
+    "Category": "Transfer",
+    "hash": "4e57867fcf2b291d417a8e626e71731b"
+  },
+  {
+    "Date": "01 Jan 2025",
+    "Details": "TRANSFER TO 4897693162093 - UPI/DR/500175535283/BURHANI /IDFB/88117965@i/icecr",
+    "Debit": "560.00",
+    "Credit": "-",
+    "Balance": "36090.85",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "BURHANI",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "IDFB",
+      "reference": "icecr",
+      "transactionId": "500175535283"
+    },
+    "Category": "Transfer",
+    "hash": "72ae0dede845831069d8c9324df082f7"
+  },
+  {
+    "Date": "01 Jan 2025",
+    "Details": "TRANSFER TO 4897692162094 - UPI/DR/436612969068/TAKWIM N/YESB/paytmqr281/cold",
+    "Debit": "20.00",
+    "Credit": "-",
+    "Balance": "38500.85",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "TAKWIM N",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "cold",
+      "transactionId": "436612969068"
+    },
+    "Category": "Transfer",
+    "hash": "40cbaf64e66ecb2efec80f8f7ef72e65"
+  },
+  {
+    "Date": "03 Jan 2025",
+    "Details": "ATM CASH 6191 SATYAM KASHISH, KONDHWPUNE CITY No Debit",
+    "Debit": "20000.00",
+    "Credit": "-",
+    "Balance": "16090.85",
+    "ExtractedInfo": {
+      "type": "ATM Withdrawal",
+      "name": "SATYAM KASHISH, KONDHWPUNE CITY",
+      "service": "ATM Cash Withdrawal",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "6191",
+      "transactionId": ""
+    },
+    "Category": "Other",
+    "hash": "c1491f81c2b684ecf781263f2db25e92"
+  },
+  {
+    "Date": "03 Jan 2025",
+    "Details": "TRANSFER TO 4897695162091 - UPI/DR/500391515303/JOHIRUL /YESB/q027940882/eggs",
+    "Debit": "40.00",
+    "Credit": "-",
+    "Balance": "16050.85",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "JOHIRUL",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "eggs",
+      "transactionId": "500391515303"
+    },
+    "Category": "Transfer",
+    "hash": "f368a7e6f12cb4f16b1a8cae4d4ced99"
+  },
+  {
+    "Date": "04 Jan 2025",
+    "Details": "TRANSFER TO 4897696162090 - UPI/DR/500413414472/VISHAL K/UTIB/karloojagi/UPI",
+    "Debit": "1199.00",
+    "Credit": "-",
+    "Balance": "14850.85",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "VISHAL K",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "UTIB",
+      "reference": "karloojagi",
+      "transactionId": "500413414472"
+    },
+    "Category": "Transfer",
+    "hash": "0072455ffbaf294c6c3fd4e551b4bd30"
+  },
+  {
+    "Date": "04 Jan 2025",
+    "Details": "TRANSFER TO 4897696162090 - UPI/DR/537013772804/Supreme /UTIB/gpay-11231/plug",
+    "Debit": "20.00",
+    "Credit": "-",
+    "Balance": "14822.85",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Supreme",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "UTIB",
+      "reference": "plug",
+      "transactionId": "537013772804"
+    },
+    "Category": "Transfer",
+    "hash": "cadc047e29c03d91b3144f2e3da53d30"
+  },
+  {
+    "Date": "04 Jan 2025",
+    "Details": "TRANSFER TO 4897696162090 - UPI/DR/500414274851/Bombay M/UTIB/gpay-11234/Xerox",
+    "Debit": "8.00",
+    "Credit": "-",
+    "Balance": "14842.85",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Bombay M",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "UTIB",
+      "reference": "Xerox",
+      "transactionId": "500414274851"
+    },
+    "Category": "Transfer",
+    "hash": "0bb608b13bd60666f5bf06e9c329be08"
+  },
+  {
+    "Date": "04 Jan 2025",
+    "Details": "TRANSFER TO 4897696162090 - UPI/DR/500413263644/VISHAL K/UTIB/karloojagi/UPI",
+    "Debit": "1.00",
+    "Credit": "-",
+    "Balance": "16049.85",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "VISHAL K",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "UTIB",
+      "reference": "karloojagi",
+      "transactionId": "500413263644"
+    },
+    "Category": "Transfer",
+    "hash": "2083b7b025f75b8ce82700d2f0999e5a"
+  },
+  {
+    "Date": "06 Jan 2025",
+    "Details": "TRANSFER FROM 4897733162090 - UPI/CR/500638202220/ALIABBAS/BA RB/aliabbas01/UPI",
+    "Debit": "-",
+    "Credit": "1000.00",
+    "Balance": "15822.85",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "ALIABBAS BA RB",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "aliabbas01",
+      "transactionId": "500638202220"
+    },
+    "Category": "Transfer",
+    "hash": "432903231158759f1d6b5dd64682939b"
+  },
+  {
+    "Date": "07 Jan 2025",
+    "Details": "ATM CASH 6432 SATYAM KASHISH, KONDHWPUNE CITY",
+    "Debit": "3500.00",
+    "Credit": "-",
+    "Balance": "12322.85",
+    "ExtractedInfo": {
+      "type": "ATM Withdrawal",
+      "name": "SATYAM KASHISH, KONDHWPUNE CITY",
+      "service": "ATM Cash Withdrawal",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "6432",
+      "transactionId": ""
+    },
+    "Category": "Other",
+    "hash": "6f9f2e6a0e604c74c611c4a80d18a79f"
+  },
+  {
+    "Date": "07 Jan 2025",
+    "Details": "TRANSFER TO 4897692162094 - UPI/DR/500756847586/Ms LAXMI/CBIN/shubhmanga/Shadi",
+    "Debit": "2000.00",
+    "Credit": "-",
+    "Balance": "9122.85",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Ms LAXMI CBIN",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "Shadi",
+      "transactionId": "500756847586"
+    },
+    "Category": "Transfer",
+    "hash": "0303ffd328f819c5bdaeb2f1c017020f"
+  },
+  {
+    "Date": "07 Jan 2025",
+    "Details": "TRANSFER TO 4897692162094 - UPI/DR/500745315340/Dr Amir /UTIB/gpay-11251/denta",
+    "Debit": "1200.00",
+    "Credit": "-",
+    "Balance": "11122.85",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Dr Amir",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "UTIB",
+      "reference": "denta",
+      "transactionId": "500745315340"
+    },
+    "Category": "Transfer",
+    "hash": "8dde94a719010f1e2faf27a4cf8156ad"
+  },
+  {
+    "Date": "07 Jan 2025",
+    "Details": "TRANSFER TO 4897692162094 - UPI/DR/500712313892/MANTHAN /YESB/paytmqr62x/bourn",
+    "Debit": "30.00",
+    "Credit": "-",
+    "Balance": "9092.85",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "MANTHAN",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "bourn",
+      "transactionId": "500712313892"
+    },
+    "Category": "Transfer",
+    "hash": "1702a591c244300262d96332307e4e4e"
+  },
+  {
+    "Date": "07 Jan 2025",
+    "Details": "TRANSFER FROM 4897734162099 - UPI/CR/537344799314/AYESHA A/BARB/shkaisha47/UPI",
+    "Debit": "-",
+    "Credit": "30.00",
+    "Balance": "9122.85",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "AYESHA A",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "BARB",
+      "reference": "shkaisha47",
+      "transactionId": "537344799314"
+    },
+    "Category": "Transfer",
+    "hash": "63cf5267d7b429bd63b4e1bef7dca689"
+  },
+  {
+    "Date": "08 Jan 2025",
+    "Details": "TRANSFER TO 4897693162093 - UPI/DR/500806164420/BAREERAH/H DFC/netsquaret/wifi",
+    "Debit": "600.00",
+    "Credit": "-",
+    "Balance": "8522.85",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "BAREERAH H DFC",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "wifi",
+      "transactionId": "500806164420"
+    },
+    "Category": "Transfer",
+    "hash": "cc2b6c4f8a8921a50a7d22cdaff96cf3"
+  },
+  {
+    "Date": "08 Jan 2025",
+    "Details": "TRANSFER TO 4897693162093 - UPI/DR/537466202133/MANTHAN /YESB/paytmqr62x/metpu",
+    "Debit": "220.00",
+    "Credit": "-",
+    "Balance": "8302.85",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "MANTHAN",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "metpu",
+      "transactionId": "537466202133"
+    },
+    "Category": "Transfer",
+    "hash": "4c1b9c1744a6fad79042aedfdb158f41"
+  },
+  {
+    "Date": "10 Jan 2025",
+    "Details": "TRANSFER TO 4897695162091 - UPI/DR/537698980480/ATISH R /HDFC/rishita208/Abbu",
+    "Debit": "2000.00",
+    "Credit": "-",
+    "Balance": "8302.85",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "ATISH R",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "HDFC",
+      "reference": "Abbu",
+      "transactionId": "537698980480"
+    },
+    "Category": "Transfer",
+    "hash": "8a03b866c7f217785a5c2a7ea0a168e0"
+  },
+  {
+    "Date": "10 Jan 2025",
+    "Details": "TRANSFER TO 4897695162091 - UPI/DR/537658990010/ATISH R /HDFC/rishita208/UPI",
+    "Debit": "2000.00",
+    "Credit": "-",
+    "Balance": "8302.85",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "ATISH R",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "HDFC",
+      "reference": "rishita208",
+      "transactionId": "537658990010"
+    },
+    "Category": "Transfer",
+    "hash": "196776cf7096ae1e81aee5df4cf57952"
+  },
+  {
+    "Date": "10 Jan 2025",
+    "Details": "TRANSFER TO 4897695162091 - UPI/DR/501075243840/ATISH R /HDFC/rishita208/UPI",
+    "Debit": "1002.00",
+    "Credit": "-",
+    "Balance": "7302.85",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "ATISH R",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "HDFC",
+      "reference": "rishita208",
+      "transactionId": "501075243840"
+    },
+    "Category": "Transfer",
+    "hash": "e888bf346e7d3fd5f5129bc6d265da64"
+  },
+  {
+    "Date": "10 Jan 2025",
+    "Details": "TRANSFER TO 4897695162091 - UPI/DR/501075236729/ATISH R /HDFC/rishita208/UPI",
+    "Debit": "999.00",
+    "Credit": "-",
+    "Balance": "6303.85",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "ATISH R",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "HDFC",
+      "reference": "rishita208",
+      "transactionId": "501075236729"
+    },
+    "Category": "Transfer",
+    "hash": "fadddd36805ec62725578cc78497a0f4"
+  },
+  {
+    "Date": "10 Jan 2025",
+    "Details": "TRANSFER TO 4897695162091 - UPI/DR/537663685883/ATISH R /HDFC/rishita208/UPI",
+    "Debit": "999.00",
+    "Credit": "-",
+    "Balance": "8304.85",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "ATISH R",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "HDFC",
+      "reference": "rishita208",
+      "transactionId": "537663685883"
+    },
+    "Category": "Transfer",
+    "hash": "7a9ff83aa7b28da27f8c2335bab19567"
+  },
+  {
+    "Date": "10 Jan 2025",
+    "Details": "TRANSFER TO 4897695162091 - UPI/DR/537676587290/ATISH R /HDFC/rishita208/abbu",
+    "Debit": "999.00",
+    "Credit": "-",
+    "Balance": "9303.85",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "ATISH R",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "HDFC",
+      "reference": "abbu",
+      "transactionId": "537676587290"
+    },
+    "Category": "Transfer",
+    "hash": "3e4d0ee5d6e02b265c28f22d20303389"
+  },
+  {
+    "Date": "10 Jan 2025",
+    "Details": "TRANSFER FROM 4897737162096 - UPI/CR/537698220917/AYESHA A/BARB/shkaisha47/UPI No Debit",
+    "Debit": "-",
+    "Credit": "2000.00",
+    "Balance": "10302.85",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "AYESHA A",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "BARB",
+      "reference": "shkaisha47",
+      "transactionId": "537698220917"
+    },
+    "Category": "Transfer",
+    "hash": "e3ea7c14fbcbe9f26c04677c57326510"
+  },
+  {
+    "Date": "10 Jan 2025",
+    "Details": "TRANSFER FROM 4897695162091 - UPI/REV/537698980480",
+    "Debit": "-",
+    "Credit": "2000.00",
+    "Balance": "10302.85",
+    "ExtractedInfo": {
+      "type": "UPI Reversal",
+      "name": "",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "",
+      "transactionId": "537698980480"
+    },
+    "Category": "Transfer",
+    "hash": "5b76f7ee4559f50a7ed3e4935a68e7be"
+  },
+  {
+    "Date": "10 Jan 2025",
+    "Details": "TRANSFER FROM 4897695162091 - UPI/REV/537658990010",
+    "Debit": "-",
+    "Credit": "2000.00",
+    "Balance": "10302.85",
+    "ExtractedInfo": {
+      "type": "UPI Reversal",
+      "name": "",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "",
+      "transactionId": "537658990010"
+    },
+    "Category": "Transfer",
+    "hash": "a3eb48f6eecfe1f3c084dc4752de64c5"
+  },
+  {
+    "Date": "10 Jan 2025",
+    "Details": "TRANSFER FROM 4897695162091 - UPI/REV/501075243840",
+    "Debit": "-",
+    "Credit": "1002.00",
+    "Balance": "7305.85",
+    "ExtractedInfo": {
+      "type": "UPI Reversal",
+      "name": "",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "",
+      "transactionId": "501075243840"
+    },
+    "Category": "Transfer",
+    "hash": "11d371ba33fcc943867add89348365d7"
+  },
+  {
+    "Date": "11 Jan 2025",
+    "Details": "TRANSFER FROM 4897738162095 - UPI/CR/537798987736/AYESHA A/BARB/shkaisha47/UPI",
+    "Debit": "-",
+    "Credit": "2000.00",
+    "Balance": "9305.85",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "AYESHA A",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "BARB",
+      "reference": "shkaisha47",
+      "transactionId": "537798987736"
+    },
+    "Category": "Transfer",
+    "hash": "1d881c98956fb18bdb64829a308115fd"
+  },
+  {
+    "Date": "12 Jan 2025",
+    "Details": "ATM CASH 6256 PUNE-NIBM KONDHWA BR OPUNE",
+    "Debit": "9500.00",
+    "Credit": "-",
+    "Balance": "1805.85",
+    "ExtractedInfo": {
+      "type": "ATM Withdrawal",
+      "name": "PUNE-NIBM KONDHWA BR OPUNE",
+      "service": "ATM Cash Withdrawal",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "6256",
+      "transactionId": ""
+    },
+    "Category": "Other",
+    "hash": "6e64d6e6bf465284c1d577e57b0a0daa"
+  },
+  {
+    "Date": "12 Jan 2025",
+    "Details": "TRANSFER TO 4897690162095 - UPI/DR/537814287263/MANTHAN /YESB/paytmqr62x/kurku",
+    "Debit": "78.00",
+    "Credit": "-",
+    "Balance": "1727.85",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "MANTHAN",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "kurku",
+      "transactionId": "537814287263"
+    },
+    "Category": "Transfer",
+    "hash": "b04f903cb90dd8c94a4c97392908259d"
+  },
+  {
+    "Date": "12 Jan 2025",
+    "Details": "TRANSFER FROM 4897732162091 - UPI/CR/501287579951/SHAIKH S/BARB/abdullahsa/UPI",
+    "Debit": "-",
+    "Credit": "2000.00",
+    "Balance": "11305.85",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SHAIKH S",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "BARB",
+      "reference": "abdullahsa",
+      "transactionId": "501287579951"
+    },
+    "Category": "Transfer",
+    "hash": "dd2e35d50342df360ea8a61862535302"
+  },
+  {
+    "Date": "13 Jan 2025",
+    "Details": "TRANSFER TO 4897691162095 - UPI/DR/537994364558/MANTHAN /YESB/paytmqr62x/tooth No Debit",
+    "Debit": "60.00",
+    "Credit": "-",
+    "Balance": "1667.85",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "MANTHAN",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "tooth No Debit",
+      "transactionId": "537994364558"
+    },
+    "Category": "Transfer",
+    "hash": "2334519d528107adf989e13a2ad904d4"
+  },
+  {
+    "Date": "14 Jan 2025",
+    "Details": "TRANSFER TO 4897692162094 - UPI/DR/501474576639/New Oran/YESB/paytmqr5vz/UPI",
+    "Debit": "175.00",
+    "Credit": "-",
+    "Balance": "1492.85",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "New Oran",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "paytmqr5vz",
+      "transactionId": "501474576639"
+    },
+    "Category": "Transfer",
+    "hash": "c3cc59a207a651a49bae65b2b9e8ca04"
+  },
+  {
+    "Date": "16 Jan 2025",
+    "Details": "TRANSFER TO 4897694162092 - UPI/DR/501669642141/SAMADHAN/U TIB/gpay-11180/dahi",
+    "Debit": "40.00",
+    "Credit": "-",
+    "Balance": "696.35",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SAMADHAN U TIB",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "dahi",
+      "transactionId": "501669642141"
+    },
+    "Category": "Transfer",
+    "hash": "d1d16b0aa207cf5a8e9120bc9564beb2"
+  },
+  {
+    "Date": "16 Jan 2025",
+    "Details": "SBIPOS005644589038Avenue Supermarts Ltd PUNE",
+    "Debit": "-",
+    "Credit": "756.50",
+    "Balance": "736.35",
+    "ExtractedInfo": {
+      "type": "Other",
+      "name": "SBIPOS005644589038Avenue Supermarts Ltd PUNE",
+      "service": "",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "",
+      "transactionId": ""
+    },
+    "Category": "Other",
+    "hash": "0a73ef3de9e45e4193a7d70178160672"
+  },
+  {
+    "Date": "17 Jan 2025",
+    "Details": "TRANSFER TO 4897695162091 - UPI/DR/538302338309/SHEHNAZ /HDFC/shehnazfar/UPI",
+    "Debit": "30.00",
+    "Credit": "-",
+    "Balance": "666.35",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SHEHNAZ",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "HDFC",
+      "reference": "shehnazfar",
+      "transactionId": "538302338309"
+    },
+    "Category": "Transfer",
+    "hash": "edd5f4d936850718f49a446d8aa6071b"
+  },
+  {
+    "Date": "17 Jan 2025",
+    "Details": "TRANSFER TO 4897695162091 - UPI/DR/538348545239/MAHENDRA/Y ESB/q232031098/dahi",
+    "Debit": "20.00",
+    "Credit": "-",
+    "Balance": "646.35",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "MAHENDRA Y ESB",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "dahi",
+      "transactionId": "538348545239"
+    },
+    "Category": "Transfer",
+    "hash": "10185f8a38834ecbabf636895a5c3f8a"
+  },
+  {
+    "Date": "18 Jan 2025",
+    "Details": "TRANSFER TO 4897696162090 - UPI/DR/501831006128/Google I/ICIC/gpayrechar/UPI",
+    "Debit": "199.90",
+    "Credit": "-",
+    "Balance": "446.45",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Google I",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "ICIC",
+      "reference": "gpayrechar",
+      "transactionId": "501831006128"
+    },
+    "Category": "Transfer",
+    "hash": "15fc799445267ebbeea097804c9c4ed7"
+  },
+  {
+    "Date": "18 Jan 2025",
+    "Details": "TRANSFER TO 4897696162090 - UPI/DR/501831174077/New Bala/UTIB/gpay-11206/groce",
+    "Debit": "130.00",
+    "Credit": "-",
+    "Balance": "286.45",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "New Bala",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "UTIB",
+      "reference": "groce",
+      "transactionId": "501831174077"
+    },
+    "Category": "Transfer",
+    "hash": "27e8e13deac5a7df7430e819deeedfa7"
+  },
+  {
+    "Date": "18 Jan 2025",
+    "Details": "TRANSFER TO 4897696162090 - UPI/DR/501842080468/MONIRUL /YESB/q529725998/eggs",
+    "Debit": "40.00",
+    "Credit": "-",
+    "Balance": "246.45",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "MONIRUL",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "eggs",
+      "transactionId": "501842080468"
+    },
+    "Category": "Transfer",
+    "hash": "9ba661e864876df724119ead8c3feab4"
+  },
+  {
+    "Date": "18 Jan 2025",
+    "Details": "TRANSFER TO 4897696162090 - UPI/DR/501831026661/Vikash K/AIRP/vikashk780/groce",
+    "Debit": "30.00",
+    "Credit": "-",
+    "Balance": "416.45",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Vikash K AIRP",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "groce",
+      "transactionId": "501831026661"
+    },
+    "Category": "Transfer",
+    "hash": "f87f9b5a10c01032260ba99ebed0149a"
+  },
+  {
+    "Date": "19 Jan 2025",
+    "Details": "TRANSFER TO 4897690162095 - UPI/DR/501915899550/ARMAAN M/KKBK/9595480431/UPI",
+    "Debit": "100.00",
+    "Credit": "-",
+    "Balance": "146.45",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "ARMAAN M",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "KKBK",
+      "reference": "9595480431",
+      "transactionId": "501915899550"
+    },
+    "Category": "Transfer",
+    "hash": "c8e8ce2f1a9ca0db5e3ff9ea9ec3d796"
+  },
+  {
+    "Date": "19 Jan 2025",
+    "Details": "TRANSFER TO 4897690162095 - UPI/DR/501956195830/CROWN BA/YESB/paytmqr5xi/UPI",
+    "Debit": "40.00",
+    "Credit": "-",
+    "Balance": "106.45",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "CROWN BA",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "paytmqr5xi",
+      "transactionId": "501956195830"
+    },
+    "Category": "Transfer",
+    "hash": "26b7e9ad47c1d230e11fa46d768e97be"
+  },
+  {
+    "Date": "20 Jan 2025",
+    "Details": "TRANSFER FROM 4897733162090 - UPI/CR/538626199650/AYESHA A/BARB/shkaisha47/UPI",
+    "Debit": "-",
+    "Credit": "1.00",
+    "Balance": "107.45",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "AYESHA A",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "BARB",
+      "reference": "shkaisha47",
+      "transactionId": "538626199650"
+    },
+    "Category": "Transfer",
+    "hash": "fcfd7572dc4b5f0722a4f5e5a3924dda"
+  },
+  {
+    "Date": "21 Jan 2025",
+    "Details": "TRANSFER TO 4897692162094 - UPI/DR/502191563051/Fashnear/UTI B/meesho1onl/UPI I",
+    "Debit": "64.00",
+    "Credit": "-",
+    "Balance": "43.45",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Fashnear UTI B",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "UPI I",
+      "transactionId": "502191563051"
+    },
+    "Category": "Transfer",
+    "hash": "0246a5c58f71dbba1d9262d5b9fb751f"
+  },
+  {
+    "Date": "21 Jan 2025",
+    "Details": "TRANSFER FROM 4897734162099 - UPI/CR/502167977476/AYESHA A/BARB/shkaisha47/UPI No Debit",
+    "Debit": "-",
+    "Credit": "63.00",
+    "Balance": "106.45",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "AYESHA A",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "BARB",
+      "reference": "shkaisha47",
+      "transactionId": "502167977476"
+    },
+    "Category": "Transfer",
+    "hash": "a9311f0466166274f749e2349d02546e"
+  },
+  {
+    "Date": "22 Jan 2025",
+    "Details": "TRANSFER FROM 4897735162098 - UPI/CR/502202195736/AYESHA A/BARB/shkaisha47/UPI",
+    "Debit": "-",
+    "Credit": "209.00",
+    "Balance": "315.45",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "AYESHA A",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "BARB",
+      "reference": "shkaisha47",
+      "transactionId": "502202195736"
+    },
+    "Category": "Transfer",
+    "hash": "d675c558d21ee8bf12a2bd99b520b0b4"
+  },
+  {
+    "Date": "23 Jan 2025",
+    "Details": "TRANSFER TO 4897694162092 - UPI/DR/502324217811/JAY BHAV/YESB/q033740033/choco",
+    "Debit": "30.00",
+    "Credit": "-",
+    "Balance": "265.45",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "JAY BHAV",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "choco",
+      "transactionId": "502324217811"
+    },
+    "Category": "Transfer",
+    "hash": "c0fcbd091c821f88bb9568a6f8d5c0dd"
+  },
+  {
+    "Date": "23 Jan 2025",
+    "Details": "TRANSFER TO 4897694162092 - UPI/DR/502324223340/JAY BHAV/YESB/q033740033/UPI",
+    "Debit": "20.00",
+    "Credit": "-",
+    "Balance": "295.45",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "JAY BHAV",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "q033740033",
+      "transactionId": "502324223340"
+    },
+    "Category": "Transfer",
+    "hash": "867af681a890de264cbbdf6a39cb2d36"
+  },
+  {
+    "Date": "28 Jan 2025",
+    "Details": "TRANSFER TO 4897692162094 - UPI/DR/539418139424/AYESHA A/BARB/shkaisha47/retur",
+    "Debit": "1000.00",
+    "Credit": "-",
+    "Balance": "265.45",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "AYESHA A",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "BARB",
+      "reference": "retur",
+      "transactionId": "539418139424"
+    },
+    "Category": "Transfer",
+    "hash": "9cbc4535f449659da54c48783f4874c3"
+  },
+  {
+    "Date": "28 Jan 2025",
+    "Details": "TRANSFER FROM 4897734162099 - UPI/CR/539495608856/AYESHA A/BARB/shkaisha47/UPI",
+    "Debit": "-",
+    "Credit": "1000.00",
+    "Balance": "1265.45",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "AYESHA A",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "BARB",
+      "reference": "shkaisha47",
+      "transactionId": "539495608856"
+    },
+    "Category": "Transfer",
+    "hash": "634d42d83f0e1ee2a6ee3e11669905cd"
+  },
+  {
+    "Date": "31 Jan 2025",
+    "Details": "TRANSFER FROM 3199956044307 - NEFT*UTIB0000070*AXISP00606371 935*BEE LOGICAL SOFT",
+    "Debit": "27450.00",
+    "Credit": "-",
+    "Balance": "27715.45",
+    "ExtractedInfo": {
+      "type": "Bank Transfer",
+      "name": "NEFT*UTIB0000070*AXISP00606371 935*BEE LOGICAL SOFT",
+      "service": "Incoming Transfer",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "3199956044307",
+      "transactionId": ""
+    },
+    "Category": "Transfer",
+    "hash": "b271ac8eed24545f7c4870710d3fd4e5"
+  },
+  {
+    "Date": "01 Feb 2025",
+    "Details": "TRANSFER TO 4897696162090 - UPI/DR/503227837445/Mr GORAK/CBIN/amzn002664/UPI",
+    "Debit": "45.00",
+    "Credit": "-",
+    "Balance": "27670.45",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Mr GORAK CBIN",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "amzn002664",
+      "transactionId": "503227837445"
+    },
+    "Category": "Transfer",
+    "hash": "ca3ab95ce54273eae9713e49b6f20443"
+  },
+  {
+    "Date": "02 Feb 2025",
+    "Details": "TRANSFER TO 4897690162095 - UPI/DR/503301615113/DUMMY NAME/barb/3216010002/UPI",
+    "Debit": "1000.00",
+    "Credit": "-",
+    "Balance": "26670.45",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "DUMMY NAME",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "BARB",
+      "reference": "3216010002",
+      "transactionId": "503301615113"
+    },
+    "Category": "Transfer",
+    "hash": "4ff7f79fc8dfbb1cb98ca1ae8f6150d8"
+  },
+  {
+    "Date": "03 Feb 2025",
+    "Details": "TRANSFER TO 4897691162095 - UPI/DR/503481007020/SHREENAT/U TIB/9545935050/juice",
+    "Debit": "10.00",
+    "Credit": "-",
+    "Balance": "26650.45",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SHREENAT U TIB",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "juice",
+      "transactionId": "503481007020"
+    },
+    "Category": "Transfer",
+    "hash": "c0e6724a1c69bed23d640eb1f608d240"
+  },
+  {
+    "Date": "03 Feb 2025",
+    "Details": "TRANSFER TO 4897691162095 - UPI/DR/503480782678/SAMEER N/KKBK/sameer7498/UPI",
+    "Debit": "10.00",
+    "Credit": "-",
+    "Balance": "26660.45",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SAMEER N",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "KKBK",
+      "reference": "sameer7498",
+      "transactionId": "503480782678"
+    },
+    "Category": "Transfer",
+    "hash": "55080b2fd3db8b5ad43e781d1598c25d"
+  },
+  {
+    "Date": "04 Feb 2025",
+    "Details": "ATM CASH 8862 SATYAM KASHISH, KONDHWPUNE CITY",
+    "Debit": "7000.00",
+    "Credit": "-",
+    "Balance": "12650.45",
+    "ExtractedInfo": {
+      "type": "ATM Withdrawal",
+      "name": "SATYAM KASHISH, KONDHWPUNE CITY",
+      "service": "ATM Cash Withdrawal",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "8862",
+      "transactionId": ""
+    },
+    "Category": "Other",
+    "hash": "ac0d7e98381507a9787a3c7f5bf64f32"
+  },
+  {
+    "Date": "04 Feb 2025",
+    "Details": "ATM CASH 8861 SATYAM KASHISH, KONDHWPUNE CITY",
+    "Debit": "7000.00",
+    "Credit": "-",
+    "Balance": "19650.45",
+    "ExtractedInfo": {
+      "type": "ATM Withdrawal",
+      "name": "SATYAM KASHISH, KONDHWPUNE CITY",
+      "service": "ATM Cash Withdrawal",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "8861",
+      "transactionId": ""
+    },
+    "Category": "Other",
+    "hash": "2d5aea6d40303891a3dc6f06009ab7e4"
+  },
+  {
+    "Date": "04 Feb 2025",
+    "Details": "ATM CASH 8863 SATYAM KASHISH, KONDHWPUNE CITY",
+    "Debit": "6000.00",
+    "Credit": "-",
+    "Balance": "6650.45",
+    "ExtractedInfo": {
+      "type": "ATM Withdrawal",
+      "name": "SATYAM KASHISH, KONDHWPUNE CITY",
+      "service": "ATM Cash Withdrawal",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "8863",
+      "transactionId": ""
+    },
+    "Category": "Other",
+    "hash": "43b89adc067cb34a88b00dd0ca402003"
+  },
+  {
+    "Date": "04 Feb 2025",
+    "Details": "TRANSFER TO 4897692162094 - UPI/DR/503557420460/AVENUE S/ICIC/innovdmart/UPI No Debit",
+    "Debit": "276.89",
+    "Credit": "-",
+    "Balance": "6373.56",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "AVENUE S",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "ICIC",
+      "reference": "innovdmart",
+      "transactionId": "503557420460"
+    },
+    "Category": "Transfer",
+    "hash": "294568b9acafc5e482d8cd31a918fed1"
+  },
+  {
+    "Date": "04 Feb 2025",
+    "Details": "TRANSFER TO 4897692162094 - UPI/DR/503545163876/MEERADEV/H DFC/mummyhdfc6/UPI",
+    "Debit": "150.00",
+    "Credit": "-",
+    "Balance": "6223.56",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "MEERADEV H DFC",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "mummyhdfc6",
+      "transactionId": "503545163876"
+    },
+    "Category": "Transfer",
+    "hash": "669e0822e3cd36d267d726817bc30eee"
+  },
+  {
+    "Date": "04 Feb 2025",
+    "Details": "TRANSFER TO 4897692162094 - UPI/DR/503512883670/Pune Can/AIRP/punecanton/PuneC",
+    "Debit": "50.00",
+    "Credit": "-",
+    "Balance": "6173.56",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Pune Can AIRP",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "PuneC",
+      "transactionId": "503512883670"
+    },
+    "Category": "Transfer",
+    "hash": "d5445df779079e7866a87bf8e7f2e917"
+  },
+  {
+    "Date": "05 Feb 2025",
+    "Details": "TRANSFER FROM 4897735162098 - UPI/CR/540218030986/ESAK ABD/SBIN/esakshaikh/retur",
+    "Debit": "-",
+    "Credit": "10000.00",
+    "Balance": "16173.56",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "ESAK ABD",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "SBIN",
+      "reference": "retur",
+      "transactionId": "540218030986"
+    },
+    "Category": "Transfer",
+    "hash": "bbe3efe9bbdd9a0fbd15c55627d62e36"
+  },
+  {
+    "Date": "06 Feb 2025",
+    "Details": "TRANSFER FROM 4897736162097 - UPI/CR/503709106910/Mohmmad /SBIN/nk1811175@/UPI",
+    "Debit": "-",
+    "Credit": "3000.00",
+    "Balance": "19173.56",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Mohmmad",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "SBIN",
+      "reference": "nk1811175@",
+      "transactionId": "503709106910"
+    },
+    "Category": "Transfer",
+    "hash": "006ee293c22b9b1cc050b9ffaeb1ff8c"
+  },
+  {
+    "Date": "07 Feb 2025",
+    "Details": "TRANSFER TO 4897695162091 - UPI/DR/503849637851/Mrs SUVA/MAHB/suvarnaang/UPI",
+    "Debit": "120.00",
+    "Credit": "-",
+    "Balance": "19038.56",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Mrs SUVA MAHB",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "suvarnaang",
+      "transactionId": "503849637851"
+    },
+    "Category": "Transfer",
+    "hash": "7376ab7aa0784b31fe32a5d329fffe3f"
+  },
+  {
+    "Date": "07 Feb 2025",
+    "Details": "TRANSFER TO 4897695162091 - UPI/DR/540402366616/CARE PLU/YESB/q874976406/medic",
+    "Debit": "108.00",
+    "Credit": "-",
+    "Balance": "19924.13",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "CARE PLU",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "medic",
+      "transactionId": "540402366616"
+    },
+    "Category": "Transfer",
+    "hash": "fe9da9c819a32c22e67b595b7c7f013e"
+  },
+  {
+    "Date": "07 Feb 2025",
+    "Details": "TRANSFER TO 4897695162091 - UPI/DR/540478150038/GAIKWAD /SRCB/rahulgaikw/cab",
+    "Debit": "90.00",
+    "Credit": "-",
+    "Balance": "18948.56",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "GAIKWAD SRCB",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "cab",
+      "transactionId": "540478150038"
+    },
+    "Category": "Transportation",
+    "hash": "0bf7a0ad464e44de2dfeb04e702f7b1f"
+  },
+  {
+    "Date": "07 Feb 2025",
+    "Details": "TRANSFER TO 4897695162091 - UPI/DR/540407543872/Wellness/YES B/wellnessfo/Payme",
+    "Debit": "86.43",
+    "Credit": "-",
+    "Balance": "18862.13",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Wellness YES B",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "Payme",
+      "transactionId": "540407543872"
+    },
+    "Category": "Transfer",
+    "hash": "21f5a46771c6213dbfe54f2559a4402b"
+  },
+  {
+    "Date": "07 Feb 2025",
+    "Details": "TRANSFER TO 4897695162091 - UPI/DR/503868287240/Mrs RAJI/MAHB/pathanmush/UPI",
+    "Debit": "48.00",
+    "Credit": "-",
+    "Balance": "19876.13",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Mrs RAJI MAHB",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "pathanmush",
+      "transactionId": "503868287240"
+    },
+    "Category": "Transfer",
+    "hash": "33d99c168bc0f9ba197d529ac1f2a03d"
+  },
+  {
+    "Date": "07 Feb 2025",
+    "Details": "TRANSFER TO 4897695162091 - UPI/DR/540450655500/Bandanaw/SBI N/khanusman0/cab",
+    "Debit": "30.00",
+    "Credit": "-",
+    "Balance": "20032.13",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Bandanaw SBI N",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "cab",
+      "transactionId": "540450655500"
+    },
+    "Category": "Transportation",
+    "hash": "8aca218a8fbee20f325f621d41b36641"
+  },
+  {
+    "Date": "07 Feb 2025",
+    "Details": "TRANSFER TO 4897695162091 - UPI/DR/503839736245/SALMAN /YESB/q755580295/kabab",
+    "Debit": "15.00",
+    "Credit": "-",
+    "Balance": "19158.56",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SALMAN",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "kabab",
+      "transactionId": "503839736245"
+    },
+    "Category": "Transfer",
+    "hash": "1275e0b396ab4e25b14e8bb4b3cf9f7d"
+  },
+  {
+    "Date": "07 Feb 2025",
+    "Details": "TRANSFER FROM 4897737162096 - UPI/CR/540467028021/NEETA AT/ICIC/neetavishn/UPI",
+    "Debit": "-",
+    "Credit": "1200.00",
+    "Balance": "20062.13",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "NEETA AT",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "ICIC",
+      "reference": "neetavishn",
+      "transactionId": "540467028021"
+    },
+    "Category": "Transfer",
+    "hash": "85141976f2b9dadd8465260568025f73"
+  },
+  {
+    "Date": "08 Feb 2025",
+    "Details": "TRANSFER TO 4897696162090 - UPI/DR/503917966891/VISHAL M/YESB/vishalinno/Payme",
+    "Debit": "4009.50",
+    "Credit": "-",
+    "Balance": "15731.63",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "VISHAL M",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "Payme",
+      "transactionId": "503917966891"
+    },
+    "Category": "Transfer",
+    "hash": "2318ee9ba60fdc85d15be749b660db44"
+  },
+  {
+    "Date": "08 Feb 2025",
+    "Details": "TRANSFER TO 4897696162090 - UPI/DR/503912841027/KASHINAT/C NRB/thombareka/cab",
+    "Debit": "107.00",
+    "Credit": "-",
+    "Balance": "15624.63",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "KASHINAT C NRB",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "cab",
+      "transactionId": "503912841027"
+    },
+    "Category": "Transportation",
+    "hash": "16fafa62774874add61702f530c61ab7"
+  },
+  {
+    "Date": "08 Feb 2025",
+    "Details": "TRANSFER TO 4897696162090 - UPI/DR/503933673629/ATIKURRA/KK BK/9719771484/cab",
+    "Debit": "98.00",
+    "Credit": "-",
+    "Balance": "19741.13",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "ATIKURRA KK BK",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "cab",
+      "transactionId": "503933673629"
+    },
+    "Category": "Transportation",
+    "hash": "854d003f892029086f6d839e3bca8906"
+  },
+  {
+    "Date": "08 Feb 2025",
+    "Details": "TRANSFER TO 4897696162090 - UPI/DR/540589771793/MAHENDRA/Y ESB/paytmqr5xm/milk",
+    "Debit": "27.00",
+    "Credit": "-",
+    "Balance": "19849.13",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "MAHENDRA Y ESB",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "milk",
+      "transactionId": "540589771793"
+    },
+    "Category": "Transfer",
+    "hash": "94ad42ff2767305b592017826643da6c"
+  },
+  {
+    "Date": "08 Feb 2025",
+    "Details": "TRANSFER TO 4897696162090 - UPI/DR/503979037258/SHEETAL /YESB/q339523632/misri No Debit",
+    "Debit": "10.00",
+    "Credit": "-",
+    "Balance": "19839.13",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SHEETAL",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "misri No Debit",
+      "transactionId": "503979037258"
+    },
+    "Category": "Transfer",
+    "hash": "cec92e014a16cce9ffa1a6430b0993c4"
+  },
+  {
+    "Date": "08 Feb 2025",
+    "Details": "TRANSFER FROM 4897738162095 - UPI/CR/540593288012/ALIABBAS/BA RB/aliabbas01/UPI",
+    "Debit": "-",
+    "Credit": "1000.00",
+    "Balance": "16624.63",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "ALIABBAS BA RB",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "aliabbas01",
+      "transactionId": "540593288012"
+    },
+    "Category": "Transfer",
+    "hash": "6e39169c2e73a4a9d99b12c2219b70b9"
+  },
+  {
+    "Date": "09 Feb 2025",
+    "Details": "TRANSFER TO 4897690162095 - UPI/DR/504066927347/JAGAT S/YESB/q674419574/eggs",
+    "Debit": "50.00",
+    "Credit": "-",
+    "Balance": "16626.63",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "JAGAT S",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "eggs",
+      "transactionId": "504066927347"
+    },
+    "Category": "Transfer",
+    "hash": "80c71b16b0464ce3645e42ae016fbf89"
+  },
+  {
+    "Date": "09 Feb 2025",
+    "Details": "TRANSFER TO 4897690162095 - UPI/DR/540633844485/MAHENDRA/Y ESB/paytmqr5xm/didi",
+    "Debit": "30.00",
+    "Credit": "-",
+    "Balance": "16676.63",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "MAHENDRA Y ESB",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "didi",
+      "transactionId": "540633844485"
+    },
+    "Category": "Transfer",
+    "hash": "9c2f525af078cb8d649b3322f34be0ff"
+  },
+  {
+    "Date": "09 Feb 2025",
+    "Details": "TRANSFER FROM 4897732162091 - UPI/CR/504057710800/HEENA SA/UJVN/heenashaik/UPI",
+    "Debit": "-",
+    "Credit": "82.00",
+    "Balance": "16706.63",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "HEENA SA UJVN",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "heenashaik",
+      "transactionId": "504057710800"
+    },
+    "Category": "Transfer",
+    "hash": "eba57bf1caa83be7803b765c60d72881"
+  },
+  {
+    "Date": "10 Feb 2025",
+    "Details": "TRANSFER TO 4897691162095 - UPI/DR/504188841322/BAREERAH/H DFC/netsquaret/wifi",
+    "Debit": "600.00",
+    "Credit": "-",
+    "Balance": "16026.63",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "BAREERAH H DFC",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "wifi",
+      "transactionId": "504188841322"
+    },
+    "Category": "Transfer",
+    "hash": "664cb13b7fd2c65b1f68c9b1983c5fd2"
+  },
+  {
+    "Date": "10 Feb 2025",
+    "Details": "TRANSFER TO 4897691162095 - UPI/DR/504168800154/MAHENDRA/Y ESB/paytmqr5xm/panee",
+    "Debit": "40.00",
+    "Credit": "-",
+    "Balance": "15986.63",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "MAHENDRA Y ESB",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "panee",
+      "transactionId": "504168800154"
+    },
+    "Category": "Transfer",
+    "hash": "2dc54675195f04efae44b8b6b520d1e1"
+  },
+  {
+    "Date": "11 Feb 2025",
+    "Details": "ATM CASH 9555 SATYAM KASHISH, KONDHWPUNE CITY",
+    "Debit": "1000.00",
+    "Credit": "-",
+    "Balance": "14986.63",
+    "ExtractedInfo": {
+      "type": "ATM Withdrawal",
+      "name": "SATYAM KASHISH, KONDHWPUNE CITY",
+      "service": "ATM Cash Withdrawal",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "9555",
+      "transactionId": ""
+    },
+    "Category": "Other",
+    "hash": "e607c0b90a2f242198c5af25d6ff52f3"
+  },
+  {
+    "Date": "11 Feb 2025",
+    "Details": "TRANSFER TO 4897692162094 - UPI/DR/504221937097/Google I/ICIC/gpayrechar/UPI",
+    "Debit": "154.90",
+    "Credit": "-",
+    "Balance": "14831.73",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Google I",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "ICIC",
+      "reference": "gpayrechar",
+      "transactionId": "504221937097"
+    },
+    "Category": "Transfer",
+    "hash": "21c77cf9f7039be3adb96d3f374a43fb"
+  },
+  {
+    "Date": "11 Feb 2025",
+    "Details": "TRANSFER TO 4897692162094 - UPI/DR/504245102045/PMPML/YESB /paytm-8385/UPI",
+    "Debit": "5.00",
+    "Credit": "-",
+    "Balance": "14826.73",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "PMPML",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "paytm-8385",
+      "transactionId": "504245102045"
+    },
+    "Category": "Transfer",
+    "hash": "f21d964fa455ea1ba46630efd9af889d"
+  },
+  {
+    "Date": "12 Feb 2025",
+    "Details": "TRANSFER TO 4897693162093 - UPI/DR/504368141844/AJAY BHI/UNBA/bharatpe.9/Pay t No Debit",
+    "Debit": "352.00",
+    "Credit": "-",
+    "Balance": "14462.73",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "AJAY BHI UNBA",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "Pay t No Debit",
+      "transactionId": "504368141844"
+    },
+    "Category": "Transfer",
+    "hash": "b0f277002ad1e98b44c63cc819b27599"
+  },
+  {
+    "Date": "12 Feb 2025",
+    "Details": "TRANSFER TO 4897693162093 - UPI/DR/504362524615/Ravindra/YES B/bharatpe90/Pay t",
+    "Debit": "12.00",
+    "Credit": "-",
+    "Balance": "14814.73",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Ravindra YES B",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "Pay t",
+      "transactionId": "504362524615"
+    },
+    "Category": "Transfer",
+    "hash": "0f7a4ef32043b3fae8fd507b38d39f63"
+  },
+  {
+    "Date": "12 Feb 2025",
+    "Details": "TRANSFER FROM 4897735162098 - UPI/CR/540955949302/Aniket S/SBIN/aniketmore/UPI",
+    "Debit": "-",
+    "Credit": "5000.00",
+    "Balance": "19462.73",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Aniket S",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "SBIN",
+      "reference": "aniketmore",
+      "transactionId": "540955949302"
+    },
+    "Category": "Transfer",
+    "hash": "9787d26110afc6d34e388cf15190294a"
+  },
+  {
+    "Date": "13 Feb 2025",
+    "Details": "TRANSFER TO 4897694162092 - UPI/DR/504446751029/SHIVKUMA/Y ESB/bharatpe9a/Pay t",
+    "Debit": "355.00",
+    "Credit": "-",
+    "Balance": "30006.73",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SHIVKUMA Y ESB",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "Pay t",
+      "transactionId": "504446751029"
+    },
+    "Category": "Transfer",
+    "hash": "2f38ba984b7fda884b145f887ea2340c"
+  },
+  {
+    "Date": "13 Feb 2025",
+    "Details": "TRANSFER TO 4897694162092 - UPI/DR/504409680526/PRITI AT/YESB/q616914413/cab",
+    "Debit": "191.00",
+    "Credit": "-",
+    "Balance": "19261.73",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "PRITI AT",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "cab",
+      "transactionId": "504409680526"
+    },
+    "Category": "Transportation",
+    "hash": "ba152dc955ecf7bb2868782fb0d72d93"
+  },
+  {
+    "Date": "13 Feb 2025",
+    "Details": "TRANSFER TO 4897694162092 - UPI/DR/541035760292/ASRAFUL /BARB/8007498777/Xerox",
+    "Debit": "10.00",
+    "Credit": "-",
+    "Balance": "19452.73",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "ASRAFUL",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "BARB",
+      "reference": "Xerox",
+      "transactionId": "541035760292"
+    },
+    "Category": "Transfer",
+    "hash": "04ed9bcf593be72318fce6a8f2ccc1f6"
+  },
+  {
+    "Date": "13 Feb 2025",
+    "Details": "TRANSFER FROM 4897736162097 - UPI/CR/541008289345/BHONDVE /JANA/vishwaente/UPI",
+    "Debit": "-",
+    "Credit": "10000.00",
+    "Balance": "29261.73",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "BHONDVE JANA",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "vishwaente",
+      "transactionId": "541008289345"
+    },
+    "Category": "Transfer",
+    "hash": "92d0bc9ff20a09eed2886d32f1102211"
+  },
+  {
+    "Date": "13 Feb 2025",
+    "Details": "TRANSFER FROM 4897736162097 - UPI/CR/504489620556/Mr NANAS/CBIN/nikhil.she/UPI",
+    "Debit": "-",
+    "Credit": "1100.00",
+    "Balance": "30361.73",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Mr NANAS CBIN",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "nikhil.she",
+      "transactionId": "504489620556"
+    },
+    "Category": "Transfer",
+    "hash": "13b7f8633fe4e876d109bd354102ceaf"
+  },
+  {
+    "Date": "14 Feb 2025",
+    "Details": "TRANSFER TO 4897695162091 - UPI/DR/504586057275/ALIABBAS/BA RB/aliabbas01/abbu No Debit",
+    "Debit": "10000.00",
+    "Credit": "-",
+    "Balance": "10156.73",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "ALIABBAS BA RB",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "abbu No Debit",
+      "transactionId": "504586057275"
+    },
+    "Category": "Transfer",
+    "hash": "4213dbcfc798fcbbcf894e38c5000977"
+  },
+  {
+    "Date": "14 Feb 2025",
+    "Details": "ATM CASH 9980 SATYAM KASHISH, KONDHWPUNE CITY",
+    "Debit": "9500.00",
+    "Credit": "-",
+    "Balance": "20156.73",
+    "ExtractedInfo": {
+      "type": "ATM Withdrawal",
+      "name": "SATYAM KASHISH, KONDHWPUNE CITY",
+      "service": "ATM Cash Withdrawal",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "9980",
+      "transactionId": ""
+    },
+    "Category": "Other",
+    "hash": "7be919c17f50f235698486c514d8d7f7"
+  },
+  {
+    "Date": "14 Feb 2025",
+    "Details": "TRANSFER TO 4897695162091 - UPI/DR/504561003301/PRAKASH /YESB/paytmqr5ct/tang",
+    "Debit": "170.00",
+    "Credit": "-",
+    "Balance": "29666.73",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "PRAKASH",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "tang",
+      "transactionId": "504561003301"
+    },
+    "Category": "Transfer",
+    "hash": "48b858fac7d34db8da827070c2bbb617"
+  },
+  {
+    "Date": "14 Feb 2025",
+    "Details": "TRANSFER TO 4897695162091 - UPI/DR/504577981649/JOHIRUL /YESB/q027940882/chick",
+    "Debit": "100.00",
+    "Credit": "-",
+    "Balance": "29836.73",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "JOHIRUL",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "chick",
+      "transactionId": "504577981649"
+    },
+    "Category": "Transfer",
+    "hash": "e80f7fb9b4f80ae42f7dc414617e0fab"
+  },
+  {
+    "Date": "14 Feb 2025",
+    "Details": "TRANSFER TO 4897695162091 - UPI/DR/504570782086/JUGESH K/YESB/paytm.s111/nimbu",
+    "Debit": "30.00",
+    "Credit": "-",
+    "Balance": "29936.73",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "JUGESH K",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "nimbu",
+      "transactionId": "504570782086"
+    },
+    "Category": "Transfer",
+    "hash": "0494dd7f4707e2df3792bafd23256bae"
+  },
+  {
+    "Date": "14 Feb 2025",
+    "Details": "TRANSFER TO 4897695162091 - UPI/DR/504515486956/MAHENDRA/Y ESB/paytmqr5xm/dahi",
+    "Debit": "20.00",
+    "Credit": "-",
+    "Balance": "29966.73",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "MAHENDRA Y ESB",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "dahi",
+      "transactionId": "504515486956"
+    },
+    "Category": "Transfer",
+    "hash": "e67af15a9d6753d5c49762a17c23b08d"
+  },
+  {
+    "Date": "14 Feb 2025",
+    "Details": "TRANSFER TO 4897695162091 - UPI/DR/504574625523/LAXMI MA/YESB/q099141967/banan",
+    "Debit": "20.00",
+    "Credit": "-",
+    "Balance": "29986.73",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "LAXMI MA",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "banan",
+      "transactionId": "504574625523"
+    },
+    "Category": "Transfer",
+    "hash": "2d5616837be560480492f844848a881e"
+  },
+  {
+    "Date": "14 Feb 2025",
+    "Details": "TRANSFER TO 4897695162091 - UPI/DR/504518479407/HARIOM S/YESB/q029738997/aalo",
+    "Debit": "10.00",
+    "Credit": "-",
+    "Balance": "29656.73",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "HARIOM S",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "aalo",
+      "transactionId": "504518479407"
+    },
+    "Category": "Transfer",
+    "hash": "cf46a74b1e3cefe80b4116d9b86ddc60"
+  },
+  {
+    "Date": "15 Feb 2025",
+    "Details": "TRANSFER TO 4897696162090 - UPI/DR/504612608960/MIR AALA/SBIN/mdnymky89@/sawa",
+    "Debit": "1500.00",
+    "Credit": "-",
+    "Balance": "8656.73",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "MIR AALA",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "SBIN",
+      "reference": "sawa",
+      "transactionId": "504612608960"
+    },
+    "Category": "Transfer",
+    "hash": "29a2e0e83b25910a4136fff0f0b01307"
+  },
+  {
+    "Date": "16 Feb 2025",
+    "Details": "ATM CASH 149 SATYAM KASHISH, KONDHWPUNE CITY",
+    "Debit": "3000.00",
+    "Credit": "-",
+    "Balance": "5656.73",
+    "ExtractedInfo": {
+      "type": "ATM Withdrawal",
+      "name": "SATYAM KASHISH, KONDHWPUNE CITY",
+      "service": "ATM Cash Withdrawal",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "149",
+      "transactionId": ""
+    },
+    "Category": "Other",
+    "hash": "42f88bd118b086a9eb650fc9b70628bb"
+  },
+  {
+    "Date": "16 Feb 2025",
+    "Details": "TRANSFER TO 4897690162095 - UPI/DR/504704456734/ISRAR BAIG/INDB/bajajpay.6/bir",
+    "Debit": "400.00",
+    "Credit": "-",
+    "Balance": "5046.73",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "ISRAR BAIG",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "INDB",
+      "reference": "bir",
+      "transactionId": "504704456734"
+    },
+    "Category": "Transfer",
+    "hash": "6efe35f454644299c453ba924a87e8af"
+  },
+  {
+    "Date": "16 Feb 2025",
+    "Details": "TRANSFER TO 4897690162095 - UPI/DR/504773861152/ROYAL SN/UTIB/gpay-11241/snook",
+    "Debit": "150.00",
+    "Credit": "-",
+    "Balance": "5506.73",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "ROYAL SN",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "UTIB",
+      "reference": "snook",
+      "transactionId": "504773861152"
+    },
+    "Category": "Transfer",
+    "hash": "0fbad27437c075b53e1256a950af45e6"
+  },
+  {
+    "Date": "16 Feb 2025",
+    "Details": "TRANSFER TO 4897690162095 - UPI/DR/504788958020/MOHAMMED/ YESB/paytmqr5vx/chick",
+    "Debit": "60.00",
+    "Credit": "-",
+    "Balance": "5446.73",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "MOHAMMED",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "chick",
+      "transactionId": "504788958020"
+    },
+    "Category": "Transfer",
+    "hash": "12e3fafd04ba22364d3ede756145328c"
+  },
+  {
+    "Date": "20 Feb 2025",
+    "Details": "TRANSFER TO 4897694162092 - UPI/DR/505177119515/MANTHAN /YESB/paytmqrils/met p",
+    "Debit": "135.00",
+    "Credit": "-",
+    "Balance": "4911.73",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "MANTHAN",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "met p",
+      "transactionId": "505177119515"
+    },
+    "Category": "Transfer",
+    "hash": "ed28676fb7256049a33a49c8a47d50e7"
+  },
+  {
+    "Date": "20 Feb 2025",
+    "Details": "TRANSFER TO 4897694162092 - UPI/DR/505194616466/SAMADHAN/U TIB/gpay-11180/Pani",
+    "Debit": "40.00",
+    "Credit": "-",
+    "Balance": "4851.73",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SAMADHAN U TIB",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "Pani",
+      "transactionId": "505194616466"
+    },
+    "Category": "Transfer",
+    "hash": "5ca2869ff5a4e81ccf6fad2bdb907068"
+  },
+  {
+    "Date": "20 Feb 2025",
+    "Details": "TRANSFER TO 4897694162092 - UPI/DR/541727360213/MAHENDRA/Y ESB/paytmqr5o3/dahi",
+    "Debit": "20.00",
+    "Credit": "-",
+    "Balance": "4891.73",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "MAHENDRA Y ESB",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "dahi",
+      "transactionId": "541727360213"
+    },
+    "Category": "Transfer",
+    "hash": "ddb3aa3b3569ed10a0de734b97a534b8"
+  },
+  {
+    "Date": "20 Feb 2025",
+    "Details": "TRANSFER TO 4897694162092 - UPI/DR/505197023868/SHREENAT/U TIB/9545935050/UPI",
+    "Debit": "10.00",
+    "Credit": "-",
+    "Balance": "4841.73",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SHREENAT U TIB",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "9545935050",
+      "transactionId": "505197023868"
+    },
+    "Category": "Transfer",
+    "hash": "52c3cc41e4e3c60fa1301791602210ff"
+  },
+  {
+    "Date": "21 Feb 2025",
+    "Details": "TRANSFER TO 4897695162091 - UPI/DR/541875742068/ARUN KIS/HDFC/8308580396/cab",
+    "Debit": "262.00",
+    "Credit": "-",
+    "Balance": "4574.73",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "ARUN KIS",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "HDFC",
+      "reference": "cab",
+      "transactionId": "541875742068"
+    },
+    "Category": "Transportation",
+    "hash": "a46b35d13ceb45830760118bb1f0ec2a"
+  },
+  {
+    "Date": "21 Feb 2025",
+    "Details": "TRANSFER TO 4897695162091 - UPI/DR/505214610872/PMPML/CBIN/ 004.141.pm/141",
+    "Debit": "5.00",
+    "Credit": "-",
+    "Balance": "4836.73",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "PMPML CBIN",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "141",
+      "transactionId": "505214610872"
+    },
+    "Category": "Transfer",
+    "hash": "d6c9679ef7bfcaa39081d37d0e71b26e"
+  },
+  {
+    "Date": "22 Feb 2025",
+    "Details": "TRANSFER TO 4897696162090 - UPI/DR/541941159883/SAMADHAN/U TIB/gpay-11180/bhel",
+    "Debit": "90.00",
+    "Credit": "-",
+    "Balance": "4484.73",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SAMADHAN U TIB",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "bhel",
+      "transactionId": "541941159883"
+    },
+    "Category": "Transfer",
+    "hash": "9a8eade863ed0d16d202c5c2a1658a2b"
+  },
+  {
+    "Date": "23 Feb 2025",
+    "Details": "TRANSFER TO 4897690162095 - UPI/DR/505462348924/JITENDRA/YE SB/q323918382/light",
+    "Debit": "120.00",
+    "Credit": "-",
+    "Balance": "4364.73",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "JITENDRA YE SB",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "light",
+      "transactionId": "505462348924"
+    },
+    "Category": "Transfer",
+    "hash": "c0de45547cf7ac62083130b92c63a70e"
+  },
+  {
+    "Date": "24 Feb 2025",
+    "Details": "TRANSFER TO 4897691162095 - UPI/DR/542191525231/Mrs. PAR/MAHB/shaikhparv/ammi",
+    "Debit": "2000.00",
+    "Credit": "-",
+    "Balance": "1865.73",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Mrs. PAR MAHB",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "ammi",
+      "transactionId": "542191525231"
+    },
+    "Category": "Transfer",
+    "hash": "6cd7d9e1d705c1272efb0f2cba6dc2a4"
+  },
+  {
+    "Date": "24 Feb 2025",
+    "Details": "TRANSFER TO 4897691162095 - UPI/DR/505561167958/BILAL NA/YESB/paytmqrt5l/shoes No Debit",
+    "Debit": "500.00",
+    "Credit": "-",
+    "Balance": "3864.73",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "BILAL NA",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "shoes No Debit",
+      "transactionId": "505561167958"
+    },
+    "Category": "Transfer",
+    "hash": "f37f394313bd0627336cec27e3a246e3"
+  },
+  {
+    "Date": "24 Feb 2025",
+    "Details": "TRANSFER FROM 4897733162090 - UPI/CR/505552716604/Mrs PARV/MAHB/shaikhparv/UPI",
+    "Debit": "-",
+    "Credit": "1.00",
+    "Balance": "3865.73",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Mrs PARV MAHB",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "shaikhparv",
+      "transactionId": "505552716604"
+    },
+    "Category": "Transfer",
+    "hash": "264550ac80de6308a85b612681e82870"
+  },
+  {
+    "Date": "25 Feb 2025",
+    "Details": "TRANSFER TO 4897692162094 - UPI/DR/505698939172/TAUSIF N/ICIC/stausif575/UPI",
+    "Debit": "500.00",
+    "Credit": "-",
+    "Balance": "1365.73",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "TAUSIF N",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "ICIC",
+      "reference": "stausif575",
+      "transactionId": "505698939172"
+    },
+    "Category": "Transfer",
+    "hash": "7462385854afb43a4dd68f6de0c04aa2"
+  },
+  {
+    "Date": "25 Feb 2025",
+    "Details": "TRANSFER TO 4897692162094 - UPI/DR/505634258642/MAHENDRA/Y ESB/paytmqr5xm/dahi",
+    "Debit": "20.00",
+    "Credit": "-",
+    "Balance": "1345.73",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "MAHENDRA Y ESB",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "dahi",
+      "transactionId": "505634258642"
+    },
+    "Category": "Transfer",
+    "hash": "8de78bdd72b260ba00d1631f1b97557b"
+  },
+  {
+    "Date": "01 Mar 2025",
+    "Details": "TRANSFER TO 4897696162090 - UPI/DR/506068470621/AVENUE S/ICIC/pinedmartm/UPI",
+    "Debit": "449.00",
+    "Credit": "-",
+    "Balance": "896.73",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "AVENUE S",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "ICIC",
+      "reference": "pinedmartm",
+      "transactionId": "506068470621"
+    },
+    "Category": "Transfer",
+    "hash": "1a1892a33a5cc1fbf9527ebfafd0b12e"
+  },
+  {
+    "Date": "02 Mar 2025",
+    "Details": "TRANSFER TO 4897690162095 - UPI/DR/542733309626/WELLNESS/Y ESB/wellnessfo/Payme",
+    "Debit": "132.96",
+    "Credit": "-",
+    "Balance": "763.77",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "WELLNESS Y ESB",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "Payme",
+      "transactionId": "542733309626"
+    },
+    "Category": "Transfer",
+    "hash": "641dde517ff0284d5fc900e02e1e37a9"
+  },
+  {
+    "Date": "03 Mar 2025",
+    "Details": "TRANSFER FROM 4698211044309 - NEFT*UTIB0000070*AXISP00626009 837*BEE LOGICAL SOFT",
+    "Debit": "27350.00",
+    "Credit": "-",
+    "Balance": "28111.77",
+    "ExtractedInfo": {
+      "type": "Bank Transfer",
+      "name": "NEFT*UTIB0000070*AXISP00626009 837*BEE LOGICAL SOFT",
+      "service": "Incoming Transfer",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "4698211044309",
+      "transactionId": ""
+    },
+    "Category": "Transfer",
+    "hash": "1279b008a9eb81093600ec29f50bd370"
+  },
+  {
+    "Date": "03 Mar 2025",
+    "Details": "TRANSFER TO 4897691162095 - UPI/DR/542882392790/DUMMY NAME/barb/3216010002/tra",
+    "Debit": "1000.00",
+    "Credit": "-",
+    "Balance": "28711.77",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "DUMMY NAME",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "BARB",
+      "reference": "tra",
+      "transactionId": "542882392790"
+    },
+    "Category": "Transfer",
+    "hash": "38b3362920e6b5c22f115bdb219a8dfc"
+  },
+  {
+    "Date": "03 Mar 2025",
+    "Details": "TRANSFER TO 4897691162095 - UPI/DR/506277118813/SAIRA SA/YESB/q839998868/Xerox",
+    "Debit": "2.00",
+    "Credit": "-",
+    "Balance": "761.77",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SAIRA SA",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "Xerox",
+      "transactionId": "506277118813"
+    },
+    "Category": "Transfer",
+    "hash": "6e54f408fdabd5ab48957afe5c138dfe"
+  },
+  {
+    "Date": "03 Mar 2025",
+    "Details": "TRANSFER FROM 4897733162090 - UPI/CR/542816688245/LATA PAN/UTIB/latakamble/UPI",
+    "Debit": "-",
+    "Credit": "1600.00",
+    "Balance": "29711.77",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "LATA PAN",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "UTIB",
+      "reference": "latakamble",
+      "transactionId": "542816688245"
+    },
+    "Category": "Transfer",
+    "hash": "1fbb0ec66ef092177180853b32f3afd7"
+  },
+  {
+    "Date": "04 Mar 2025",
+    "Details": "TRANSFER TO 4897692162094 - UPI/DR/506313646350/BHARAT K/YESB/paytmqr65u/jira",
+    "Debit": "10.00",
+    "Credit": "-",
+    "Balance": "28701.77",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "BHARAT K",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "jira",
+      "transactionId": "506313646350"
+    },
+    "Category": "Transfer",
+    "hash": "379f32c2084d6a6b0b9af478ba2bb0b8"
+  },
+  {
+    "Date": "04 Mar 2025",
+    "Details": "TRANSFER TO 4897692162094 - UPI/DR/506325237319/SAIRA SA/YESB/q839998868/Xerox",
+    "Debit": "8.00",
+    "Credit": "-",
+    "Balance": "28693.77",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SAIRA SA",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "Xerox",
+      "transactionId": "506325237319"
+    },
+    "Category": "Transfer",
+    "hash": "0840e331d5bb917b931f34c1fc97a435"
+  },
+  {
+    "Date": "04 Mar 2025",
+    "Details": "TRANSFER FROM 4897734162099 - UPI/CR/506365783333/AYESHA A/BARB/shkaisha47/UPI",
+    "Debit": "-",
+    "Credit": "500.00",
+    "Balance": "29193.77",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "AYESHA A",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "BARB",
+      "reference": "shkaisha47",
+      "transactionId": "506365783333"
+    },
+    "Category": "Transfer",
+    "hash": "feb3b4c17ff112fc352ea14d9671e47d"
+  },
+  {
+    "Date": "05 Mar 2025",
+    "Details": "ATM CASH 1638 SATYAM KASHISH, KONDHWPUNE CITY No Debit",
+    "Debit": "20000.00",
+    "Credit": "-",
+    "Balance": "9193.77",
+    "ExtractedInfo": {
+      "type": "ATM Withdrawal",
+      "name": "SATYAM KASHISH, KONDHWPUNE CITY",
+      "service": "ATM Cash Withdrawal",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "1638",
+      "transactionId": ""
+    },
+    "Category": "Other",
+    "hash": "6bf1f7a0934dc5542817a314581675d6"
+  },
+  {
+    "Date": "05 Mar 2025",
+    "Details": "ATM CASH 1639 SATYAM KASHISH, KONDHWPUNE CITY",
+    "Debit": "1500.00",
+    "Credit": "-",
+    "Balance": "7693.77",
+    "ExtractedInfo": {
+      "type": "ATM Withdrawal",
+      "name": "SATYAM KASHISH, KONDHWPUNE CITY",
+      "service": "ATM Cash Withdrawal",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "1639",
+      "transactionId": ""
+    },
+    "Category": "Other",
+    "hash": "7e8e8611d76903154320101c70c0c9c2"
+  },
+  {
+    "Date": "06 Mar 2025",
+    "Details": "TRANSFER TO 4897694162092 - UPI/DR/506515856578/VISHRAM /YESB/q318152064/straw",
+    "Debit": "100.00",
+    "Credit": "-",
+    "Balance": "7593.77",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "VISHRAM",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "straw",
+      "transactionId": "506515856578"
+    },
+    "Category": "Transfer",
+    "hash": "a58755648132d78bb3ecd1c86c6d0bbb"
+  },
+  {
+    "Date": "07 Mar 2025",
+    "Details": "TRANSFER FROM 4897737162096 - UPI/CR/543239782761/SHEHNAZ /FDRL/shehnazfar/UPI",
+    "Debit": "-",
+    "Credit": "19999.00",
+    "Balance": "27593.77",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SHEHNAZ",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "FDRL",
+      "reference": "shehnazfar",
+      "transactionId": "543239782761"
+    },
+    "Category": "Transfer",
+    "hash": "f547a924dca2bd66c869a0c6bb49e694"
+  },
+  {
+    "Date": "07 Mar 2025",
+    "Details": "TRANSFER FROM 4897737162096 - UPI/CR/506697175735/ALIABBAS/BA RB/aliabbas01/UPI",
+    "Debit": "-",
+    "Credit": "3000.00",
+    "Balance": "30593.77",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "ALIABBAS BA RB",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "aliabbas01",
+      "transactionId": "506697175735"
+    },
+    "Category": "Transfer",
+    "hash": "952ae96cb67be95eabf9051cae4d4bb7"
+  },
+  {
+    "Date": "07 Mar 2025",
+    "Details": "TRANSFER FROM 4897737162096 - UPI/CR/543264978107/SHEHNAZ /FDRL/shehnazfar/UPI",
+    "Debit": "-",
+    "Credit": "1.00",
+    "Balance": "7594.77",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SHEHNAZ",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "FDRL",
+      "reference": "shehnazfar",
+      "transactionId": "543264978107"
+    },
+    "Category": "Transfer",
+    "hash": "6cf161ce792ccde24fee1370f6e59455"
+  },
+  {
+    "Date": "08 Mar 2025",
+    "Details": "ATM CASH 50672 FATIMA NAGAR PUNE",
+    "Debit": "2000.00",
+    "Credit": "-",
+    "Balance": "26455.77",
+    "ExtractedInfo": {
+      "type": "ATM Withdrawal",
+      "name": "FATIMA NAGAR PUNE",
+      "service": "ATM Cash Withdrawal",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "50672",
+      "transactionId": ""
+    },
+    "Category": "Other",
+    "hash": "cf65454f61139c00d4226437b79196f7"
+  },
+  {
+    "Date": "08 Mar 2025",
+    "Details": "TRANSFER TO 4897696162090 - UPI/DR/543393203039/stausif5/ICIC/s tausif575/abbu",
+    "Debit": "2000.00",
+    "Credit": "-",
+    "Balance": "28513.77",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "abbu",
+      "transactionId": "543393203039"
+    },
+    "Category": "Transfer",
+    "hash": "97b4420e6ba8c59363416efc3fa792a4"
+  },
+  {
+    "Date": "08 Mar 2025",
+    "Details": "TRANSFER TO 4897696162090 - UPI/DR/543396697067/NUR ISALAM/INDB/bajajpay.6/Sch",
+    "Debit": "80.00",
+    "Credit": "-",
+    "Balance": "30513.77",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "NUR ISALAM",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "INDB",
+      "reference": "Sch",
+      "transactionId": "543396697067"
+    },
+    "Category": "Transfer",
+    "hash": "cbe54d6c7c64eb86ba4fbd3bb610ea45"
+  },
+  {
+    "Date": "08 Mar 2025",
+    "Details": "TRANSFER TO 4897696162090 - UPI/DR/506768760596/JAFAR IQ/KKBK/jafarbagwa/auto",
+    "Debit": "45.00",
+    "Credit": "-",
+    "Balance": "26398.77",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "JAFAR IQ",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "KKBK",
+      "reference": "auto",
+      "transactionId": "506768760596"
+    },
+    "Category": "Transportation",
+    "hash": "91d3002fb3c5603f4f155bda0a8f2afb"
+  },
+  {
+    "Date": "08 Mar 2025",
+    "Details": "TRANSFER TO 4897696162090 - UPI/DR/506725766636/PRAKASH /YESB/paytmqr5ct/fruti",
+    "Debit": "30.00",
+    "Credit": "-",
+    "Balance": "28455.77",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "PRAKASH",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "fruti",
+      "transactionId": "506725766636"
+    },
+    "Category": "Transfer",
+    "hash": "a22cfe54f9b2a6f5f2d60b42314c037e"
+  },
+  {
+    "Date": "08 Mar 2025",
+    "Details": "TRANSFER TO 4897696162090 - UPI/DR/506759164420/JAGDISHC/YE SB/q816444328/kotmi",
+    "Debit": "20.00",
+    "Credit": "-",
+    "Balance": "28493.77",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "JAGDISHC YE SB",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "kotmi",
+      "transactionId": "506759164420"
+    },
+    "Category": "Transfer",
+    "hash": "788f6bed906a1c4ae36a93b01f682f6f"
+  },
+  {
+    "Date": "08 Mar 2025",
+    "Details": "TRANSFER TO 4897696162090 - UPI/DR/506763341688/CARE PLU/YESB/q196876173/dolo",
+    "Debit": "12.00",
+    "Credit": "-",
+    "Balance": "26443.77",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "CARE PLU",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "dolo",
+      "transactionId": "506763341688"
+    },
+    "Category": "Transfer",
+    "hash": "2309bc0aa6c6dddf067bc720394cb065"
+  },
+  {
+    "Date": "08 Mar 2025",
+    "Details": "TRANSFER TO 4897696162090 - UPI/DR/543319400908/PRAKASH /YESB/paytmqr5ct/UPI",
+    "Debit": "8.00",
+    "Credit": "-",
+    "Balance": "28485.77",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "PRAKASH",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "paytmqr5ct",
+      "transactionId": "543319400908"
+    },
+    "Category": "Transfer",
+    "hash": "ac45b63c13baf2390145a7aa48b13a32"
+  },
+  {
+    "Date": "09 Mar 2025",
+    "Details": "TRANSFER TO 4897690162095 - UPI/DR/506893690490/MEHREEN /BARB/mehreenkhu/bissi No Debit",
+    "Debit": "10000.00",
+    "Credit": "-",
+    "Balance": "16398.77",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "MEHREEN",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "BARB",
+      "reference": "bissi No Debit",
+      "transactionId": "506893690490"
+    },
+    "Category": "Transfer",
+    "hash": "8ea76186d1fafd45eac29b3723b06bb7"
+  },
+  {
+    "Date": "09 Mar 2025",
+    "Details": "TRANSFER TO 4897690162095 - UPI/DR/543410932534/mehreenk/BA RB/mehreenkhu/bissi",
+    "Debit": "1000.00",
+    "Credit": "-",
+    "Balance": "15398.77",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "bissi",
+      "transactionId": "543410932534"
+    },
+    "Category": "Transfer",
+    "hash": "9c3c708d514ae411866f4b3316448d32"
+  },
+  {
+    "Date": "09 Mar 2025",
+    "Details": "TRANSFER TO 4897690162095 - UPI/DR/543404969459/SALEEM M/KKBK/amzn002660/UPI",
+    "Debit": "50.00",
+    "Credit": "-",
+    "Balance": "15348.77",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SALEEM M",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "KKBK",
+      "reference": "amzn002660",
+      "transactionId": "543404969459"
+    },
+    "Category": "Transfer",
+    "hash": "97ddc5e2dfade9aade4eafc41c5c4513"
+  },
+  {
+    "Date": "10 Mar 2025",
+    "Details": "TRANSFER TO 4897691162095 - UPI/DR/543503584495/Wellness/YES B/wellnessfo/Payme",
+    "Debit": "132.96",
+    "Credit": "-",
+    "Balance": "15215.81",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Wellness YES B",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "Payme",
+      "transactionId": "543503584495"
+    },
+    "Category": "Transfer",
+    "hash": "ac1fed0ff0b08f657d80638c56be489f"
+  },
+  {
+    "Date": "10 Mar 2025",
+    "Details": "TRANSFER TO 4897691162095 - UPI/DR/506992231259/VikashKu/YES B/paytmqr677/groce Please do not share your ATM, Debit/Credit card number, PIN and OTP with anyone over mail, SMS, phone call or any other media. Bank never ask for such information.",
+    "Debit": "35.00",
+    "Credit": "-",
+    "Balance": "15150.81",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "VikashKu YES B",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "Credit card number, PIN and OTP with anyone over mail, SMS, phone call or any other media. Bank never ask for such information.",
+      "transactionId": "506992231259"
+    },
+    "Category": "Income",
+    "hash": "acb0113dd48c36ada2d8976142502b41"
+  },
+  {
+    "Date": "10 Mar 2025",
+    "Details": "TRANSFER TO 4897691162095 - UPI/DR/506982531447/MAHENDRA/Y ESB/paytmqr68y/dahi",
+    "Debit": "30.00",
+    "Credit": "-",
+    "Balance": "15185.81",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "MAHENDRA Y ESB",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "dahi",
+      "transactionId": "506982531447"
+    },
+    "Category": "Transfer",
+    "hash": "2dfee87262ab50ebe5f48fcf3d8344e0"
+  },
+  {
+    "Date": "01 Jul 2025",
+    "Details": "TRANSFER FROM 99509044300 - NEFT*UTIB0000070*AXISP00684760 584*BEE LOGICAL SOFT",
+    "Debit": "43262.00",
+    "Credit": "-",
+    "Balance": "45412.18",
+    "ExtractedInfo": {
+      "type": "Bank Transfer",
+      "name": "NEFT*UTIB0000070*AXISP00684760 584*BEE LOGICAL SOFT",
+      "service": "Incoming Transfer",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "99509044300",
+      "transactionId": ""
+    },
+    "Category": "Transfer",
+    "hash": "36fa03085f4a7e704a2621b9bcc6f08e"
+  },
+  {
+    "Date": "02 Jul 2025",
+    "Details": "TRANSFER TO 4897693162093 - UPI/DR/518309839975/DUMMY NAME/barb/3216010002/sip",
+    "Debit": "1500.00",
+    "Credit": "-",
+    "Balance": "43912.18",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "DUMMY NAME",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "BARB",
+      "reference": "sip",
+      "transactionId": "518309839975"
+    },
+    "Category": "Transfer",
+    "hash": "d50988085cc43713d97f2affad108091"
+  },
+  {
+    "Date": "03 Jul 2025",
+    "Details": "TRANSFER TO 4897694162092 - UPI/DR/518468003897/NEW BADH/YESB/q871810046/gulab No Debit",
+    "Debit": "140.00",
+    "Credit": "-",
+    "Balance": "21772.18",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "NEW BADH",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "gulab No Debit",
+      "transactionId": "518468003897"
+    },
+    "Category": "Transfer",
+    "hash": "4a8faf2137cd0f052bb417d9fe3205d0"
+  },
+  {
+    "Date": "03 Jul 2025",
+    "Details": "TRANSFER TO 4897694162092 - UPI/DR/518426590563/PRADIP K/SBIN/9763179290/UPI",
+    "Debit": "88.00",
+    "Credit": "-",
+    "Balance": "23684.18",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "PRADIP K",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "SBIN",
+      "reference": "9763179290",
+      "transactionId": "518426590563"
+    },
+    "Category": "Transfer",
+    "hash": "129a5c04b6e802911b5a4f3214bafda9"
+  },
+  {
+    "Date": "03 Jul 2025",
+    "Details": "TRANSFER TO 4897694162092 - UPI/DR/518476333359/ASHA UTT/JSFB/shindeutta/auto",
+    "Debit": "81.91",
+    "Credit": "-",
+    "Balance": "23602.27",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "ASHA UTT JSFB",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "auto",
+      "transactionId": "518476333359"
+    },
+    "Category": "Transportation",
+    "hash": "74702553a51fe19c663d9918a03e1ce8"
+  },
+  {
+    "Date": "03 Jul 2025",
+    "Details": "TRANSFER TO 4897694162092 - UPI/DR/518402332340/SAMADHAN/U TIB/gpay-11180/panip",
+    "Debit": "30.00",
+    "Credit": "-",
+    "Balance": "23772.27",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SAMADHAN U TIB",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "panip",
+      "transactionId": "518402332340"
+    },
+    "Category": "Transfer",
+    "hash": "a10b4d6a2338cbe4e3f89159dc598825"
+  },
+  {
+    "Date": "03 Jul 2025",
+    "Details": "TRANSFER FROM 4897736162097 - UPI/CR/107459710587/NITESH S/HDFC/nitesh.paw/UPI",
+    "Debit": "-",
+    "Credit": "2000.00",
+    "Balance": "23772.18",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "NITESH S",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "HDFC",
+      "reference": "nitesh.paw",
+      "transactionId": "107459710587"
+    },
+    "Category": "Transfer",
+    "hash": "b68e2413aafeb77800ba7a960287734d"
+  },
+  {
+    "Date": "03 Jul 2025",
+    "Details": "TRANSFER FROM 4897736162097 - UPI/CR/518483522938/Faiza Fe/SBIN/faizasheik/UPI",
+    "Debit": "-",
+    "Credit": "200.00",
+    "Balance": "23802.27",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Faiza Fe",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "SBIN",
+      "reference": "faizasheik",
+      "transactionId": "518483522938"
+    },
+    "Category": "Transfer",
+    "hash": "f1fdada72f8d928fb3df93ee27b51e97"
+  },
+  {
+    "Date": "04 Jul 2025",
+    "Details": "TRANSFER TO 4897695162091 - UPI/DR/518530477353/SANA FAR/BKID/sana.faroo/Ariz",
+    "Debit": "500.00",
+    "Credit": "-",
+    "Balance": "23322.27",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SANA FAR BKID",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "Ariz",
+      "transactionId": "518530477353"
+    },
+    "Category": "Transfer",
+    "hash": "77f05611a931b8229d15aaf501e09e1f"
+  },
+  {
+    "Date": "04 Jul 2025",
+    "Details": "TRANSFER TO 4897695162091 - UPI/DR/518570888470/SNEHA PR/YESB/paytmqr1if/eno",
+    "Debit": "7.00",
+    "Credit": "-",
+    "Balance": "23715.27",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SNEHA PR",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "eno",
+      "transactionId": "518570888470"
+    },
+    "Category": "Transfer",
+    "hash": "1a7b3c0f9fcc4d121144d18e4033e3c4"
+  },
+  {
+    "Date": "04 Jul 2025",
+    "Details": "TRANSFER FROM 4897737162096 - UPI/CR/555180199738/Mr NANAS/CBIN/nikhil.she/UPI",
+    "Debit": "-",
+    "Credit": "400.00",
+    "Balance": "23722.27",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Mr NANAS CBIN",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "nikhil.she",
+      "transactionId": "555180199738"
+    },
+    "Category": "Transfer",
+    "hash": "479f3aeb0a62ded3de836e9b9e74b8d5"
+  },
+  {
+    "Date": "04 Jul 2025",
+    "Details": "TRANSFER FROM 4897737162096 - UPI/CR/555134067249/SANA FAR/BKID/sana.faroo/sadqa",
+    "Debit": "-",
+    "Credit": "50.00",
+    "Balance": "23822.27",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SANA FAR BKID",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "sadqa",
+      "transactionId": "555134067249"
+    },
+    "Category": "Transfer",
+    "hash": "641e72c15fb78d5264558ebcde1c60bf"
+  },
+  {
+    "Date": "05 Jul 2025",
+    "Details": "ATM CASH 51861 FATIMA NAGAR PUNE",
+    "Debit": "5000.00",
+    "Credit": "-",
+    "Balance": "18715.27",
+    "ExtractedInfo": {
+      "type": "ATM Withdrawal",
+      "name": "FATIMA NAGAR PUNE",
+      "service": "ATM Cash Withdrawal",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "51861",
+      "transactionId": ""
+    },
+    "Category": "Other",
+    "hash": "c62125d55c09bd86a2428480bad5c057"
+  },
+  {
+    "Date": "05 Jul 2025",
+    "Details": "TRANSFER TO 4897696162090 - UPI/DR/518628498437/IMRAN RA/UBIN/imran.path/Abdul",
+    "Debit": "1000.00",
+    "Credit": "-",
+    "Balance": "19540.27",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "IMRAN RA",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "UBIN",
+      "reference": "Abdul",
+      "transactionId": "518628498437"
+    },
+    "Category": "Transfer",
+    "hash": "723a5650382c8104485794afc8a3591f"
+  },
+  {
+    "Date": "05 Jul 2025",
+    "Details": "TRANSFER TO 4897696162090 - UPI/DR/518615292059/SHAIKH A/YESB/q911528892/samos",
+    "Debit": "100.00",
+    "Credit": "-",
+    "Balance": "18570.27",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SHAIKH A",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "samos",
+      "transactionId": "518615292059"
+    },
+    "Category": "Transfer",
+    "hash": "2a760a72114fdbf7be31a92c2e5e50c5"
+  },
+  {
+    "Date": "05 Jul 2025",
+    "Details": "TRANSFER TO 4897696162090 - UPI/DR/518617044533/MANTHAN /YESB/paytmqr62x/cosme",
+    "Debit": "45.00",
+    "Credit": "-",
+    "Balance": "18670.27",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "MANTHAN",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "cosme",
+      "transactionId": "518617044533"
+    },
+    "Category": "Transfer",
+    "hash": "bb73ea189c3727cf50b379f5b0d4867c"
+  },
+  {
+    "Date": "05 Jul 2025",
+    "Details": "TRANSFER TO 4897696162090 - UPI/DR/518699673965/IMRAN NA/YESB/paytmqr6km/panip",
+    "Debit": "30.00",
+    "Credit": "-",
+    "Balance": "18540.27",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "IMRAN NA",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "panip",
+      "transactionId": "518699673965"
+    },
+    "Category": "Transfer",
+    "hash": "6f89ba93f588624a3b877558b795dd44"
+  },
+  {
+    "Date": "05 Jul 2025",
+    "Details": "TRANSFER FROM 4897738162095 - UPI/CR/518627229661/Aniket S/SBIN/aniketmore/UPI No Debit",
+    "Debit": "-",
+    "Credit": "2000.00",
+    "Balance": "20540.27",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Aniket S",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "SBIN",
+      "reference": "aniketmore",
+      "transactionId": "518627229661"
+    },
+    "Category": "Transfer",
+    "hash": "06a568ec4b6191ed15611adecb5eff51"
+  },
+  {
+    "Date": "06 Jul 2025",
+    "Details": "ATM CASH 51871 MEETA NAGAR BAZAAR KO PUNE",
+    "Debit": "2000.00",
+    "Credit": "-",
+    "Balance": "17540.27",
+    "ExtractedInfo": {
+      "type": "ATM Withdrawal",
+      "name": "MEETA NAGAR BAZAAR KO PUNE",
+      "service": "ATM Cash Withdrawal",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "51871",
+      "transactionId": ""
+    },
+    "Category": "Other",
+    "hash": "c2c368eb7dfd98e5c8d00cc9eb8530bd"
+  },
+  {
+    "Date": "06 Jul 2025",
+    "Details": "TRANSFER TO 4897690162095 - UPI/DR/518732349720/Amazon B/UTIB/amazonpayr/Reque",
+    "Debit": "299.00",
+    "Credit": "-",
+    "Balance": "19540.27",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Amazon B",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "UTIB",
+      "reference": "Reque",
+      "transactionId": "518732349720"
+    },
+    "Category": "Shopping",
+    "hash": "abc64f53da325a4af4e295fae4c8d545"
+  },
+  {
+    "Date": "06 Jul 2025",
+    "Details": "TRANSFER TO 4897690162095 - UPI/DR/555399584455/MANTHAN /YESB/paytmqr5o3/itrac",
+    "Debit": "170.00",
+    "Credit": "-",
+    "Balance": "17340.15",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "MANTHAN",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "itrac",
+      "transactionId": "555399584455"
+    },
+    "Category": "Transfer",
+    "hash": "c70c4fcbed5a74a48a269149b2196548"
+  },
+  {
+    "Date": "06 Jul 2025",
+    "Details": "TRANSFER TO 4897690162095 - UPI/DR/518746002026/Firdos A/YESB/paytm.s1io/idle",
+    "Debit": "80.00",
+    "Credit": "-",
+    "Balance": "17460.27",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Firdos A",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "idle",
+      "transactionId": "518746002026"
+    },
+    "Category": "Transfer",
+    "hash": "da64cf2454adde8e83a1ab631e4d1b13"
+  },
+  {
+    "Date": "06 Jul 2025",
+    "Details": "TRANSFER TO 4897690162095 - UPI/DR/555339233899/MASUDEV /KKBK/m.kamble26/cab",
+    "Debit": "50.12",
+    "Credit": "-",
+    "Balance": "17510.15",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "MASUDEV",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "KKBK",
+      "reference": "cab",
+      "transactionId": "555339233899"
+    },
+    "Category": "Transportation",
+    "hash": "5f1b031256eb6d01e3482e3ec6885a4d"
+  },
+  {
+    "Date": "06 Jul 2025",
+    "Details": "TRANSFER FROM 4897732162091 - UPI/CR/518764994460/AYESHA A/BARB/shkaisha47/UPI",
+    "Debit": "-",
+    "Credit": "299.00",
+    "Balance": "19839.27",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "AYESHA A",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "BARB",
+      "reference": "shkaisha47",
+      "transactionId": "518764994460"
+    },
+    "Category": "Transfer",
+    "hash": "f50f61d7e690c661e1c0da272ae05360"
+  },
+  {
+    "Date": "06 Jul 2025",
+    "Details": "TRANSFER FROM 4897732162091 - UPI/CR/555350442366/SANA FAR/BKID/sana.faroo/sadqa",
+    "Debit": "-",
+    "Credit": "100.00",
+    "Balance": "17560.27",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SANA FAR BKID",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "sadqa",
+      "transactionId": "555350442366"
+    },
+    "Category": "Transfer",
+    "hash": "288f3081aa59417af41c3ae265ff9073"
+  },
+  {
+    "Date": "07 Jul 2025",
+    "Details": "TRANSFER TO 4897691162095 - UPI/DR/518843673646/Mahbub /SBIN/mk2753317-/Abdul",
+    "Debit": "1000.00",
+    "Credit": "-",
+    "Balance": "15939.15",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Mahbub",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "SBIN",
+      "reference": "Abdul",
+      "transactionId": "518843673646"
+    },
+    "Category": "Transfer",
+    "hash": "daa6dd1c21b94a53516b972746a467aa"
+  },
+  {
+    "Date": "07 Jul 2025",
+    "Details": "TRANSFER TO 4897691162095 - UPI/DR/518834390942/Amazon P/RATN/amazonpayb/Reque",
+    "Debit": "401.00",
+    "Credit": "-",
+    "Balance": "16939.15",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Amazon P",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "RATN",
+      "reference": "Reque",
+      "transactionId": "518834390942"
+    },
+    "Category": "Shopping",
+    "hash": "de66e1ea597618707655af9169154ea7"
+  },
+  {
+    "Date": "08 Jul 2025",
+    "Details": "TRANSFER TO 4897692162094 - UPI/DR/107771745061/AYESHA A/BARB/shkaisha47/UPI",
+    "Debit": "2000.00",
+    "Credit": "-",
+    "Balance": "13939.15",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "AYESHA A",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "BARB",
+      "reference": "shkaisha47",
+      "transactionId": "107771745061"
+    },
+    "Category": "Transfer",
+    "hash": "1fe720e7876b5d10a2b970f6f462cb96"
+  },
+  {
+    "Date": "08 Jul 2025",
+    "Details": "TRANSFER TO 4897692162094 - UPI/DR/555511267124/ZAIN ZAH/SBIN/skzain0079/zain",
+    "Debit": "400.00",
+    "Credit": "-",
+    "Balance": "13539.15",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "ZAIN ZAH",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "SBIN",
+      "reference": "zain",
+      "transactionId": "555511267124"
+    },
+    "Category": "Transfer",
+    "hash": "24c1060d3d6632ca658901a919600a65"
+  },
+  {
+    "Date": "09 Jul 2025",
+    "Details": "TRANSFER FROM 4897735162098 - UPI/CR/107802752601/SAURABH /AIRP/sy4379611@/UPI",
+    "Debit": "-",
+    "Credit": "1000.00",
+    "Balance": "14539.15",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SAURABH AIRP",
+      "service": "Credit",
+      "upiId": "sy4379611@",
+      "bankCode": "",
+      "reference": "",
+      "transactionId": "107802752601"
+    },
+    "Category": "Transfer",
+    "hash": "3d4ae4fdb4da1b2d00f5376e8255773e"
+  },
+  {
+    "Date": "10 Jul 2025",
+    "Details": "TRANSFER TO 4897694162092 - UPI/DR/519180469096/Faiza Fe/SBIN/faizasheik/Bissi",
+    "Debit": "9500.00",
+    "Credit": "-",
+    "Balance": "3539.15",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Faiza Fe",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "SBIN",
+      "reference": "Bissi",
+      "transactionId": "519180469096"
+    },
+    "Category": "Transfer",
+    "hash": "84eb41032ecf817577077aa5654911d7"
+  },
+  {
+    "Date": "10 Jul 2025",
+    "Details": "TRANSFER TO 4897694162092 - UPI/DR/555717048613/IMRAN RA/UBIN/imran.path/Abdul No Debit",
+    "Debit": "1500.00",
+    "Credit": "-",
+    "Balance": "13039.15",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "IMRAN RA",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "UBIN",
+      "reference": "Abdul No Debit",
+      "transactionId": "555717048613"
+    },
+    "Category": "Transfer",
+    "hash": "ecb6fe968015af2facacb57ec3b0bb63"
+  },
+  {
+    "Date": "10 Jul 2025",
+    "Details": "TRANSFER TO 4897694162092 - UPI/DR/555702541439/Mahbub /SBIN/mk2753317-/Abdul",
+    "Debit": "1000.00",
+    "Credit": "-",
+    "Balance": "1739.15",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Mahbub",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "SBIN",
+      "reference": "Abdul",
+      "transactionId": "555702541439"
+    },
+    "Category": "Transfer",
+    "hash": "023b023445959960fd88ea558d897380"
+  },
+  {
+    "Date": "10 Jul 2025",
+    "Details": "TRANSFER TO 4897694162092 - UPI/DR/519165944368/BAREERAH/H DFC/netsquaret/wifi",
+    "Debit": "600.00",
+    "Credit": "-",
+    "Balance": "2739.15",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "BAREERAH H DFC",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "wifi",
+      "transactionId": "519165944368"
+    },
+    "Category": "Transfer",
+    "hash": "d9a256ac34e1451200827d0f21e53320"
+  },
+  {
+    "Date": "10 Jul 2025",
+    "Details": "TRANSFER TO 4897694162092 - UPI/DR/519165792700/ZAM ZAM /AIRP/zamzamfoun/ZAMZA",
+    "Debit": "200.00",
+    "Credit": "-",
+    "Balance": "3339.15",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "ZAM ZAM AIRP",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "ZAMZA",
+      "transactionId": "519165792700"
+    },
+    "Category": "Transfer",
+    "hash": "7336b5eca0caa74aa1677f21f1fa4b56"
+  },
+  {
+    "Date": "11 Jul 2025",
+    "Details": "TRANSFER TO 4897695162091 - UPI/DR/555820577438/ZAM ZAM /ICIC/zamzamfoun/Payme",
+    "Debit": "100.00",
+    "Credit": "-",
+    "Balance": "1739.15",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "ZAM ZAM",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "ICIC",
+      "reference": "Payme",
+      "transactionId": "555820577438"
+    },
+    "Category": "Transfer",
+    "hash": "428e113a98615dd2fbf385d6e8f8cf78"
+  },
+  {
+    "Date": "11 Jul 2025",
+    "Details": "TRANSFER FROM 4897737162096 - UPI/CR/519240562069/SANA FAR/BKID/sana.faroo/UPI",
+    "Debit": "-",
+    "Credit": "100.00",
+    "Balance": "1839.15",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SANA FAR BKID",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "sana.faroo",
+      "transactionId": "519240562069"
+    },
+    "Category": "Transfer",
+    "hash": "5070e0ac665c2da32f0ff8135a1722cb"
+  },
+  {
+    "Date": "13 Jul 2025",
+    "Details": "TRANSFER TO 4897690162095 - UPI/DR/519462267738/MANTHAN /YESB/paytmqr62x/itrac",
+    "Debit": "170.00",
+    "Credit": "-",
+    "Balance": "2343.15",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "MANTHAN",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "itrac",
+      "transactionId": "519462267738"
+    },
+    "Category": "Transfer",
+    "hash": "52ac355c0f025cb762270a0cedc4ee6d"
+  },
+  {
+    "Date": "13 Jul 2025",
+    "Details": "TRANSFER TO 4897690162095 - UPI/DR/519486675459/Meesho/UTIB/ meesho1onl/UPI Int",
+    "Debit": "136.00",
+    "Credit": "-",
+    "Balance": "1603.15",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Meesho",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "UTIB",
+      "reference": "UPI Int",
+      "transactionId": "519486675459"
+    },
+    "Category": "Transfer",
+    "hash": "ac0cd07500d4d15e50f3a8febffca2ff"
+  },
+  {
+    "Date": "13 Jul 2025",
+    "Details": "TRANSFER TO 4897690162095 - UPI/DR/519481337909/PRAKASH /YESB/paytmqr5ct/toy",
+    "Debit": "60.00",
+    "Credit": "-",
+    "Balance": "2533.15",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "PRAKASH",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "toy",
+      "transactionId": "519481337909"
+    },
+    "Category": "Transfer",
+    "hash": "0d55ee8bce45760c07855364315a6ddb"
+  },
+  {
+    "Date": "13 Jul 2025",
+    "Details": "TRANSFER TO 4897690162095 - UPI/DR/519434672996/MANTHAN /YESB/paytmqr1t9/thumb",
+    "Debit": "20.00",
+    "Credit": "-",
+    "Balance": "2513.15",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "MANTHAN",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "thumb",
+      "transactionId": "519434672996"
+    },
+    "Category": "Transfer",
+    "hash": "d1fce4692e012ae1ac64608b403e6fe6"
+  },
+  {
+    "Date": "13 Jul 2025",
+    "Details": "TRANSFER TO 4897690162095 - UPI/DR/519424547626/BASHIR /SBIN/8867000788/auto",
+    "Debit": "10.00",
+    "Credit": "-",
+    "Balance": "2593.15",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "BASHIR",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "SBIN",
+      "reference": "auto",
+      "transactionId": "519424547626"
+    },
+    "Category": "Transportation",
+    "hash": "c396ab77b61ce93ed27f5b69dfe6bbb7"
+  },
+  {
+    "Date": "13 Jul 2025",
+    "Details": "TRANSFER FROM 4897732162091 - UPI/CR/519423449807/ALIABBAS/BA RB/aliabbas01/UPI",
+    "Debit": "-",
+    "Credit": "1000.00",
+    "Balance": "2603.15",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "ALIABBAS BA RB",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "aliabbas01",
+      "transactionId": "519423449807"
+    },
+    "Category": "Transfer",
+    "hash": "ce19a57db89f9b7913bab2db0a2b3d37"
+  },
+  {
+    "Date": "14 Jul 2025",
+    "Details": "TRANSFER TO 4897691162095 - UPI/DR/519554241862/MANTHAN /YESB/paytmqr1t9/medic No Debit",
+    "Debit": "160.00",
+    "Credit": "-",
+    "Balance": "2058.15",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "MANTHAN",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "medic No Debit",
+      "transactionId": "519554241862"
+    },
+    "Category": "Transfer",
+    "hash": "99a206ce69f2a75c523f4678c518a0f6"
+  },
+  {
+    "Date": "14 Jul 2025",
+    "Details": "TRANSFER TO 4897691162095 - UPI/DR/519536915366/New Bala/UTIB/gpay-11244/champ",
+    "Debit": "125.00",
+    "Credit": "-",
+    "Balance": "2218.15",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "New Bala",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "UTIB",
+      "reference": "champ",
+      "transactionId": "519536915366"
+    },
+    "Category": "Transfer",
+    "hash": "e3ec9f403d26383724cbcc9b3095c303"
+  },
+  {
+    "Date": "14 Jul 2025",
+    "Details": "TRANSFER TO 4897691162095 - UPI/DR/519560456516/Mr GANES/YESB/q339523632/shamp",
+    "Debit": "10.00",
+    "Credit": "-",
+    "Balance": "2048.15",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Mr GANES",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "shamp",
+      "transactionId": "519560456516"
+    },
+    "Category": "Transfer",
+    "hash": "43bef99e21605c38a933057451dd82d3"
+  },
+  {
+    "Date": "15 Jul 2025",
+    "Details": "TRANSFER TO 4897692162094 - UPI/DR/519698311606/32160100/bar b/3216010002/UPI",
+    "Debit": "2749.15",
+    "Credit": "-",
+    "Balance": "19640.00",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "3216010002",
+      "transactionId": "519698311606"
+    },
+    "Category": "Transfer",
+    "hash": "db2f5dca0f5928bdb05c97020c181c56"
+  },
+  {
+    "Date": "15 Jul 2025",
+    "Details": "TRANSFER TO 4897692162094 - UPI/DR/519628077287/Mahbub /SBIN/mk2753317-/Abdul",
+    "Debit": "2000.00",
+    "Credit": "-",
+    "Balance": "17640.00",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Mahbub",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "SBIN",
+      "reference": "Abdul",
+      "transactionId": "519628077287"
+    },
+    "Category": "Transfer",
+    "hash": "a6ea2569520f80dc364516d497c14613"
+  },
+  {
+    "Date": "15 Jul 2025",
+    "Details": "TRANSFER TO 4897692162094 - UPI/DR/519693604633/GOLDEN E/HDFC/shaikhfaiz/Abdul",
+    "Debit": "1000.00",
+    "Credit": "-",
+    "Balance": "22389.15",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "GOLDEN E",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "HDFC",
+      "reference": "Abdul",
+      "transactionId": "519693604633"
+    },
+    "Category": "Transfer",
+    "hash": "4054d120faead04d30ef9d44d42b1dea"
+  },
+  {
+    "Date": "15 Jul 2025",
+    "Details": "TRANSFER TO 4897692162094 - UPI/DR/519644585397/Amazon B/UTIB/amazonpayr/Reque",
+    "Debit": "299.00",
+    "Credit": "-",
+    "Balance": "1749.15",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Amazon B",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "UTIB",
+      "reference": "Reque",
+      "transactionId": "519644585397"
+    },
+    "Category": "Shopping",
+    "hash": "865ed600ca6eb85392b64ca0da5e3098"
+  },
+  {
+    "Date": "15 Jul 2025",
+    "Details": "TRANSFER TO 43315799574 POWER POINT MARKETING -",
+    "Debit": "-",
+    "Credit": "21794921640.00",
+    "Balance": "23389.15",
+    "ExtractedInfo": {
+      "type": "Bank Transfer",
+      "name": "",
+      "service": "Outgoing Transfer",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "43315799574",
+      "transactionId": ""
+    },
+    "Category": "Shopping",
+    "hash": "a301dc36401922dcbb75537b5c9d09b4"
+  },
+  {
+    "Date": "16 Jul 2025",
+    "Details": "ATM CASH 51962 FATIMA NAGAR PUNE",
+    "Debit": "10000.00",
+    "Credit": "-",
+    "Balance": "7640.00",
+    "ExtractedInfo": {
+      "type": "ATM Withdrawal",
+      "name": "FATIMA NAGAR PUNE",
+      "service": "ATM Cash Withdrawal",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "51962",
+      "transactionId": ""
+    },
+    "Category": "Other",
+    "hash": "9d05fab9d345a79c9a48bcfe82cc15ea"
+  },
+  {
+    "Date": "16 Jul 2025",
+    "Details": "ATM CASH 51962 FATIMA NAGAR PUNE",
+    "Debit": "5000.00",
+    "Credit": "-",
+    "Balance": "2640.00",
+    "ExtractedInfo": {
+      "type": "ATM Withdrawal",
+      "name": "FATIMA NAGAR PUNE",
+      "service": "ATM Cash Withdrawal",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "51962",
+      "transactionId": ""
+    },
+    "Category": "Other",
+    "hash": "d20edba58129c8cdf8cd6317f0eaf184"
+  },
+  {
+    "Date": "16 Jul 2025",
+    "Details": "TRANSFER TO 4897693162093 - UPI/DR/519765054830/MANTHAN /YESB/paytmqr62x/itrac",
+    "Debit": "340.00",
+    "Credit": "-",
+    "Balance": "1765.00",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "MANTHAN",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "itrac",
+      "transactionId": "519765054830"
+    },
+    "Category": "Transfer",
+    "hash": "5d3c54dd14a78e823677ada998a31650"
+  },
+  {
+    "Date": "16 Jul 2025",
+    "Details": "TRANSFER TO 4897693162093 - UPI/DR/519757873408/MR SAFIU/YESB/q199743898/birya No Debit",
+    "Debit": "330.00",
+    "Credit": "-",
+    "Balance": "2105.00",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "MR SAFIU",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "birya No Debit",
+      "transactionId": "519757873408"
+    },
+    "Category": "Transfer",
+    "hash": "7218df905b19ef8b9f719faa693a431f"
+  },
+  {
+    "Date": "16 Jul 2025",
+    "Details": "TRANSFER TO 4897693162093 - UPI/DR/556325197957/AKHTAR A/KKBK/9960614399/auto",
+    "Debit": "105.00",
+    "Credit": "-",
+    "Balance": "2535.00",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "AKHTAR A",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "KKBK",
+      "reference": "auto",
+      "transactionId": "556325197957"
+    },
+    "Category": "Transportation",
+    "hash": "b08423ecf25d1448c2b99e4ab8ee052d"
+  },
+  {
+    "Date": "16 Jul 2025",
+    "Details": "TRANSFER TO 4897693162093 - UPI/DR/519776707389/TAUSIF H/KKBK/9890439264/auto",
+    "Debit": "40.00",
+    "Credit": "-",
+    "Balance": "2495.00",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "TAUSIF H",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "KKBK",
+      "reference": "auto",
+      "transactionId": "519776707389"
+    },
+    "Category": "Transportation",
+    "hash": "0c75aed15ca45803748dace93c8f0a49"
+  },
+  {
+    "Date": "16 Jul 2025",
+    "Details": "TRANSFER TO 4897693162093 - UPI/DR/519757427229/Mr KAUSA/MAHB/9921203903/auro",
+    "Debit": "20.00",
+    "Credit": "-",
+    "Balance": "2435.00",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Mr KAUSA MAHB",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "auro",
+      "transactionId": "519757427229"
+    },
+    "Category": "Transfer",
+    "hash": "62bc580419f1c08c0c18623b3fb0a0bc"
+  },
+  {
+    "Date": "16 Jul 2025",
+    "Details": "TRANSFER TO 4897693162093 - UPI/DR/519756845682/Imran Wa/YESB/q523357784/pudin",
+    "Debit": "20.00",
+    "Credit": "-",
+    "Balance": "2455.00",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Imran Wa",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "pudin",
+      "transactionId": "519756845682"
+    },
+    "Category": "Transfer",
+    "hash": "397add1b60b6ae2ea08672034c0f5831"
+  },
+  {
+    "Date": "16 Jul 2025",
+    "Details": "TRANSFER TO 4897693162093 - UPI/DR/519756758795/PRAKASH /YESB/q803137856/tomat",
+    "Debit": "20.00",
+    "Credit": "-",
+    "Balance": "2475.00",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "PRAKASH",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "tomat",
+      "transactionId": "519756758795"
+    },
+    "Category": "Transfer",
+    "hash": "96b58497897a65d84c6e7c79f044f818"
+  },
+  {
+    "Date": "16 Jul 2025",
+    "Details": "TRANSFER FROM 4897735162098 - UPI/CR/519723772125/SAHEL AK/SBIN/sahelshaik/UPI",
+    "Debit": "-",
+    "Credit": "15000.00",
+    "Balance": "16765.00",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SAHEL AK",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "SBIN",
+      "reference": "sahelshaik",
+      "transactionId": "519723772125"
+    },
+    "Category": "Transfer",
+    "hash": "eb1c6fe90bfc0d684b10895b9dfc46e5"
+  },
+  {
+    "Date": "17 Jul 2025",
+    "Details": "TRANSFER TO 4897694162092 - UPI/DR/519882471643/IMRAN RA/UBIN/imran.path/Abdul",
+    "Debit": "4000.00",
+    "Credit": "-",
+    "Balance": "12765.00",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "IMRAN RA",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "UBIN",
+      "reference": "Abdul",
+      "transactionId": "519882471643"
+    },
+    "Category": "Transfer",
+    "hash": "0b53d8a927ddcd49d792537901ff79a5"
+  },
+  {
+    "Date": "17 Jul 2025",
+    "Details": "TRANSFER TO 4897694162092 - UPI/DR/519882507800/RUPA YOG/KKBK/rupalijadh/Abdul",
+    "Debit": "2000.00",
+    "Credit": "-",
+    "Balance": "10765.00",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "RUPA YOG",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "KKBK",
+      "reference": "Abdul",
+      "transactionId": "519882507800"
+    },
+    "Category": "Transfer",
+    "hash": "d2ab9990ed4d9f4cd61c53d9ca3740ff"
+  },
+  {
+    "Date": "17 Jul 2025",
+    "Details": "TRANSFER TO 4897694162092 - UPI/DR/519898193636/MANGESH /KKBK/mangesh312/auto",
+    "Debit": "70.72",
+    "Credit": "-",
+    "Balance": "10679.28",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "MANGESH",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "KKBK",
+      "reference": "auto",
+      "transactionId": "519898193636"
+    },
+    "Category": "Transportation",
+    "hash": "f34b5fd65a2ef7e27612a3d19e942e97"
+  },
+  {
+    "Date": "17 Jul 2025",
+    "Details": "TRANSFER TO 4897694162092 - UPI/DR/519884424996/MUSRIFA /IPOS/ganeshkata/auto",
+    "Debit": "15.00",
+    "Credit": "-",
+    "Balance": "10750.00",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "MUSRIFA IPOS",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "auto",
+      "transactionId": "519884424996"
+    },
+    "Category": "Transportation",
+    "hash": "8fdce5125400ac0e343c33dbd7d8be5c"
+  },
+  {
+    "Date": "18 Jul 2025",
+    "Details": "TRANSFER TO 4897695162091 - UPI/DR/519955453869/QURESHI /COSB/mahiraqure/auto",
+    "Debit": "170.00",
+    "Credit": "-",
+    "Balance": "10509.28",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "QURESHI COSB",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "auto",
+      "transactionId": "519955453869"
+    },
+    "Category": "Transportation",
+    "hash": "2dd1a6657caef39f37eb901c8b74b47b"
+  },
+  {
+    "Date": "18 Jul 2025",
+    "Details": "TRANSFER TO 4897695162091 - UPI/DR/556551190688/HARIOM S/YESB/q029738997/Maggi",
+    "Debit": "30.00",
+    "Credit": "-",
+    "Balance": "10679.28",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "HARIOM S",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "Maggi",
+      "transactionId": "556551190688"
+    },
+    "Category": "Transfer",
+    "hash": "8da980de40a33381fa5976e1f53c3616"
+  },
+  {
+    "Date": "18 Jul 2025",
+    "Details": "TRANSFER TO 4897695162091 - UPI/DR/556526664598/CROWN BA/YESB/paytmqr6gv/burun",
+    "Debit": "20.00",
+    "Credit": "-",
+    "Balance": "10659.28",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "CROWN BA",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "burun",
+      "transactionId": "556526664598"
+    },
+    "Category": "Transfer",
+    "hash": "26ba68165f51fbb7efe2f080116a36c6"
+  },
+  {
+    "Date": "18 Jul 2025",
+    "Details": "TRANSFER FROM 4897737162096 - UPI/CR/556551074742/SANA FAR/BKID/sana.faroo/UPI",
+    "Debit": "-",
+    "Credit": "50.00",
+    "Balance": "10709.28",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SANA FAR BKID",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "sana.faroo",
+      "transactionId": "556551074742"
+    },
+    "Category": "Transfer",
+    "hash": "520e930abb68f0d3ebd9ce60fdfafa21"
+  },
+  {
+    "Date": "20 Jul 2025",
+    "Details": "ATM CASH 52011 FATIMA NAGAR PUNE",
+    "Debit": "10000.00",
+    "Credit": "-",
+    "Balance": "7509.28",
+    "ExtractedInfo": {
+      "type": "ATM Withdrawal",
+      "name": "FATIMA NAGAR PUNE",
+      "service": "ATM Cash Withdrawal",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "52011",
+      "transactionId": ""
+    },
+    "Category": "Other",
+    "hash": "5b586325d5b9812009b19622b5ecc17e"
+  },
+  {
+    "Date": "20 Jul 2025",
+    "Details": "ATM CASH 52011 FATIMA NAGAR PUNE",
+    "Debit": "5024.78",
+    "Credit": "-",
+    "Balance": "2484.50",
+    "ExtractedInfo": {
+      "type": "ATM Withdrawal",
+      "name": "FATIMA NAGAR PUNE",
+      "service": "ATM Cash Withdrawal",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "52011",
+      "transactionId": ""
+    },
+    "Category": "Other",
+    "hash": "3e87ba416d0f70fa0b496b9dffa58cae"
+  },
+  {
+    "Date": "20 Jul 2025",
+    "Details": "TRANSFER TO 4897690162095 - UPI/DR/520126722175/Mahbub /SBIN/mk2753317-/Abdul",
+    "Debit": "1000.00",
+    "Credit": "-",
+    "Balance": "2920.50",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Mahbub",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "SBIN",
+      "reference": "Abdul",
+      "transactionId": "520126722175"
+    },
+    "Category": "Transfer",
+    "hash": "8568793d06acd5e4cd4727ba0ad1f5fc"
+  },
+  {
+    "Date": "20 Jul 2025",
+    "Details": "TRANSFER TO 4897690162095 - UPI/DR/556771838150/Safiulla/KKBK/ 0790724a02/29852",
+    "Debit": "70.00",
+    "Credit": "-",
+    "Balance": "2320.50",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Safiulla",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "KKBK",
+      "reference": "29852",
+      "transactionId": "556771838150"
+    },
+    "Category": "Transfer",
+    "hash": "5697a629c49d23b3f8fa97ff700aacb1"
+  },
+  {
+    "Date": "20 Jul 2025",
+    "Details": "TRANSFER TO 4897690162095 - UPI/DR/556775560352/New Bala/UTIB/gpay-11206/akhi",
+    "Debit": "44.00",
+    "Credit": "-",
+    "Balance": "2390.50",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "New Bala",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "UTIB",
+      "reference": "akhi",
+      "transactionId": "556775560352"
+    },
+    "Category": "Transfer",
+    "hash": "d2eb56083b721171ef8e1418c9e4ad43"
+  },
+  {
+    "Date": "20 Jul 2025",
+    "Details": "TRANSFER TO 4897690162095 - UPI/DR/556736615236/MAHENDRA/Y ESB/q232031098/dahi No Debit",
+    "Debit": "30.00",
+    "Credit": "-",
+    "Balance": "2454.50",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "MAHENDRA Y ESB",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "dahi No Debit",
+      "transactionId": "556736615236"
+    },
+    "Category": "Transfer",
+    "hash": "58497c7335175ff035a3387043e5e3d0"
+  },
+  {
+    "Date": "20 Jul 2025",
+    "Details": "TRANSFER TO 4897690162095 - UPI/DR/556715757333/Ujwala P/YESB/paytmqr6d7/cucum",
+    "Debit": "20.00",
+    "Credit": "-",
+    "Balance": "2434.50",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Ujwala P",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "cucum",
+      "transactionId": "556715757333"
+    },
+    "Category": "Transfer",
+    "hash": "80f6d54cad175f1e56567eb0b332110a"
+  },
+  {
+    "Date": "20 Jul 2025",
+    "Details": "TRANSFER FROM 4897732162091 - UPI/CR/520196822064/SAHEL AK/SBIN/sahelshaik/UPI",
+    "Debit": "-",
+    "Credit": "7000.00",
+    "Balance": "17509.28",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SAHEL AK",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "SBIN",
+      "reference": "sahelshaik",
+      "transactionId": "520196822064"
+    },
+    "Category": "Transfer",
+    "hash": "3f0935509d39cb6ab96055a6f7180417"
+  },
+  {
+    "Date": "20 Jul 2025",
+    "Details": "TRANSFER FROM 4897732162091 - UPI/CR/520113573401/SHAIKH F/HDFC/shaikhfaiz/UPI",
+    "Debit": "-",
+    "Credit": "1600.00",
+    "Balance": "3920.50",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SHAIKH F",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "HDFC",
+      "reference": "shaikhfaiz",
+      "transactionId": "520113573401"
+    },
+    "Category": "Transfer",
+    "hash": "ba6496f57ae40a31614db213a8bf4c31"
+  },
+  {
+    "Date": "21 Jul 2025",
+    "Details": "TRANSFER TO 4897691162095 - UPI/DR/520287265595/SANA FAR/BKID/sana.faroo/Sulem",
+    "Debit": "1000.00",
+    "Credit": "-",
+    "Balance": "1447.50",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SANA FAR BKID",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "Sulem",
+      "transactionId": "520287265595"
+    },
+    "Category": "Transfer",
+    "hash": "d9f7518746747c38f04f96642ff17eff"
+  },
+  {
+    "Date": "21 Jul 2025",
+    "Details": "TRANSFER TO 4897691162095 - UPI/DR/520233924687/AYESHA A/BARB/shkaisha47/dmart",
+    "Debit": "1000.00",
+    "Credit": "-",
+    "Balance": "1920.50",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "AYESHA A",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "BARB",
+      "reference": "dmart",
+      "transactionId": "520233924687"
+    },
+    "Category": "Transfer",
+    "hash": "26dc5272fb4e7ca99b70336518cfbb31"
+  },
+  {
+    "Date": "21 Jul 2025",
+    "Details": "TRANSFER TO 4897691162095 - UPI/DR/520261397411/32160100/bar b/3216010002/trans",
+    "Debit": "800.00",
+    "Credit": "-",
+    "Balance": "647.50",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "trans",
+      "transactionId": "520261397411"
+    },
+    "Category": "Transfer",
+    "hash": "3e74ecfd142dedf8af83b9b7b24ad7dc"
+  },
+  {
+    "Date": "21 Jul 2025",
+    "Details": "TRANSFER TO 4897691162095 - UPI/DR/556827873392/DATTATRA/B KID/q61458647@/auto",
+    "Debit": "103.00",
+    "Credit": "-",
+    "Balance": "1817.50",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "DATTATRA B KID",
+      "service": "Debit",
+      "upiId": "q61458647@",
+      "bankCode": "",
+      "reference": "auto",
+      "transactionId": "556827873392"
+    },
+    "Category": "Transportation",
+    "hash": "5a49b34f1087ea473e9a793dd53da92b"
+  },
+  {
+    "Date": "21 Jul 2025",
+    "Details": "TRANSFER TO 4897691162095 - UPI/DR/520270862643/Shri Pay/UTIB/gpay-11231/baloo No Debit",
+    "Debit": "70.00",
+    "Credit": "-",
+    "Balance": "2447.50",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Shri Pay",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "UTIB",
+      "reference": "baloo No Debit",
+      "transactionId": "520270862643"
+    },
+    "Category": "Transfer",
+    "hash": "b67b0cfa1f671aef44929bf7c0b77a4c"
+  },
+  {
+    "Date": "21 Jul 2025",
+    "Details": "TRANSFER TO 4897691162095 - UPI/DR/520249529525/Chavan D/AUBL/dc4567541-/extra",
+    "Debit": "50.00",
+    "Credit": "-",
+    "Balance": "2467.50",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Chavan D AUBL",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "extra",
+      "transactionId": "520249529525"
+    },
+    "Category": "Transfer",
+    "hash": "ce27415acd6e98b6f3eb90f64d27c75b"
+  },
+  {
+    "Date": "21 Jul 2025",
+    "Details": "TRANSFER TO 4897691162095 - UPI/DR/556868093990/Diamond /UTIB/8449567594/salt",
+    "Debit": "40.00",
+    "Credit": "-",
+    "Balance": "1737.50",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Diamond",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "UTIB",
+      "reference": "salt",
+      "transactionId": "556868093990"
+    },
+    "Category": "Transfer",
+    "hash": "2f0c3990e8e2c5032acdad7d9c53fb12"
+  },
+  {
+    "Date": "21 Jul 2025",
+    "Details": "TRANSFER TO 4897691162095 - UPI/DR/520236024295/Shahrukh/FIN O/sharukhsk2/auto",
+    "Debit": "40.00",
+    "Credit": "-",
+    "Balance": "1777.50",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Shahrukh FIN O",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "auto",
+      "transactionId": "520236024295"
+    },
+    "Category": "Transportation",
+    "hash": "038e1f47db08ce6b39727da8303a8c39"
+  },
+  {
+    "Date": "21 Jul 2025",
+    "Details": "TRANSFER TO 4897691162095 - UPI/DR/520206337295/Diamond /UTIB/8449567594/juice",
+    "Debit": "20.00",
+    "Credit": "-",
+    "Balance": "1717.50",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Diamond",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "UTIB",
+      "reference": "juice",
+      "transactionId": "520206337295"
+    },
+    "Category": "Transfer",
+    "hash": "06f31000da369b18c94167252a89f96f"
+  },
+  {
+    "Date": "21 Jul 2025",
+    "Details": "TRANSFER FROM 4897733162090 - UPI/CR/520243879827/ZAIN ZAH/SBIN/skzain0079/UPI",
+    "Debit": "-",
+    "Credit": "800.00",
+    "Balance": "2517.50",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "ZAIN ZAH",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "SBIN",
+      "reference": "skzain0079",
+      "transactionId": "520243879827"
+    },
+    "Category": "Transfer",
+    "hash": "7ef28ec143707972b6d5f1a60636347c"
+  },
+  {
+    "Date": "21 Jul 2025",
+    "Details": "TRANSFER FROM 4897733162090 - UPI/CR/520232802228/Chavan D/AUBL/dc4567541-/UPI",
+    "Debit": "-",
+    "Credit": "50.00",
+    "Balance": "2517.50",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Chavan D AUBL",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "dc4567541-",
+      "transactionId": "520232802228"
+    },
+    "Category": "Transfer",
+    "hash": "37fa9094863245a691060e57e323fcb7"
+  },
+  {
+    "Date": "22 Jul 2025",
+    "Details": "TRANSFER TO 4897692162094 - UPI/DR/556984924133/MAHENDRA/Y ESB/paytmqr6d7/milk",
+    "Debit": "27.00",
+    "Credit": "-",
+    "Balance": "870.50",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "MAHENDRA Y ESB",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "milk",
+      "transactionId": "556984924133"
+    },
+    "Category": "Transfer",
+    "hash": "7303f8a302e9ff1f365c70e03c5748fa"
+  },
+  {
+    "Date": "22 Jul 2025",
+    "Details": "TRANSFER FROM 4897734162099 - UPI/CR/520357176807/SANA FAR/BKID/sana.faroo/UPI",
+    "Debit": "-",
+    "Credit": "250.00",
+    "Balance": "897.50",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SANA FAR BKID",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "sana.faroo",
+      "transactionId": "520357176807"
+    },
+    "Category": "Transfer",
+    "hash": "92b03c40fe80885a0e65e8102d6eb454"
+  },
+  {
+    "Date": "23 Jul 2025",
+    "Details": "TRANSFER TO 4897693162093 - UPI/DR/520441163637/AYESHA A/BARB/shkaisha47/Hyder",
+    "Debit": "330.00",
+    "Credit": "-",
+    "Balance": "1337.45",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "AYESHA A",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "BARB",
+      "reference": "Hyder",
+      "transactionId": "520441163637"
+    },
+    "Category": "Transfer",
+    "hash": "ecc764408242aa87182926dc8f9739df"
+  },
+  {
+    "Date": "23 Jul 2025",
+    "Details": "TRANSFER TO 4897693162093 - UPI/DR/520431720876/32160100/bar b/3216010002/trans",
+    "Debit": "300.00",
+    "Credit": "-",
+    "Balance": "167.45",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "trans",
+      "transactionId": "520431720876"
+    },
+    "Category": "Transfer",
+    "hash": "1ed7e6b1b800c3c027d39c9cc9137514"
+  },
+  {
+    "Date": "23 Jul 2025",
+    "Details": "TRANSFER TO 4897693162093 - UPI/DR/520407009287/ZAM ZAM /ICIC/zamzamfoun/Payme",
+    "Debit": "250.00",
+    "Credit": "-",
+    "Balance": "467.45",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "ZAM ZAM",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "ICIC",
+      "reference": "Payme",
+      "transactionId": "520407009287"
+    },
+    "Category": "Transfer",
+    "hash": "e812991f9a6c23e554319a2b1b5d497d"
+  },
+  {
+    "Date": "23 Jul 2025",
+    "Details": "TRANSFER TO 4897693162093 - UPI/DR/557034784040/Shahebaz/YE SB/paytm.s1gs/auto",
+    "Debit": "103.05",
+    "Credit": "-",
+    "Balance": "767.45",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Shahebaz YE SB",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "auto",
+      "transactionId": "557034784040"
+    },
+    "Category": "Transportation",
+    "hash": "c954c983a3867fb81c46b17b581328d8"
+  },
+  {
+    "Date": "23 Jul 2025",
+    "Details": "TRANSFER TO 4897693162093 - UPI/DR/557078790318/SAI CAFE/YESB/paytmqr68v/wada",
+    "Debit": "50.00",
+    "Credit": "-",
+    "Balance": "717.45",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SAI CAFE",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "wada",
+      "transactionId": "557078790318"
+    },
+    "Category": "Food & Dining",
+    "hash": "b95afe6490a57c1b5197cfee30492944"
+  },
+  {
+    "Date": "23 Jul 2025",
+    "Details": "TRANSFER FROM 4897735162098 - UPI/CR/520440784607/IMRAN RA/UBIN/imran.path/UPI",
+    "Debit": "-",
+    "Credit": "1000.00",
+    "Balance": "1667.45",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "IMRAN RA",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "UBIN",
+      "reference": "imran.path",
+      "transactionId": "520440784607"
+    },
+    "Category": "Transfer",
+    "hash": "d6e83f6deb0c95d16e7ca4c568281367"
+  },
+  {
+    "Date": "23 Jul 2025",
+    "Details": "TRANSFER FROM 4897735162098 - UPI/CR/557046371229/SANA FAR/BKID/sana.faroo/UPI",
+    "Debit": "-",
+    "Credit": "500.00",
+    "Balance": "667.45",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SANA FAR BKID",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "sana.faroo",
+      "transactionId": "557046371229"
+    },
+    "Category": "Transfer",
+    "hash": "fd9b60a8b23716f5e74ff9cc9f0b6a5f"
+  },
+  {
+    "Date": "23 Jul 2025",
+    "Details": "TRANSFER FROM 4897735162098 - UPI/CR/557030781383/AYESHA A/BARB/shkaisha47/UPI",
+    "Debit": "-",
+    "Credit": "110.00",
+    "Balance": "1447.45",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "AYESHA A",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "BARB",
+      "reference": "shkaisha47",
+      "transactionId": "557030781383"
+    },
+    "Category": "Transfer",
+    "hash": "77f8b8208d8ab7a4b5d068e92e71abfc"
+  },
+  {
+    "Date": "24 Jul 2025",
+    "Details": "TRANSFER TO 4897694162092 - UPI/DR/520520294783/MAHA BAL/YESB/paytmqr677/rice",
+    "Debit": "430.00",
+    "Credit": "-",
+    "Balance": "765.96",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "MAHA BAL",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "rice",
+      "transactionId": "520520294783"
+    },
+    "Category": "Transfer",
+    "hash": "f7d7ee1eaaf9c19de21428f3d121459a"
+  },
+  {
+    "Date": "24 Jul 2025",
+    "Details": "TRANSFER TO 4897694162092 - UPI/DR/520562650699/AYESHA A/BARB/shkaisha47/auto",
+    "Debit": "300.00",
+    "Credit": "-",
+    "Balance": "195.96",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "AYESHA A",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "BARB",
+      "reference": "auto",
+      "transactionId": "520562650699"
+    },
+    "Category": "Transportation",
+    "hash": "ea2493b3dd96c0ecbfa4b976647a343c"
+  },
+  {
+    "Date": "24 Jul 2025",
+    "Details": "TRANSFER TO 4897694162092 - UPI/DR/520552714081/CROWN BA/YESB/paytmqr6gv/cake",
+    "Debit": "270.00",
+    "Credit": "-",
+    "Balance": "495.96",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "CROWN BA",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "cake",
+      "transactionId": "520552714081"
+    },
+    "Category": "Transfer",
+    "hash": "6ec7495e2d6422f8d59a851d38f321f1"
+  },
+  {
+    "Date": "24 Jul 2025",
+    "Details": "TRANSFER TO 4897694162092 - UPI/DR/520548887877/LAMBE AT/BARA/lambeatmar/UPI No Debit",
+    "Debit": "108.00",
+    "Credit": "-",
+    "Balance": "1310.45",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "LAMBE AT BARA",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "lambeatmar",
+      "transactionId": "520548887877"
+    },
+    "Category": "Transfer",
+    "hash": "6682f47fc7d421dc14ae510409e78123"
+  },
+  {
+    "Date": "24 Jul 2025",
+    "Details": "TRANSFER TO 4897694162092 - UPI/DR/520569075863/WELLNESS/Y ESB/wfmlmh1@yb/Payme",
+    "Debit": "94.49",
+    "Credit": "-",
+    "Balance": "1215.96",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "WELLNESS Y ESB",
+      "service": "Debit",
+      "upiId": "wfmlmh1@yb",
+      "bankCode": "",
+      "reference": "Payme",
+      "transactionId": "520569075863"
+    },
+    "Category": "Transfer",
+    "hash": "791b20e4422adc0f32bdf769c6c11887"
+  },
+  {
+    "Date": "24 Jul 2025",
+    "Details": "TRANSFER TO 4897694162092 - UPI/DR/520504967376/Mr GANES/YESB/q339523632/milk",
+    "Debit": "29.00",
+    "Credit": "-",
+    "Balance": "1418.45",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Mr GANES",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "milk",
+      "transactionId": "520504967376"
+    },
+    "Category": "Transfer",
+    "hash": "a9d6d5351d07c3172c8a0b629aa5ea6b"
+  },
+  {
+    "Date": "24 Jul 2025",
+    "Details": "TRANSFER TO 4897694162092 - UPI/DR/557145187509/PRADIP K/SBIN/9763179290/auto",
+    "Debit": "20.00",
+    "Credit": "-",
+    "Balance": "1195.96",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "PRADIP K",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "SBIN",
+      "reference": "auto",
+      "transactionId": "557145187509"
+    },
+    "Category": "Transportation",
+    "hash": "e45f479217350cbf83795ba440a2aee4"
+  },
+  {
+    "Date": "25 Jul 2025",
+    "Details": "TRANSFER TO 4897695162091 - UPI/DR/557246573791/ZAM ZAM /ICIC/zamzamfoun/Payme",
+    "Debit": "50.00",
+    "Credit": "-",
+    "Balance": "195.96",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "ZAM ZAM",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "ICIC",
+      "reference": "Payme",
+      "transactionId": "557246573791"
+    },
+    "Category": "Transfer",
+    "hash": "23ff0da9e6d5fe0dd9342e632a8e4b6c"
+  },
+  {
+    "Date": "25 Jul 2025",
+    "Details": "TRANSFER FROM 4897737162096 - UPI/CR/520614487056/SANA FAR/BKID/sana.faroo/sadqa",
+    "Debit": "-",
+    "Credit": "50.00",
+    "Balance": "245.96",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SANA FAR BKID",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "sadqa",
+      "transactionId": "520614487056"
+    },
+    "Category": "Transfer",
+    "hash": "d65827d246aec7a92c24e672059675fb"
+  },
+  {
+    "Date": "26 Jul 2025",
+    "Details": "ATM CASH 52071 FATIMA NAGAR PUNE",
+    "Debit": "10024.78",
+    "Credit": "-",
+    "Balance": "171.18",
+    "ExtractedInfo": {
+      "type": "ATM Withdrawal",
+      "name": "FATIMA NAGAR PUNE",
+      "service": "ATM Cash Withdrawal",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "52071",
+      "transactionId": ""
+    },
+    "Category": "Other",
+    "hash": "448a0dd3fb8a449288b7c884cccbcbcb"
+  },
+  {
+    "Date": "26 Jul 2025",
+    "Details": "TRANSFER FROM 4897738162095 - UPI/CR/108709984902/MODERN E/HDFC/sahelshaik/UPI",
+    "Debit": "-",
+    "Credit": "10000.00",
+    "Balance": "10195.96",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "MODERN E",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "HDFC",
+      "reference": "sahelshaik",
+      "transactionId": "108709984902"
+    },
+    "Category": "Transfer",
+    "hash": "1d27deb87d38699accddaf64efbefe3c"
+  },
+  {
+    "Date": "26 Jul 2025",
+    "Details": "TRANSFER FROM 4897738162095 - UPI/CR/520748758630/Mr NANAS/CBIN/nikhil.she/UPI",
+    "Debit": "-",
+    "Credit": "500.00",
+    "Balance": "921.18",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Mr NANAS CBIN",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "nikhil.she",
+      "transactionId": "520748758630"
+    },
+    "Category": "Transfer",
+    "hash": "8037eef8552eb3d381e543c317cd9020"
+  },
+  {
+    "Date": "26 Jul 2025",
+    "Details": "TRANSFER FROM 4897738162095 - UPI/CR/520748312416/SAHEL AK/SBIN/sahelshaik/UPI",
+    "Debit": "-",
+    "Credit": "250.00",
+    "Balance": "421.18",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SAHEL AK",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "SBIN",
+      "reference": "sahelshaik",
+      "transactionId": "520748312416"
+    },
+    "Category": "Transfer",
+    "hash": "07f4298fc57cb6acd202b5956000f76f"
+  },
+  {
+    "Date": "27 Jul 2025",
+    "Details": "TRANSFER TO 4897690162095 - UPI/DR/557436659682/Avenue S/UTIB/8421256798/cutti",
+    "Debit": "170.00",
+    "Credit": "-",
+    "Balance": "751.18",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Avenue S",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "UTIB",
+      "reference": "cutti",
+      "transactionId": "557436659682"
+    },
+    "Category": "Transfer",
+    "hash": "969d3c8e89872fe15492d5f8003a80fd"
+  },
+  {
+    "Date": "28 Jul 2025",
+    "Details": "TRANSFER TO 4897691162095 - UPI/DR/520931908751/Meesho/UTIB/ meesho1onl/UPI Int No Debit",
+    "Debit": "83.00",
+    "Credit": "-",
+    "Balance": "658.18",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Meesho",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "UTIB",
+      "reference": "UPI Int No Debit",
+      "transactionId": "520931908751"
+    },
+    "Category": "Transfer",
+    "hash": "a9f3b07e96d0c7c79bf017df0a1a88fe"
+  },
+  {
+    "Date": "28 Jul 2025",
+    "Details": "TRANSFER TO 4897691162095 - UPI/DR/520914943844/Jugesh K/AIRP/kjugesh068/kotam",
+    "Debit": "10.00",
+    "Credit": "-",
+    "Balance": "741.18",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Jugesh K AIRP",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "kotam",
+      "transactionId": "520914943844"
+    },
+    "Category": "Transfer",
+    "hash": "0a44be012b023686513786bca6ecd8a5"
+  },
+  {
+    "Date": "29 Jul 2025",
+    "Details": "ATM CASH 521023479499 FATIMA NAGAR PUNE",
+    "Debit": "5024.78",
+    "Credit": "-",
+    "Balance": "471.42",
+    "ExtractedInfo": {
+      "type": "ATM Withdrawal",
+      "name": "FATIMA NAGAR PUNE",
+      "service": "ATM Cash Withdrawal",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "521023479499",
+      "transactionId": ""
+    },
+    "Category": "Other",
+    "hash": "cf364f9a28dcb4d51279c4e51cd54b6d"
+  },
+  {
+    "Date": "29 Jul 2025",
+    "Details": "TRANSFER TO 4897692162094 - UPI/DR/521074593421/ATISH R /HDFC/rishita208/Abdul",
+    "Debit": "4000.00",
+    "Credit": "-",
+    "Balance": "6780.20",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "ATISH R",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "HDFC",
+      "reference": "Abdul",
+      "transactionId": "521074593421"
+    },
+    "Category": "Transfer",
+    "hash": "591119e7ecdc9d9793dd9dd7682915d8"
+  },
+  {
+    "Date": "29 Jul 2025",
+    "Details": "TRANSFER TO 4897692162094 - UPI/DR/521074604975/ATISH R /HDFC/rishita208/Abdul",
+    "Debit": "2000.00",
+    "Credit": "-",
+    "Balance": "8780.20",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "ATISH R",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "HDFC",
+      "reference": "Abdul",
+      "transactionId": "521074604975"
+    },
+    "Category": "Transfer",
+    "hash": "ecb6580fa0132e0c8144a56c05a66721"
+  },
+  {
+    "Date": "29 Jul 2025",
+    "Details": "TRANSFER TO 4897692162094 - UPI/DR/557604526288/Tamboli /IDFB/feroza.tam/Abdul No Debit",
+    "Debit": "1000.00",
+    "Credit": "-",
+    "Balance": "5496.20",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Tamboli",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "IDFB",
+      "reference": "Abdul No Debit",
+      "transactionId": "557604526288"
+    },
+    "Category": "Transfer",
+    "hash": "2e34f2aa9dab92709f2fa4c781bc8c2f"
+  },
+  {
+    "Date": "29 Jul 2025",
+    "Details": "TRANSFER TO 4897692162094 - UPI/DR/521074929781/ATISH R /HDFC/rishita208/Abdul",
+    "Debit": "999.00",
+    "Credit": "-",
+    "Balance": "6784.20",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "ATISH R",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "HDFC",
+      "reference": "Abdul",
+      "transactionId": "521074929781"
+    },
+    "Category": "Transfer",
+    "hash": "b7b6997029df667fdceab924c6fab979"
+  },
+  {
+    "Date": "29 Jul 2025",
+    "Details": "TRANSFER TO 4897692162094 - UPI/DR/521074752304/ATISH R /HDFC/rishita208/Abdul",
+    "Debit": "999.00",
+    "Credit": "-",
+    "Balance": "7783.20",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "ATISH R",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "HDFC",
+      "reference": "Abdul",
+      "transactionId": "521074752304"
+    },
+    "Category": "Transfer",
+    "hash": "321a515916297ddc9af96e7f2073c4e6"
+  },
+  {
+    "Date": "29 Jul 2025",
+    "Details": "TRANSFER TO 4897692162094 - UPI/DR/521074688874/ATISH R /HDFC/rishita208/Abdul",
+    "Debit": "999.00",
+    "Credit": "-",
+    "Balance": "8782.20",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "ATISH R",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "HDFC",
+      "reference": "Abdul",
+      "transactionId": "521074688874"
+    },
+    "Category": "Transfer",
+    "hash": "87142bfb6e5faf239200e53857fa79be"
+  },
+  {
+    "Date": "29 Jul 2025",
+    "Details": "TRANSFER TO 4897692162094 - UPI/DR/521074660177/ATISH R /HDFC/rishita208/Abdul",
+    "Debit": "999.00",
+    "Credit": "-",
+    "Balance": "9781.20",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "ATISH R",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "HDFC",
+      "reference": "Abdul",
+      "transactionId": "521074660177"
+    },
+    "Category": "Transfer",
+    "hash": "20c2e0cc26d4f5339b42b8ac0614f5c0"
+  },
+  {
+    "Date": "29 Jul 2025",
+    "Details": "TRANSFER TO 4897692162094 - UPI/DR/521055685524/Shadowfa/YE SB/shadowfaxo/Payme",
+    "Debit": "284.00",
+    "Credit": "-",
+    "Balance": "6496.20",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Shadowfa YE SB",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "Payme",
+      "transactionId": "521055685524"
+    },
+    "Category": "Transfer",
+    "hash": "d46358e49165f0997fbb1470b3d41d4e"
+  },
+  {
+    "Date": "29 Jul 2025",
+    "Details": "TRANSFER TO 4897692162094 - UPI/DR/521092543079/WELLNESS/Y ESB/wellnessfo/Payme",
+    "Debit": "110.98",
+    "Credit": "-",
+    "Balance": "547.20",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "WELLNESS Y ESB",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "Payme",
+      "transactionId": "521092543079"
+    },
+    "Category": "Transfer",
+    "hash": "1e84f9c45be0e551f6fd74c345f6d1f8"
+  },
+  {
+    "Date": "29 Jul 2025",
+    "Details": "TRANSFER TO 4897692162094 - UPI/DR/521075214603/ATISH R /HDFC/rishita208/Abdul",
+    "Debit": "4.00",
+    "Credit": "-",
+    "Balance": "6780.20",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "ATISH R",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "HDFC",
+      "reference": "Abdul",
+      "transactionId": "521075214603"
+    },
+    "Category": "Transfer",
+    "hash": "c632ade3aece326b179a49ba7a0c400a"
+  },
+  {
+    "Date": "29 Jul 2025",
+    "Details": "TRANSFER FROM 4897734162099 - UPI/CR/244651480461/SHIVSHAK/C NRB/9019747038/Payme",
+    "Debit": "-",
+    "Credit": "10000.00",
+    "Balance": "10780.20",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SHIVSHAK C NRB",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "Payme",
+      "transactionId": "244651480461"
+    },
+    "Category": "Transfer",
+    "hash": "bb1f17a431467c386b2989ef30f722a7"
+  },
+  {
+    "Date": "29 Jul 2025",
+    "Details": "TRANSFER FROM 4897692162094 - UPI/REV/521074593421",
+    "Debit": "-",
+    "Credit": "4000.00",
+    "Balance": "10780.20",
+    "ExtractedInfo": {
+      "type": "UPI Reversal",
+      "name": "",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "",
+      "transactionId": "521074593421"
+    },
+    "Category": "Transfer",
+    "hash": "f16b02a74cb35a1051d12f090979d259"
+  },
+  {
+    "Date": "29 Jul 2025",
+    "Details": "TRANSFER FROM 4897692162094 - UPI/REV/521074604975",
+    "Debit": "-",
+    "Credit": "2000.00",
+    "Balance": "10780.20",
+    "ExtractedInfo": {
+      "type": "UPI Reversal",
+      "name": "",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "",
+      "transactionId": "521074604975"
+    },
+    "Category": "Transfer",
+    "hash": "483148d927f094a5436a162b0b924fe4"
+  },
+  {
+    "Date": "29 Jul 2025",
+    "Details": "TRANSFER FROM 4897734162099 - UPI/CR/557676462002/AYESHA A/BARB/shkaisha47/UPI",
+    "Debit": "-",
+    "Credit": "233.00",
+    "Balance": "780.20",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "AYESHA A",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "BARB",
+      "reference": "shkaisha47",
+      "transactionId": "557676462002"
+    },
+    "Category": "Transfer",
+    "hash": "de0d99a9140d81acba87c91c914ae6d9"
+  },
+  {
+    "Date": "30 Jul 2025",
+    "Details": "TRANSFER TO 4897693162093 - UPI/DR/557708671855/SAMADHAN/U TIB/gpay-11180/panip",
+    "Debit": "40.00",
+    "Credit": "-",
+    "Balance": "531.42",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SAMADHAN U TIB",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "panip",
+      "transactionId": "557708671855"
+    },
+    "Category": "Transfer",
+    "hash": "a3af12aa014ef94b0a7c5f203fcf4088"
+  },
+  {
+    "Date": "30 Jul 2025",
+    "Details": "TRANSFER FROM 4897735162098 - UPI/CR/521198837944/SANA FAR/BKID/sana.faroo/sadqa",
+    "Debit": "-",
+    "Credit": "100.00",
+    "Balance": "571.42",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SANA FAR BKID",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "sadqa",
+      "transactionId": "521198837944"
+    },
+    "Category": "Transfer",
+    "hash": "24098b713a3c4cd0bc4794fcd78c3e49"
+  },
+  {
+    "Date": "31 Jul 2025",
+    "Details": "TRANSFER TO 4897694162092 - UPI/DR/557831704111/IMTIYAZ/YES B/q730026421/auro",
+    "Debit": "63.58",
+    "Credit": "-",
+    "Balance": "460.84",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "IMTIYAZ YES B",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "auro",
+      "transactionId": "557831704111"
+    },
+    "Category": "Transfer",
+    "hash": "31627efdc0a6c497a99da28f3490b900"
+  },
+  {
+    "Date": "31 Jul 2025",
+    "Details": "TRANSFER TO 4897694162092 - UPI/DR/521228093697/FAYAZ SH/HDFC/fayazshaik/auto",
+    "Debit": "7.00",
+    "Credit": "-",
+    "Balance": "524.42",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "FAYAZ SH",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "HDFC",
+      "reference": "auto",
+      "transactionId": "521228093697"
+    },
+    "Category": "Transportation",
+    "hash": "b4c4e321e8c95b19fe44da1a4297c591"
+  },
+  {
+    "Date": "31 Jul 2025",
+    "Details": "TRANSFER FROM 4897736162097 - UPI/CR/109012636526/MODERN E/HDFC/sahelshaik/UPI",
+    "Debit": "-",
+    "Credit": "25000.00",
+    "Balance": "25460.84",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "MODERN E",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "HDFC",
+      "reference": "sahelshaik",
+      "transactionId": "109012636526"
+    },
+    "Category": "Transfer",
+    "hash": "916f7a72a69ef80a9b7cac327cfb63cd"
+  },
+  {
+    "Date": "01 Aug 2025",
+    "Details": "TRANSFER FROM 99509044300 - NEFT*UTIB0000070*AXISP00696826 905*BEE LOGICAL SOFT",
+    "Debit": "40262.00",
+    "Credit": "-",
+    "Balance": "65722.84",
+    "ExtractedInfo": {
+      "type": "Bank Transfer",
+      "name": "NEFT*UTIB0000070*AXISP00696826 905*BEE LOGICAL SOFT",
+      "service": "Incoming Transfer",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "99509044300",
+      "transactionId": ""
+    },
+    "Category": "Transfer",
+    "hash": "a8059f27e03c03b273ba354e2ca65cbe"
+  },
+  {
+    "Date": "01 Aug 2025",
+    "Details": "TRANSFER TO 4897695162091 - UPI/DR/521309331351/ZAM ZAM /AIRP/zamzamfoun/Payme",
+    "Debit": "100.00",
+    "Credit": "-",
+    "Balance": "65622.84",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "ZAM ZAM AIRP",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "Payme",
+      "transactionId": "521309331351"
+    },
+    "Category": "Transfer",
+    "hash": "5b41b2150ad5bd39621af8e6bc963aee"
+  },
+  {
+    "Date": "02 Aug 2025",
+    "Details": "TRANSFER TO 4897696162090 - UPI/DR/521458283060/MUBEEN M/ICIC/mastermube/Dawat",
+    "Debit": "500.00",
+    "Credit": "-",
+    "Balance": "65122.84",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "MUBEEN M",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "ICIC",
+      "reference": "Dawat",
+      "transactionId": "521458283060"
+    },
+    "Category": "Transfer",
+    "hash": "057322d12e7d3cb4fe9af90619a68dd7"
+  },
+  {
+    "Date": "03 Aug 2025",
+    "Details": "TRANSFER TO 4897690162095 - UPI/DR/521584448465/TOUSIF R/HDFC/tstousif@o/jazak No Debit",
+    "Debit": "25000.00",
+    "Credit": "-",
+    "Balance": "39177.84",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "TOUSIF R",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "HDFC",
+      "reference": "jazak No Debit",
+      "transactionId": "521584448465"
+    },
+    "Category": "Transfer",
+    "hash": "fa64f0992aabd2d00b642b4baeef1304"
+  },
+  {
+    "Date": "03 Aug 2025",
+    "Details": "TRANSFER TO 4897690162095 - UPI/DR/521568674158/AYESHA A/BARB/shkaisha47/gas",
+    "Debit": "880.00",
+    "Credit": "-",
+    "Balance": "64182.84",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "AYESHA A",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "BARB",
+      "reference": "gas",
+      "transactionId": "521568674158"
+    },
+    "Category": "Transfer",
+    "hash": "bd7eea1aed1b4ba7de90a42915cbed51"
+  },
+  {
+    "Date": "03 Aug 2025",
+    "Details": "TRANSFER TO 4897690162095 - UPI/DR/521584998185/PMPML/CBIN/ 008.2216.p/2216",
+    "Debit": "30.00",
+    "Credit": "-",
+    "Balance": "65062.84",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "PMPML CBIN",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "2216",
+      "transactionId": "521584998185"
+    },
+    "Category": "Transfer",
+    "hash": "1b8e7dfef25aaeacb0209e0ebfe9dc42"
+  },
+  {
+    "Date": "03 Aug 2025",
+    "Details": "TRANSFER TO 4897690162095 - UPI/DR/558174340850/PMPML/CBIN/ 008.2216.p/2216",
+    "Debit": "30.00",
+    "Credit": "-",
+    "Balance": "65092.84",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "PMPML CBIN",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "2216",
+      "transactionId": "558174340850"
+    },
+    "Category": "Transfer",
+    "hash": "4389f662362b52889be74761decf0c5e"
+  },
+  {
+    "Date": "03 Aug 2025",
+    "Details": "TRANSFER TO 4897690162095 - UPI/DR/558113499243/Indian R/SBIN/railsbiupi/UPI",
+    "Debit": "5.00",
+    "Credit": "-",
+    "Balance": "64177.84",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Indian R",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "SBIN",
+      "reference": "railsbiupi",
+      "transactionId": "558113499243"
+    },
+    "Category": "Transfer",
+    "hash": "005b718e803be43695db28686e629f6b"
+  },
+  {
+    "Date": "04 Aug 2025",
+    "Details": "ATM CASH 521609480249 FATIMA NAGAR PUNE",
+    "Debit": "5000.00",
+    "Credit": "-",
+    "Balance": "32057.84",
+    "ExtractedInfo": {
+      "type": "ATM Withdrawal",
+      "name": "FATIMA NAGAR PUNE",
+      "service": "ATM Cash Withdrawal",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "521609480249",
+      "transactionId": ""
+    },
+    "Category": "Other",
+    "hash": "34786c5a45809ee9a88299456b8c91c1"
+  },
+  {
+    "Date": "04 Aug 2025",
+    "Details": "TRANSFER TO 4897691162095 - UPI/DR/521601012318/DUMMY NAME/barb/3216010002/UPI",
+    "Debit": "1100.00",
+    "Credit": "-",
+    "Balance": "37867.84",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "DUMMY NAME",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "BARB",
+      "reference": "3216010002",
+      "transactionId": "521601012318"
+    },
+    "Category": "Transfer",
+    "hash": "f44061a7c7a6c3cce822c2463b0c8938"
+  },
+  {
+    "Date": "04 Aug 2025",
+    "Details": "TRANSFER TO 4897691162095 - UPI/DR/521670969523/Amazon Pay/RATN/amazonpayh/Req",
+    "Debit": "810.00",
+    "Credit": "-",
+    "Balance": "37057.84",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Amazon Pay",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "RATN",
+      "reference": "Req",
+      "transactionId": "521670969523"
+    },
+    "Category": "Shopping",
+    "hash": "4c4de74640b359ec7668113d81970135"
+  },
+  {
+    "Date": "04 Aug 2025",
+    "Details": "TRANSFER TO 4897691162095 - UPI/DR/558271463284/AYESHA A/BARB/shkaisha47/oil",
+    "Debit": "210.00",
+    "Credit": "-",
+    "Balance": "38967.84",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "AYESHA A",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "BARB",
+      "reference": "oil",
+      "transactionId": "558271463284"
+    },
+    "Category": "Transfer",
+    "hash": "a6e19e42e68bf748c88c7fe0d99b2548"
+  },
+  {
+    "Date": "04 Aug 2025",
+    "Details": "TRANSFER FROM 4897733162090 - UPI/CR/521628731945/AYESHA A/BARB/shkaisha47/UPI Please do not share your ATM, Debit/Credit card number, PIN and OTP with anyone over mail, SMS, phone call or any other media. Bank never ask for such information.",
+    "Debit": "-",
+    "Credit": "130.00",
+    "Balance": "32187.84",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "AYESHA A",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "BARB",
+      "reference": "Credit card number, PIN and OTP with anyone over mail, SMS, phone call or any other media. Bank never ask for such information.",
+      "transactionId": "521628731945"
+    },
+    "Category": "Income",
+    "hash": "38db0528e9d5b101f752ef603ebdbf13"
+  },
+  {
+    "Date": "06 Aug 2025",
+    "Details": "TRANSFER TO 4897693162093 - UPI/DR/521819501488/RAJESH S/YESB/q277038577/chick",
+    "Debit": "100.00",
+    "Credit": "-",
+    "Balance": "26008.84",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "RAJESH S",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "chick",
+      "transactionId": "521819501488"
+    },
+    "Category": "Transfer",
+    "hash": "54581425005507759428a54c30f30613"
+  },
+  {
+    "Date": "06 Aug 2025",
+    "Details": "TRANSFER TO 4897693162093 - UPI/DR/521800645396/HARIOM S/YESB/q029738997/sause",
+    "Debit": "20.00",
+    "Credit": "-",
+    "Balance": "25988.84",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "HARIOM S",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "YESB",
+      "reference": "sause",
+      "transactionId": "521800645396"
+    },
+    "Category": "Transfer",
+    "hash": "518ce7990464e1f0a73e7d2d49d29d4c"
+  },
+  {
+    "Date": "06 Aug 2025",
+    "Details": "TRANSFER TO 4897693162093 - UPI/DR/558469863020/MAHENDRA/Y ESB/paytmqr5o3/dahi Please do not share your ATM, Debit/Credit card number, PIN and OTP with anyone over mail, SMS, phone call or any other media. Bank never ask for such information.",
+    "Debit": "20.00",
+    "Credit": "-",
+    "Balance": "26108.84",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "MAHENDRA Y ESB",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "Credit card number, PIN and OTP with anyone over mail, SMS, phone call or any other media. Bank never ask for such information.",
+      "transactionId": "558469863020"
+    },
+    "Category": "Income",
+    "hash": "cdc12af0f4af55308b0fac93d858638d"
+  },
+  {
+    "Date": "06 Aug 2025",
+    "Details": "TRANSFER FROM 4897735162098 - UPI/CR/367912601378/SAMEER B/ESFB/8999681077/Payme",
+    "Debit": "-",
+    "Credit": "2000.00",
+    "Balance": "27988.84",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SAMEER B ESFB",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "Payme",
+      "transactionId": "367912601378"
+    },
+    "Category": "Transfer",
+    "hash": "1260d885bebd821098e20e5a10420987"
+  },
+  {
+    "Date": "07 Aug 2025",
+    "Details": "TRANSFER TO 4897694162092 - UPI/DR/521907839871/WELLNESS/U TIB/wellnessfo/Payme",
+    "Debit": "1133.59",
+    "Credit": "-",
+    "Balance": "26855.25",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "WELLNESS U TIB",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "",
+      "reference": "Payme",
+      "transactionId": "521907839871"
+    },
+    "Category": "Transfer",
+    "hash": "bd42cc290767c47f5f625f266e876c11"
+  },
+  {
+    "Date": "07 Aug 2025",
+    "Details": "TRANSFER TO 4897694162092 - UPI/DR/521947060200/Meesho/UTIB/ meesho1onl/UPI Int No Debit",
+    "Debit": "546.00",
+    "Credit": "-",
+    "Balance": "26125.25",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Meesho",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "UTIB",
+      "reference": "UPI Int No Debit",
+      "transactionId": "521947060200"
+    },
+    "Category": "Transfer",
+    "hash": "6a8e334e023d36ea618f956d7c4dbec1"
+  },
+  {
+    "Date": "07 Aug 2025",
+    "Details": "TRANSFER TO 4897694162092 - UPI/DR/521973562801/Meesho/UTIB/ meesho1onl/UPI Int",
+    "Debit": "184.00",
+    "Credit": "-",
+    "Balance": "26671.25",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "Meesho",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "UTIB",
+      "reference": "UPI Int",
+      "transactionId": "521973562801"
+    },
+    "Category": "Transfer",
+    "hash": "a0214e33e9d1ccd0ab1febf475050f64"
+  },
+  {
+    "Date": "08 Aug 2025",
+    "Details": "TRANSFER TO 4897695162091 - UPI/DR/522091851102/AYESHA A/BARB/shkaisha47/serum",
+    "Debit": "1512.20",
+    "Credit": "-",
+    "Balance": "82613.05",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "AYESHA A",
+      "service": "Debit",
+      "upiId": "",
+      "bankCode": "BARB",
+      "reference": "serum",
+      "transactionId": "522091851102"
+    },
+    "Category": "Transfer",
+    "hash": "eeee731c8c5da3a44a781fbc641f73b8"
+  },
+  {
+    "Date": "08 Aug 2025",
+    "Details": "TRANSFER FROM 4897737162096 - UPI/CR/109440894347/FAISAL M/SBIN/shaikhfaiz/UPI",
+    "Debit": "-",
+    "Credit": "48000.00",
+    "Balance": "74125.25",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "FAISAL M",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "SBIN",
+      "reference": "shaikhfaiz",
+      "transactionId": "109440894347"
+    },
+    "Category": "Transfer",
+    "hash": "92025a3f7a74c7e1fc3e6d3942b5de37"
+  },
+  {
+    "Date": "08 Aug 2025",
+    "Details": "TRANSFER FROM 4897737162096 - UPI/CR/522080218371/SHAIKH F/HDFC/shaikhfaiz/UPI",
+    "Debit": "-",
+    "Credit": "10000.00",
+    "Balance": "84125.25",
+    "ExtractedInfo": {
+      "type": "UPI Transfer",
+      "name": "SHAIKH F",
+      "service": "Credit",
+      "upiId": "",
+      "bankCode": "HDFC",
+      "reference": "shaikhfaiz",
+      "transactionId": "522080218371"
+    },
+    "Category": "Transfer",
+    "hash": "e479a7e8f85f9f9ad579a38987927beb"
+  }
+]
