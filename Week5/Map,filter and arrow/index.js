@@ -184,4 +184,3 @@ function registerUser({
   };
 
   console.log(registerUser(userData));
-// Using map to create a new array with each number squared
