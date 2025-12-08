@@ -1,0 +1,24 @@
+{
+    "poonaCollege": [
+        {
+            "course": "Backend Engineering",
+            "courseId": 2,
+            "cohort": 1,
+            "college": "Poona College",
+            "semester": 3,
+            "instructor": "Sadik Shaikh",
+            "averageRating": 4.8,
+            "studentsVoted": 3
+        },
+        {
+            "course": "Product Management",
+            "courseId": 3,
+            "cohort": 1,
+            "college": "Poona College",
+            "semester": 4,
+            "instructor": "Sadik Shaikh",
+            "averageRating": 4.9,
+            "studentsVoted": 1
+        }
+    ]
+}
