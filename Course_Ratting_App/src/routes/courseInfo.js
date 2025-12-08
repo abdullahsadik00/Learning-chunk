@@ -3,6 +3,7 @@ const courseData = require('../../course.json');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
+const validators = require('../helpers/validator');
 
 // Middleware
 courseRoutes.use(bodyParser.json());
@@ -24,7 +25,14 @@ courseRoutes.get('/:courseId', (req, res) => {
 
 courseRoutes.post('/', (req, res) => {
     const newCourse = req.body;
+    const validationResult = validators.validateCourseInfo(newCourse);
 
+    if (validationResult.hasError) {
+        return res.status(400).json({
+            message: "Invalid course data",
+            details: validationResult.message
+        });
+    }
     const writePath = path.join(__dirname, '..', 'course.json');
 
     fs.readFile(writePath, 'utf-8', (err, data) => {
