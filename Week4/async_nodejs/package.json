@@ -13,6 +13,7 @@
     "axios": "^1.13.2",
     "body-parser": "^2.2.1",
     "express": "^5.2.1",
-    "nodemon": "^3.1.11"
+    "nodemon": "^3.1.11",
+    "url-search-params": "^1.1.0"
   }
 }
