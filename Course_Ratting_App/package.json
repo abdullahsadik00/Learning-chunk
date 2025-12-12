@@ -21,6 +21,7 @@
     "jsonwebtoken": "^9.0.3",
     "mocha": "^11.7.5",
     "mongoose": "^9.0.1",
-    "nodemon": "^3.1.11"
+    "nodemon": "^3.1.11",
+    "sinon": "^21.0.0"
   }
 }
