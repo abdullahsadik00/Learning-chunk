@@ -70,7 +70,7 @@ courseRoutes.post('/', (req, res) => {
     });
 });
 
-courseRoutes.post('/: courseId/averageRating', (req, res) => {
+courseRoutes.post('/:courseId/averageRating', (req, res) => {
     let courseId = Number(req.params.courseId);
     let ratingPassed = Number(req.body.rating);
     const writePath = path.join(__dirname, '..', 'course.json');
