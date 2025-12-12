@@ -5,6 +5,7 @@ const User = require('../model/user');
 const register = async (req, res) => {
     // Registration logic here
     try {
+        console.log("Registration request body:", req.body);
         const { fullName, email, password, role } = req.body;
 
         // Check if email already exists
