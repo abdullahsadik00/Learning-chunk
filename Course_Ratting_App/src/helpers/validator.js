@@ -19,6 +19,14 @@ class Validators {
             }
         }
     }
+
+    static validateAverageRating(rating) {
+        if (typeof rating === 'number' && rating >= 1 && rating <= 5) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 
 module.exports = Validators;
