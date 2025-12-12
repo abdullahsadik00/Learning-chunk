@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
 const validators = require('../helpers/validator');
+const verifyToken = require('../middleware/verifyToken');
 
 // Middleware
 courseRoutes.use(bodyParser.json());
@@ -23,7 +24,10 @@ courseRoutes.get('/:courseId', (req, res) => {
     res.status(200).json(fillterCourseData);
 });
 
-courseRoutes.post('/', (req, res) => {
+courseRoutes.post('/', verifyToken, (req, res) => {
+    if (!req.user) {
+        return res.status(401).json({ hasError: true, message: "Unauthorized: Please log in to add a course." });
+    }
     const newCourse = req.body;
     const validationResult = validators.validateCourseInfo(newCourse);
 
