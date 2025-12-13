@@ -1,9 +1,9 @@
-const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
-const User = require('../model/user');
+import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
+import {User} from '../model/user.js';  // Use the `.js` extension for ES Modules
 
-const register = async (req, res) => {
-    // Registration logic here
+// Registration function
+export const register = async (req, res) => {
     try {
         console.log("Registration request body:", req.body);
         const { fullName, email, password, role } = req.body;
@@ -30,11 +30,10 @@ const register = async (req, res) => {
     } catch (error) {
         return res.status(500).json({ message: "Error registering user", error });
     }
-
 };
 
-const login = async (req, res) => {
-    // Login logic here
+// Login function
+export const login = async (req, res) => {
     try {
         const { email, password } = req.body;
         let user = await User.findOne({ email: email });
@@ -47,7 +46,7 @@ const login = async (req, res) => {
             return res.status(401).json({ message: "Invalid password" });
         }
 
-        const token = "Bearer "+jwt.sign(
+        const token = "Bearer " + jwt.sign(
             { id: user._id, role: user.role },
             'SECRET_KEY',
             { expiresIn: '84600' }
@@ -61,5 +60,3 @@ const login = async (req, res) => {
         return res.status(500).json({ message: "Error logging in", error });
     }
 };
-
-module.exports = { register, login };

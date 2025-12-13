@@ -1,9 +1,11 @@
-
 import mongoose from 'mongoose';
 mongoose.Promise = global.Promise;
 
+// Ensure the connection happens only once
+let mongoUri = 'mongodb://localhost:27017/course_rating_app_test';
+
 before((done) => {
-    mongoose.connect('mongodb://localhost:27017/course_rating_app_test')
+    mongoose.connect(mongoUri)
         .then(() => {
             console.log("Connected to Test MongoDB");
             done();
@@ -18,7 +20,7 @@ beforeEach((done) => {
     mongoose.connection.db.dropDatabase()
         .then(() => {
             console.log("Test database cleared");
-            done()
+            done();
         })
         .catch((err) => done(err));  // Call done with error in case of failure
 });

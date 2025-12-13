@@ -1,5 +1,6 @@
-const jwt = require('jsonwebtoken');
-const User = require('../model/user');
+import jwt from 'jsonwebtoken';  // Using `import`
+import { User } from '../model/user.js';
+// const User = require('../model/user');
 
 const verifyToken = (req, res, next) => {
     if (req.headers && req.headers.authorization && req.headers.authorization.split(' ')[0] === 'Bearer') {
@@ -24,4 +25,4 @@ const verifyToken = (req, res, next) => {
     }
 }
 
-module.exports = verifyToken;
+export default verifyToken;

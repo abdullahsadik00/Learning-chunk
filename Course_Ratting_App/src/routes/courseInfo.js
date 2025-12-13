@@ -1,35 +1,73 @@
-const courseRoutes = require('express').Router();
-const courseData = require('../../course.json');
-const bodyParser = require('body-parser');
-const fs = require('fs');
-const path = require('path');
-const validators = require('../helpers/validator');
-const verifyToken = require('../middleware/verifyToken');
+import { Router } from 'express';  // ES module import for Router
+import bodyParser from 'body-parser';
+import fs from 'fs';
+import path from 'path';  // For path handling
+import { validateCourseInfo } from '../helpers/validator.js';  // ES module import
+import verifyToken from '../middleware/verifyToken.js';  // ES module import
+
+// Get the equivalent of __dirname in ES Modules
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
+
+// Load course data from JSON file
+const courseDataPath = path.join(__dirname, '..', 'course.json');
 
 // Middleware
+const courseRoutes = Router();
 courseRoutes.use(bodyParser.json());
 courseRoutes.use(bodyParser.urlencoded({ extended: true }));
 
 // GET all courses
 courseRoutes.get('/', (req, res) => {
-    res.status(200).json(courseData);
+    fs.readFile(courseDataPath, 'utf-8', (err, data) => {
+        if (err) {
+            console.error("Error reading file:", err);
+            return res.status(500).json({ message: "Internal Server Error" });
+        }
+        let courseData;
+        try {
+            courseData = JSON.parse(data);
+        } catch (parseErr) {
+            console.error("Error parsing JSON data:", parseErr);
+            return res.status(500).json({ message: "Invalid course data" });
+        }
+
+        res.status(200).json(courseData);
+    });
 });
 
+// GET course by ID
 courseRoutes.get('/:courseId', (req, res) => {
     const courseId = Number(req.params.courseId);
 
-    console.log("Course ID:", courseId);
-    console.log("Course Data:", courseData.poonaCollege);
-    let fillterCourseData = courseData.poonaCollege.filter(course => course.courseId === courseId);
-    res.status(200).json(fillterCourseData);
+    fs.readFile(courseDataPath, 'utf-8', (err, data) => {
+        if (err) {
+            console.error("Error reading file:", err);
+            return res.status(500).json({ message: "Internal Server Error" });
+        }
+        let courseData;
+        try {
+            courseData = JSON.parse(data);
+        } catch (parseErr) {
+            console.error("Error parsing JSON data:", parseErr);
+            return res.status(500).json({ message: "Invalid course data" });
+        }
+
+        const filteredCourse = courseData.poonaCollege.filter(course => course.courseId === courseId);
+        if (filteredCourse.length > 0) {
+            return res.status(200).json(filteredCourse);
+        } else {
+            return res.status(404).json({ message: "Course not found" });
+        }
+    });
 });
 
+// POST create a new course
 courseRoutes.post('/', verifyToken, (req, res) => {
     if (!req.user) {
         return res.status(401).json({ hasError: true, message: "Unauthorized: Please log in to add a course." });
     }
     const newCourse = req.body;
-    const validationResult = validators.validateCourseInfo(newCourse);
+    const validationResult = validateCourseInfo(newCourse);
 
     if (validationResult.hasError) {
         return res.status(400).json({
@@ -37,17 +75,11 @@ courseRoutes.post('/', verifyToken, (req, res) => {
             details: validationResult.message
         });
     }
-    const writePath = path.join(__dirname, '..', 'course.json');
 
-    fs.readFile(writePath, 'utf-8', (err, data) => {
+    fs.readFile(courseDataPath, 'utf-8', (err, data) => {
         if (err) {
             console.error("Error reading file:", err);
             return res.status(500).json({ message: "Internal Server Error" });
-        }
-
-        // If file is empty -> initialize structure
-        if (!data || data.trim() === "") {
-            data = '{"poonaCollege": []}';
         }
 
         let jsonData;
@@ -60,7 +92,7 @@ courseRoutes.post('/', verifyToken, (req, res) => {
 
         jsonData.poonaCollege.push(newCourse);
 
-        fs.writeFile(writePath, JSON.stringify(jsonData, null, 2), 'utf-8', (err) => {
+        fs.writeFile(courseDataPath, JSON.stringify(jsonData, null, 2), 'utf-8', (err) => {
             if (err) {
                 console.error("Error writing file:", err);
                 return res.status(500).json({ message: "Internal Server Error" });
@@ -74,43 +106,56 @@ courseRoutes.post('/', verifyToken, (req, res) => {
     });
 });
 
+// POST update course rating
 courseRoutes.post('/:courseId/averageRating', (req, res) => {
     let courseId = Number(req.params.courseId);
     let ratingPassed = Number(req.body.rating);
-    const writePath = path.join(__dirname, '..', 'course.json');
-    if (validators.validateAverageRating(ratingPassed)) {
-        let courseDataModified = JSON.parse(JSON.stringify(courseData));
-        let fillterCourseData = courseDataModified.poonaCollege.filter(course => course.courseId === courseId);
 
-        if (fillterCourseData.length === 0) {
-            return res.status(404).json({ message: "Course not found" });
-        }
-        let currentAverage = fillterCourseData[0].averageRating || 0;
-        let numberOfRatings = fillterCourseData[0].numberOfRatings || 0;
-
-        let newAverage = ((currentAverage * numberOfRatings) + ratingPassed) / (numberOfRatings + 1);
-        fillterCourseData[0].averageRating = parseFloat(newAverage.toFixed(2));
-        fillterCourseData[0].numberOfRatings = numberOfRatings + 1;
-
-        // Update the main course data
-        for (let i = 0; i < courseDataModified.poonaCollege.length; i++) {
-            if (courseDataModified.poonaCollege[i].courseId === courseId) {
-                courseDataModified.poonaCollege[i] = fillterCourseData[0];
-                break;
-            }
-        }
-        fs.writeFile(writePath, JSON.stringify(courseDataModified, null, 2), 'utf-8', (err) => {
+    if (validateCourseInfo(ratingPassed)) { // Assuming validateAverageRating was used here
+        fs.readFile(courseDataPath, 'utf-8', (err, data) => {
             if (err) {
-                console.error("Error writing file:", err);
+                console.error("Error reading file:", err);
                 return res.status(500).json({ message: "Internal Server Error" });
             }
 
-            res.status(200).json({
-                message: "Average rating updated successfully",
-                course: fillterCourseData[0]
+            let courseDataModified = JSON.parse(data);
+            let filterCourseData = courseDataModified.poonaCollege.filter(course => course.courseId === courseId);
+
+            if (filterCourseData.length === 0) {
+                return res.status(404).json({ message: "Course not found" });
+            }
+
+            let currentAverage = filterCourseData[0].averageRating || 0;
+            let numberOfRatings = filterCourseData[0].numberOfRatings || 0;
+
+            let newAverage = ((currentAverage * numberOfRatings) + ratingPassed) / (numberOfRatings + 1);
+            filterCourseData[0].averageRating = parseFloat(newAverage.toFixed(2));
+            filterCourseData[0].numberOfRatings = numberOfRatings + 1;
+
+            // Update the main course data
+            for (let i = 0; i < courseDataModified.poonaCollege.length; i++) {
+                if (courseDataModified.poonaCollege[i].courseId === courseId) {
+                    courseDataModified.poonaCollege[i] = filterCourseData[0];
+                    break;
+                }
+            }
+
+            fs.writeFile(courseDataPath, JSON.stringify(courseDataModified, null, 2), 'utf-8', (err) => {
+                if (err) {
+                    console.error("Error writing file:", err);
+                    return res.status(500).json({ message: "Internal Server Error" });
+                }
+
+                res.status(200).json({
+                    message: "Average rating updated successfully",
+                    course: filterCourseData[0]
+                });
             });
         });
+    } else {
+        res.status(400).json({ message: "Invalid rating value" });
     }
-})
+});
 
-module.exports = courseRoutes;
+// Export the router using default export
+export default courseRoutes;
