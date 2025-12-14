@@ -1,28 +1,32 @@
-import jwt from 'jsonwebtoken';  // Using `import`
+import jwt from 'jsonwebtoken';
 import { User } from '../model/user.js';
-// const User = require('../model/user');
 
-const verifyToken = (req, res, next) => {
-    if (req.headers && req.headers.authorization && req.headers.authorization.split(' ')[0] === 'Bearer') {
+const verifyToken = async (req, res, next) => {
+    const authHeader = req.headers?.authorization;
 
-        jwt.verify(req.headers.authorization.split(' ')[1], 'SECRET_KEY', (err, decode) => {
-            if (err) {
-                req.user = undefined;
-                next();
-            } else {
-                User.findById(decode.id).then(user => {
-                    req.user = user;
-                    next();
-                }).catch(err => {
-                    res.status(500).json({ hasError: true, message: "Error fetching user", error: err });
-                });
-            }
-        });
-    } else {
-        req.user = undefined;
-        req.message = "Authorization header not found";
+    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+        // No token provided
+        req.user = null;
+        return next(); // Let endpoint decide whether to return 401/403
+    }
+
+    const token = authHeader.split(' ')[1];
+
+    try {
+        const decoded = jwt.verify(token, 'SECRET_KEY');
+        const user = await User.findById(decoded.id);
+
+        if (!user) {
+            req.user = null;
+        } else {
+            req.user = user;
+        }
+
+        next(); // Continue to route handler
+    } catch (err) {
+        req.user = null; // Token invalid
         next();
     }
-}
+};
 
 export default verifyToken;
