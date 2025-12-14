@@ -17,46 +17,43 @@ courseRoutes.use(bodyParser.json());
 courseRoutes.use(bodyParser.urlencoded({ extended: true }));
 
 // GET all courses
-courseRoutes.get('/', (req, res) => {
+courseRoutes.get('/', verifyToken, (req, res) => {
+    if (!req.user) {
+        return res.status(401).json({ message: 'Unauthorized: Please log in' });
+    }
     fs.readFile(courseDataPath, 'utf-8', (err, data) => {
-        if (err) {
-            console.error("Error reading file:", err);
-            return res.status(500).json({ message: "Internal Server Error" });
-        }
-        let courseData;
-        try {
-            courseData = JSON.parse(data);
-        } catch (parseErr) {
-            console.error("Error parsing JSON data:", parseErr);
-            return res.status(500).json({ message: "Invalid course data" });
-        }
+        if (err) return res.status(500).json({ message: "Internal Server Error" });
 
-        res.status(200).json(courseData);
+        try {
+            const courseData = JSON.parse(data);
+            res.status(200).json(courseData);
+        } catch (parseErr) {
+            console.error("JSON parse error:", parseErr);
+            res.status(500).json({ message: "Invalid course data" });
+        }
     });
 });
+
 
 // GET course by ID
 courseRoutes.get('/:courseId', (req, res) => {
     const courseId = Number(req.params.courseId);
 
     fs.readFile(courseDataPath, 'utf-8', (err, data) => {
-        if (err) {
-            console.error("Error reading file:", err);
-            return res.status(500).json({ message: "Internal Server Error" });
-        }
-        let courseData;
-        try {
-            courseData = JSON.parse(data);
-        } catch (parseErr) {
-            console.error("Error parsing JSON data:", parseErr);
-            return res.status(500).json({ message: "Invalid course data" });
-        }
+        if (err) return res.status(500).json({ message: "Internal Server Error" });
 
-        const filteredCourse = courseData.poonaCollege.filter(course => course.courseId === courseId);
-        if (filteredCourse.length > 0) {
-            return res.status(200).json(filteredCourse);
-        } else {
-            return res.status(404).json({ message: "Course not found" });
+        try {
+            const courseData = JSON.parse(data);
+            const filteredCourse = courseData.poonaCollege.filter(c => c.courseId === courseId);
+
+            if (filteredCourse.length > 0) {
+                res.status(200).json(filteredCourse);
+            } else {
+                res.status(404).json({ message: "Course not found" });
+            }
+        } catch (parseErr) {
+            console.error("JSON parse error:", parseErr);
+            res.status(500).json({ message: "Invalid course data" });
         }
     });
 });
@@ -77,26 +74,19 @@ courseRoutes.post('/', verifyToken, (req, res) => {
     }
 
     fs.readFile(courseDataPath, 'utf-8', (err, data) => {
-        if (err) {
-            console.error("Error reading file:", err);
-            return res.status(500).json({ message: "Internal Server Error" });
-        }
+        if (err) return res.status(500).json({ message: "Internal Server Error" });
 
-        let jsonData;
+        let courseData;
         try {
-            jsonData = JSON.parse(data);
-        } catch (e) {
-            console.error("JSON parse error:", e);
+            courseData = JSON.parse(data);
+        } catch (parseErr) {
             return res.status(500).json({ message: "Corrupted JSON file" });
         }
 
-        jsonData.poonaCollege.push(newCourse);
+        courseData.poonaCollege.push(newCourse);
 
-        fs.writeFile(courseDataPath, JSON.stringify(jsonData, null, 2), 'utf-8', (err) => {
-            if (err) {
-                console.error("Error writing file:", err);
-                return res.status(500).json({ message: "Internal Server Error" });
-            }
+        fs.writeFile(courseDataPath, JSON.stringify(courseData, null, 2), 'utf-8', (err) => {
+            if (err) return res.status(500).json({ message: "Internal Server Error" });
 
             res.status(201).json({
                 message: "Course added successfully",
@@ -108,53 +98,43 @@ courseRoutes.post('/', verifyToken, (req, res) => {
 
 // POST update course rating
 courseRoutes.post('/:courseId/averageRating', (req, res) => {
-    let courseId = Number(req.params.courseId);
-    let ratingPassed = Number(req.body.rating);
+    const courseId = Number(req.params.courseId);
+    const rating = Number(req.body.rating);
 
-    if (validateCourseInfo(ratingPassed)) { // Assuming validateAverageRating was used here
-        fs.readFile(courseDataPath, 'utf-8', (err, data) => {
-            if (err) {
-                console.error("Error reading file:", err);
-                return res.status(500).json({ message: "Internal Server Error" });
-            }
+    if (isNaN(rating) || rating < 0 || rating > 5) {
+        return res.status(400).json({ message: "Invalid rating value" });
+    }
 
-            let courseDataModified = JSON.parse(data);
-            let filterCourseData = courseDataModified.poonaCollege.filter(course => course.courseId === courseId);
+    fs.readFile(courseDataPath, 'utf-8', (err, data) => {
+        if (err) return res.status(500).json({ message: "Internal Server Error" });
 
-            if (filterCourseData.length === 0) {
-                return res.status(404).json({ message: "Course not found" });
-            }
+        let courseData;
+        try {
+            courseData = JSON.parse(data);
+        } catch (parseErr) {
+            return res.status(500).json({ message: "Corrupted JSON file" });
+        }
 
-            let currentAverage = filterCourseData[0].averageRating || 0;
-            let numberOfRatings = filterCourseData[0].numberOfRatings || 0;
+        const courseIndex = courseData.poonaCollege.findIndex(c => c.courseId === courseId);
+        if (courseIndex === -1) return res.status(404).json({ message: "Course not found" });
 
-            let newAverage = ((currentAverage * numberOfRatings) + ratingPassed) / (numberOfRatings + 1);
-            filterCourseData[0].averageRating = parseFloat(newAverage.toFixed(2));
-            filterCourseData[0].numberOfRatings = numberOfRatings + 1;
+        const course = courseData.poonaCollege[courseIndex];
+        const newAverage = ((course.averageRating * course.numberOfRatings) + rating) / (course.numberOfRatings + 1);
 
-            // Update the main course data
-            for (let i = 0; i < courseDataModified.poonaCollege.length; i++) {
-                if (courseDataModified.poonaCollege[i].courseId === courseId) {
-                    courseDataModified.poonaCollege[i] = filterCourseData[0];
-                    break;
-                }
-            }
+        course.averageRating = parseFloat(newAverage.toFixed(2));
+        course.numberOfRatings += 1;
 
-            fs.writeFile(courseDataPath, JSON.stringify(courseDataModified, null, 2), 'utf-8', (err) => {
-                if (err) {
-                    console.error("Error writing file:", err);
-                    return res.status(500).json({ message: "Internal Server Error" });
-                }
+        courseData.poonaCollege[courseIndex] = course;
 
-                res.status(200).json({
-                    message: "Average rating updated successfully",
-                    course: filterCourseData[0]
-                });
+        fs.writeFile(courseDataPath, JSON.stringify(courseData, null, 2), 'utf-8', (err) => {
+            if (err) return res.status(500).json({ message: "Internal Server Error" });
+
+            res.status(200).json({
+                message: "Average rating updated successfully",
+                course
             });
         });
-    } else {
-        res.status(400).json({ message: "Invalid rating value" });
-    }
+    });
 });
 
 // Export the router using default export
