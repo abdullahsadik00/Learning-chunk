@@ -27,6 +27,6 @@ export function validateAverageRating(rating) {
 
 export function validateUniqueCourseId(courseInfo, courseData) {
     let valueFound = courseData.poonaCollege.some(el => el.courseId === courseInfo.courseId);
-    if (valueFound) return false;
+    if (valueFound) {return false;}
     return true;
 }

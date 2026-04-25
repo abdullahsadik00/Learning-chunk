@@ -29,7 +29,7 @@ after((done) => {
     mongoose.connection.close()
         .then(() => {
             console.log("Test MongoDB connection closed");
-            done()
+            done();
         })
         .catch((err) => done(err));  // Call done with error in case of failure
 });

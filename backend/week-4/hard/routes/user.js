@@ -19,4 +19,4 @@ router.post('/logout', userMiddleware, (req, res) => {
     // Implement logout logic
 });
 
-module.exports = router
+module.exports = router;

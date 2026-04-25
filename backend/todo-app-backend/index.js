@@ -1,16 +1,16 @@
-const express = require('express')
+const express = require('express');
 
-const app = express()
+const app = express();
 app.use(express.json());
 
-let todos = []
+let todos = [];
 app.get('/', (req, res) => {
     res.json(
         {
             hasError: false,
             todos
-        })
-})
+        });
+});
 
 app.post('/', (req, res) => {
 
@@ -21,8 +21,8 @@ app.post('/', (req, res) => {
         todo
     });
 
-    res.json({ message: "POST request received" })
-})
+    res.json({ message: "POST request received" });
+});
 
 app.put('/:id',(req,res)=>{
     const {id} = req.params;
@@ -34,7 +34,7 @@ app.put('/:id',(req,res)=>{
     console.log("todoItem :", todoItem);
     if(todoItem) {
         todoItem.todo = todo + " (updated)";
-        res.json({ message: `Todo with ID ${id} updated.` })
+        res.json({ message: `Todo with ID ${id} updated.` });
     }
-})
-app.listen(3000)
+});
+app.listen(3000);

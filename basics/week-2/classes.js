@@ -16,15 +16,15 @@ class Rectangle {
 
 }
 
-const rect = new Rectangle(2, 4)
+const rect = new Rectangle(2, 4);
 const area = rect.area();
-console.log(area)
+console.log(area);
 
 // Assignment #1 - Create a Circle class
 class Circle {
     constructor(radius, color) {
         this.radius = radius;
-        this.color = color
+        this.color = color;
     }
     area() {
         const area = this.radius * this.radius * Math.PI;

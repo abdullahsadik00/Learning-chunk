@@ -22,17 +22,17 @@ function applyCoupon(coupon) {
             discount = 0;
             break;
     }
-    return discount
+    return discount;
 }
 
 // HOF Implementation:
 function applyBulkDiscount(prices, couponHandler) {
     // Apply couponHandler to each price
-    let result = []
+    let result = [];
     for (let i = 0; i < prices.length; i++) {
-        result.push(prices[i] - couponHandler(coupons[i]))
+        result.push(prices[i] - couponHandler(coupons[i]));
     }
-    return result
+    return result;
 }
 
 console.log(applyBulkDiscount(prices, applyCoupon));
@@ -49,7 +49,7 @@ const products = [
 function getTaxRate(state) {
     /* Return tax function: 
        "MH" → 18%, "KA" → 15%, default → 12% */
-    let TAX = null
+    let TAX = null;
     switch (state) {
         case "MH":
             TAX = 0.18;
@@ -61,18 +61,18 @@ function getTaxRate(state) {
             TAX = 0.12;
             break;
     }
-    return TAX
+    return TAX;
 }
 
 // HOF Implementation:
 function calculateTotal(products, state, taxHandler) {
     // Apply taxHandler to each product
-    const result = []
-    const tax = taxHandler(state)
+    const result = [];
+    const tax = taxHandler(state);
     for (let i = 0; i < products.length; i++) {
-        result.push(products[i].price + (products[i].price * tax))
+        result.push(products[i].price + (products[i].price * tax));
     }
-    return result
+    return result;
 }
 
 console.log(calculateTotal(products, "MH", getTaxRate));
@@ -92,9 +92,9 @@ function applyDiscountPipeline(price, discountFunctions) {
     // Sequentially apply all discount functions
     let finalPrice = price;
     for (let i = 0; i < discountFunctions.length; i++) {
-        finalPrice = discountFunctions[i](finalPrice)
+        finalPrice = discountFunctions[i](finalPrice);
     }
-    return finalPrice
+    return finalPrice;
 }
 
 console.log(applyDiscountPipeline(2000, discounts));
@@ -116,9 +116,9 @@ function calculateFinalPrice(basePrice, userType, rules) {
     // Apply all rules sequentially
     let finalPrice = basePrice;
     for (let i = 0; i < rules.length; i++) {
-        finalPrice = rules[i](finalPrice, userType)
+        finalPrice = rules[i](finalPrice, userType);
     }
-    return finalPrice
+    return finalPrice;
 }
 
 console.log(calculateFinalPrice(3000, "prime", pricingRules));
@@ -158,9 +158,9 @@ const physicalCount = [
 //   Problem: Create a function that filters out prime numbers from an array using filter.
   
   function isPrime(num) {
-    if (num < 2) return false;
+    if (num < 2) {return false;}
     for (let i = 2; i <= Math.sqrt(num); i++) {
-      if (num % i === 0) return false;
+      if (num % i === 0) {return false;}
     }
     return true;
   }

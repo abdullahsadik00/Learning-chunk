@@ -1,5 +1,5 @@
 const arr1 = [1, 2, 3, 4, 5];
-const arr2 = [...arr1]
+const arr2 = [...arr1];
 // const arr3 = ['a', 'b', 'c', 'd', 'e'];
 console.log(arr2);
 // Spread operator to merge arrays
@@ -16,20 +16,20 @@ const updatedProduct = {...product, price: 750};
 console.log(updatedProduct);
 
 // Rest Operator (...Rest Operator)
-const sum = (...numbers) => {return numbers.reduce((acc,curr)=> acc + curr,0)};
+const sum = (...numbers) => {return numbers.reduce((acc,curr)=> acc + curr,0);};
 console.log(sum(1,2,3,4,5));
 
 const [first,...other] = arr1;
 const {name,...details} = obj2;
 console.log(first);
 console.log(other);
-console.log(name)
+console.log(name);
 console.log(details);
 
 const placeOrders = (customer,...items) =>{
     console.log(`Customer ${customer} ordered ${items.length} items.`);
     console.log(items);
-}
+};
 
 placeOrders('Alice', 'item1', 'item2', 'item3');
 
@@ -41,7 +41,7 @@ console.log(fruitsCopy);
 // Create a function that accepts any number of marks and returns their average.
 const average = (...marks) => {
     console.log(marks.reduce((acc,curr) => acc + curr,0) / marks.length);
-}
+};
 
 average(10, 20, 30);
 
@@ -63,10 +63,10 @@ const updatedUser = {...user, orderId: 12345, status: "Shipped" };
 console.log(updatedUser);
 
 // On a shopping app, the admin wants the first product to be featured.
-const featuredProducts = ([featured,...normalItems]) => {return {featured, normalItems}};
-featuredProducts(["iPhone", "Samsung", "Pixel", "OnePlus"])
+const featuredProducts = ([featured,...normalItems]) => {return {featured, normalItems};};
+featuredProducts(["iPhone", "Samsung", "Pixel", "OnePlus"]);
 
-console.log(featuredProducts(["iPhone", "Samsung", "Pixel", "OnePlus"]))
+console.log(featuredProducts(["iPhone", "Samsung", "Pixel", "OnePlus"]));
 
 // Array Destructuring
 const numbers = [1, 2, 3, 4, 5];
@@ -144,7 +144,7 @@ const employee = {
 const updateEmployee  = (obj)=>{
     const {name:employeeName, skills:[mainSkill,...otherSkills]} = obj;
     return {employeeName, mainSkill, otherSkills};
-}
+};
 console.log(updateEmployee(employee));
 
 const apiResponse = {

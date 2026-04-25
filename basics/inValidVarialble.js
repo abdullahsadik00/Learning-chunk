@@ -1,3 +1,3 @@
-console.debug("error")
+console.debug("error");
 console.log(log);
 

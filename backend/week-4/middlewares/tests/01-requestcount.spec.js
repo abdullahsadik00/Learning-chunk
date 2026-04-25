@@ -9,7 +9,7 @@ describe('GET /user', function() {
       .then(response => {
         expect(response.body.requestCount).toBe(1);
         done();
-      })
+      });
   });
 
   it('10 more requests log 12', function(done) {
@@ -23,6 +23,6 @@ describe('GET /user', function() {
               .then(response => {
                 expect(response.body.requestCount).toBe(12);
                 done();
-              })
+              });
       });
 });

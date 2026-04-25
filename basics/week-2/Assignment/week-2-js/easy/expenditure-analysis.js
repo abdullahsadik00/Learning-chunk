@@ -14,19 +14,19 @@
 */
 
 function calculateTotalSpentByCategory(transactions) {
-  let resultObj = {}
+  let resultObj = {};
   transactions.forEach(transaction => {
-    const { category, price } = transaction
+    const { category, price } = transaction;
     if (resultObj[category]) {
-      resultObj[category] += price
+      resultObj[category] += price;
     } else {
-      resultObj[category] = price
+      resultObj[category] = price;
     }
   });
   const result = Object.keys(resultObj).map(category =>({
     category,
     totalSpent: resultObj[category]
-  }))
+  }));
   return result;
 }
 
