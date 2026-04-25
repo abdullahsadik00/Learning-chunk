@@ -26,13 +26,13 @@ airQuality.get('/:city/callback', (req, res) => {
     const options = createOptions(city);
 
     airQualityCallback(options, (err, result1) => {
-        if (err) return res.status(500).json({ error: 'Error fetching air quality data' });
+        if (err) {return res.status(500).json({ error: 'Error fetching air quality data' });}
 
         airQualityCallback(options, (err, result2) => {
-            if (err) return res.status(500).json({ error: 'Error fetching air quality data' });
+            if (err) {return res.status(500).json({ error: 'Error fetching air quality data' });}
 
             airQualityCallback(options, (err, result3) => {
-                if (err) return res.status(500).json({ error: 'Error fetching air quality data' });
+                if (err) {return res.status(500).json({ error: 'Error fetching air quality data' });}
 
                 // Respond with results of all three calls
                 return res.json({

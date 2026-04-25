@@ -1,5 +1,5 @@
 var score  = 90;
-var name = 'Sadik'
+var name = 'Sadik';
 
 let marks = 85;
-let lastName = 'Shaikh'
+let lastName = 'Shaikh';

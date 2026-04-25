@@ -42,7 +42,7 @@ let users = [
  */
 app.get("/", (req, res) => {
     const user = users[0].kidneys;
-    const numberOfKidneys = user.kidneys.lenght
+    const numberOfKidneys = user.kidneys.lenght;
     const healthyKidneys = user.filter(kidney => kidney.healthy).length;
     const unhealthyKidneys = numberOfKidneys - healthyKidneys;
 

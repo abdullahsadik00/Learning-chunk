@@ -116,7 +116,7 @@ function outer() {
 
     function inner() {
         let f = 30;
-        z = "no scope"
+        z = "no scope";
         console.log(d, e, f); // Accesses outer scopes
     }
 
@@ -124,37 +124,37 @@ function outer() {
 }
 
 outer();
-console.log(z)
+console.log(z);
 
 function square(el){
     return el * 2;
 }
 
 function customMapper(arr,func){
-    let result = []
+    let result = [];
     for (let index = 0; index < arr.length; index++) {
-        result.push(func(arr[index],index))
+        result.push(func(arr[index],index));
     }
-    return result
+    return result;
 }
-const arr = [2,4,5,6,7,8,9]
-const result = customMapper(arr,square)
-console.log(result)
+const arr = [2,4,5,6,7,8,9];
+const result = customMapper(arr,square);
+console.log(result);
 
 // We want a function that applies different discount strategies (10%, 20%, etc.) depending on the function we pass.
 
 function tenPercentDiscount(amount){
-    return amount - amount * 0.1
+    return amount - amount * 0.1;
 }
 function twentyPercentDiscount(amount){
-    return amount - amount * 0.2
+    return amount - amount * 0.2;
 }
 function thirtyPercentDiscount(amount){
-    return amount - amount * 0.3
+    return amount - amount * 0.3;
 }
 
 function applyDiscount(discountFunction,price){
-    return discountFunction(price)
+    return discountFunction(price);
 }
 
 let price = 1000;
@@ -173,18 +173,18 @@ console.log("Price after 30% discount:", applyDiscount( thirtyPercentDiscount,pr
 // Print the final payable amount.
 
 function discountCoupon(coupon) {
-    let discountedPrice = 0
+    let discountedPrice = 0;
     switch (coupon) {
         case "RS5":
-            discountedPrice = 5
-            break
+            discountedPrice = 5;
+            break;
         case "RS10":
-            discountedPrice = 10
-            break
+            discountedPrice = 10;
+            break;
         default:
-            discountedPrice = 0
+            discountedPrice = 0;
     }
-    return discountedPrice
+    return discountedPrice;
 }
 
 function calculateGST(price) {

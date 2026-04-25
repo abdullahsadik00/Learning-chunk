@@ -14,7 +14,7 @@ const app = express();
 let numberOfRequestsForUser = {};
 setInterval(() => {
     numberOfRequestsForUser = {};
-}, 1000)
+}, 1000);
 app.use((req, res, next) => {
   const userId = req.headers["user-id"];
     if(numberOfRequestsForUser[userId] > 5) {

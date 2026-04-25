@@ -19,4 +19,4 @@ const Todo = mongoose.model('Todo', TodoSchema);
 module.exports = {
     User,
     Todo
-}
+};

@@ -19,7 +19,7 @@ function airQualityPromise(url) {
             .catch(error => {
                 return reject(error);
             });
-    })
+    });
 }
 
 module.exports = {

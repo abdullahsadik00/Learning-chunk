@@ -33,7 +33,7 @@ const total = numbers.reduce((acc, cur) => acc + cur, 0);
 
 console.log(total);
 
-const cartItems = products
+const cartItems = products;
 const cartTotal = cartItems.reduce((acc, product) => acc + product.price, 0);
 console.log(cartTotal);
 
@@ -46,7 +46,7 @@ const users = [
     { name: "Aman", age: 16 },
     { name: "Riya", age: 22 },
     { name: "Bharat", age: 19 }
-]
+];
 const adults = users.filter(user => user.age > 18);
 console.log(JSON.stringify(adults));
 
@@ -54,7 +54,7 @@ console.log(JSON.stringify(adults));
 const items = [
     { name: "laptop", price: 50000 },
     { name: "mobile", price: 20000 }
-]
+];
 const uppercasedItems = items.map(item => ({
     ...item,
     name: item.name.toUpperCase()
@@ -67,7 +67,7 @@ const shoppingCart = [
     { name: "Tablet", price: 15000 },
     { name: "Charger", price: 500 },
     { name: "Headphones", price: 3000 }
-]
+];
 const totalPrice = shoppingCart.filter(item => item.price > 1000)
     .map(item => ({
         ...item,

@@ -6,7 +6,7 @@ const routes = express.Router();
 // Middleware to parse JSON bodies
 const app = express();
 app.use(bodyParser.json());
-app.use(routes)
+app.use(routes);
 app.use(bodyParser.urlencoded({ extended: false }));
 
 const PORT = 3000;

@@ -2,14 +2,14 @@ const fs = require('fs');
 fs.readFile('sample.txt','utf-8',(err,data)=>{
     if(err){
         if(err.code === 'ENONET'){
-            console.error('File not found')
+            console.error('File not found');
         }else{
-            console.error('Error reading file',err)
+            console.error('Error reading file',err);
         }
-        return
+        return;
     }
-    console.log('File Content', data)
-})
+    console.log('File Content', data);
+});
 
 // Expensive operation: A simple, large computational task
 const expensiveOperation = () => {

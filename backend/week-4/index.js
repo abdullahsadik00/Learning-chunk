@@ -22,7 +22,7 @@ function main(filePath) {
             console.error("Error reading file:", err);
             return;
         }
-        var len = data.split(' ').length
+        var len = data.split(' ').length;
         console.log("This file contain", len, "words");
     });
 }
