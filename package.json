@@ -1,0 +1,14 @@
+{
+  "name": "learning-chunk",
+  "version": "1.0.0",
+  "description": "Professional SDE Learning Log",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --ext .js"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0"
+  },
+  "author": "Abdullah Sadik",
+  "license": "MIT"
+}
