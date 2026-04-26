@@ -4,10 +4,14 @@
   "description": "Professional SDE Learning Log",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint . --ext .js"
+    "lint": "eslint . --ext .js",
+    "git-watch": "node scripts/git-watch-agent.js",
+    "prepare": "husky"
   },
   "devDependencies": {
-    "eslint": "^8.0.0"
+    "chokidar": "^5.0.0",
+    "eslint": "^8.0.0",
+    "husky": "^9.1.7"
   },
   "author": "Abdullah Sadik",
   "license": "MIT"
