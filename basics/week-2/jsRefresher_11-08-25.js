@@ -1,3 +1,4 @@
+/* eslint-disable */
 // Use Case for var
 // `var` is function-scoped. If it's declared anywhere within a function, 
 // it can be accessed throughout that function. 

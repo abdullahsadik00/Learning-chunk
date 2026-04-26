@@ -13,7 +13,7 @@ console.log('Standards: ESLint Auto-fix | Git Auto-commit');
 // Initialize watcher on domain directories
 const watcher = chokidar.watch(['frontend', 'backend', 'basics', 'database'], {
     ignored: [
-        /(^|[\/\\])\../, // ignore dotfiles
+        /(^|[/\\])\../, // ignore dotfiles
         '**/node_modules/**',
         '**/dist/**',
         '**/build/**'
@@ -29,11 +29,15 @@ const watcher = chokidar.watch(['frontend', 'backend', 'basics', 'database'], {
 let isProcessing = false;
 
 watcher.on('change', (filePath) => {
-    if (isProcessing) return;
+    if (isProcessing) {
+        return;
+    }
     
     // Only process JS/JSX files for linting/fixing
     const ext = path.extname(filePath);
-    if (!['.js', '.jsx'].includes(ext)) return;
+    if (!['.js', '.jsx'].includes(ext)) {
+        return;
+    }
 
     isProcessing = true;
     const fileName = path.basename(filePath);

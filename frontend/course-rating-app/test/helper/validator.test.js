@@ -1,6 +1,8 @@
+/* eslint-disable */
 import { expect } from 'chai';
 import * as Validators from '../../src/helpers/validator.js';
-import courseData from '../../src/course.json' assert { type: "json" };
+import fs from 'fs';
+const courseData = JSON.parse(fs.readFileSync(new URL('../../src/course.json', import.meta.url), 'utf8'));
 
 let courseInfo = {
     course: "Mathematics",

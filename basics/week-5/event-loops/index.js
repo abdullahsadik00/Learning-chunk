@@ -43,7 +43,9 @@ for (let i = 0; i < 3; i++) {
 process.nextTick(() => {
   console.log("Inside the next tick is the highest priority and runs first");
   const start = Date.now();
-  while (Date.now() - start < 1000) {}
+  while (Date.now() - start < 1000) {
+    // Spin-wait
+  }
 });
 
 const timeoutScheduled = Date.now();
@@ -75,7 +77,9 @@ for (let i = 0; i < 3; i++) {
 process.nextTick(() => {
   console.log("Inside the next tick is the highest priority and runs first");
   const start = Date.now();
-  while (Date.now() - start < 500) {}
+  while (Date.now() - start < 500) {
+    // Spin-wait
+  }
 });
 
 const timeoutScheduled1 = Date.now();
