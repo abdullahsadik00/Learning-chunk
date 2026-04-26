@@ -1,22 +1,22 @@
 export function validateCourseInfo(courseInfo) {
     if (
-        courseInfo.hasOwnProperty("course") &&
-        courseInfo.hasOwnProperty("courseId") &&
-        courseInfo.hasOwnProperty("cohort") &&
-        courseInfo.hasOwnProperty("college") &&
-        courseInfo.hasOwnProperty("semester") &&
-        courseInfo.hasOwnProperty("instructor") &&
-        courseInfo.hasOwnProperty("averageRating") &&
-        courseInfo.hasOwnProperty("studentsVoted")
+        Object.prototype.hasOwnProperty.call(courseInfo, 'course') &&
+        Object.prototype.hasOwnProperty.call(courseInfo, 'courseId') &&
+        Object.prototype.hasOwnProperty.call(courseInfo, 'cohort') &&
+        Object.prototype.hasOwnProperty.call(courseInfo, 'college') &&
+        Object.prototype.hasOwnProperty.call(courseInfo, 'semester') &&
+        Object.prototype.hasOwnProperty.call(courseInfo, 'instructor') &&
+        Object.prototype.hasOwnProperty.call(courseInfo, 'averageRating') &&
+        Object.prototype.hasOwnProperty.call(courseInfo, 'studentsVoted')
     ) {
         return {
             hasError: false,
-            message: "course has been added"
+            message: 'course has been added'
         };
     } else {
         return {
             hasError: true,
-            message: "course cannot be added"
+            message: 'course cannot be added'
         };
     }
 }
