@@ -33,6 +33,8 @@ This table tracks the chronological journey through the curriculum, mapped to th
 | **Week 5** | Runtimes & Logic | [`/basics/week-5`](./basics/week-5) | Event Loops, Map/Filter/Arrow Functions |
 | **Week 6** | React Hooks | [`/frontend/react-hooks`](./frontend/react-hooks) | useMemo, useCallback, useRef |
 | **Week 6** | Database Mastery | [`/database/week-6`](./database/week-6) | SQL Basics, Querying, Indexing |
+| **Week 8** | Full-Stack App | [`/backend/paytm`](./backend/paytm) | Paytm Backend, Auth, Transactions |
+| **Week 8** | Full-Stack App | [`/frontend/paytm`](./frontend/paytm) | Paytm Frontend, State Management |
 | **Ongoing** | Frontend Styling | [`/frontend/tailwind-learning`](./frontend/tailwind-learning) | Utility-first CSS, Responsive Design |
 | **Ongoing** | Applications | [`/frontend/course-rating-app`](./frontend/course-rating-app) | Full-stack UI, Rating Logic |
 
