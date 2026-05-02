@@ -1,5 +1,6 @@
 node_modules/
-frontend/paytm/
+paytm/frontend/
+frontend/3-use-ref/
 dist/
 build/
 .husky/
