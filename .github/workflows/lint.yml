@@ -1,4 +1,4 @@
-name: Lint Codebase
+name: CI
 
 on:
   push:
@@ -25,3 +25,35 @@ jobs:
 
       - name: Run ESLint
         run: npm run lint
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Root Dependencies
+        run: npm install
+
+      - name: Test week-2-js
+        working-directory: basics/week-2/Assignment/week-2-js
+        run: npm install && npm test
+
+      - name: Test week-2-async-js
+        working-directory: basics/week-2/Assignment/week-2-async-js
+        run: npm install && npm test
+
+      - name: Test backend middlewares
+        working-directory: backend/week-4/middlewares
+        run: npm install && npm test
+
+      - name: Test course-rating-app
+        working-directory: frontend/course-rating-app
+        run: npm install && npm test

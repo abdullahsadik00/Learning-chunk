@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect("mongodb://localhost:27017/paytm")
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/paytm")
     .then(() => console.log("Connected to MongoDB"))
     .catch(err => console.error("Could not connect to MongoDB:", err));
 

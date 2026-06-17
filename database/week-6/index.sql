@@ -12,7 +12,7 @@ Select * from Product;
 
 update product set stock = 50 where price = 10;
 
-delect from product where name = "Onion";
+delete from product where name = "Onion";
 
 -- Task 1: Create table for storing your profile data in a table with attributes - Student name, Learning minutes, Attendence and Designation.
 -- Task 2: Insert data for student named Sancheeta. Her learning minutes are 120 mins, attendance is 4 lectures, designation is Software Engineer.
