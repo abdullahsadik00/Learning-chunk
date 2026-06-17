@@ -47,6 +47,7 @@ greet();
 
 console.log("\n=== 3. Block Scope ===");
 
+// eslint-disable-next-line no-constant-condition
 if (true) {
     var  blockVar   = "var in block";   // leaks out (function-scoped)
     let  blockLet   = "let in block";   // stays inside

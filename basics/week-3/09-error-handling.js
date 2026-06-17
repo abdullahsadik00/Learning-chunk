@@ -44,6 +44,7 @@ console.log("\n=== 2. try / catch / finally ===");
 try {
     console.log("try: running");
     throw new Error("something broke");
+    // eslint-disable-next-line no-unreachable
     console.log("try: never reached");
 } catch (err) {
     console.log("catch:", err.message);
@@ -69,6 +70,7 @@ try { withFinally(); } catch (e) { console.log("outer caught:", e.message); }
 // finally return OVERRIDES try/catch return:
 function finallyOverride() {
     try { return "from try"; }
+    // eslint-disable-next-line no-unsafe-finally
     finally { return "from finally"; } // wins!
 }
 console.log("return override:", finallyOverride()); // "from finally"
@@ -286,6 +288,7 @@ console.log("\n=== Practice ===");
 try {
     console.log("Q1 A");
     throw new Error("oops");
+    // eslint-disable-next-line no-unreachable
     console.log("Q1 B");
 } catch (e) {
     console.log("Q1 C");
@@ -297,8 +300,10 @@ console.log("Q1 E");
 
 // Q2: What does this return?
 function q2() {
+    // eslint-disable-next-line no-unreachable
     try   { throw new Error(); return 1; }
     catch { return 2; }
+    // eslint-disable-next-line no-unsafe-finally
     finally { return 3; }
 }
 console.log("Q2:", q2()); // 3 — finally overrides

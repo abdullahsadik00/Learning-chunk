@@ -139,6 +139,7 @@ console.log("\n=== 7. Classic Interview: function a() inside b() ===");
 var a = 1;
 
 function b() {
+    // eslint-disable-next-line no-func-assign
     a = 10;
     return;
     function a() {}   // hoisted to top of b — creates LOCAL a
@@ -190,6 +191,7 @@ console.log(result);
 // Q4 — parameter + var same name
 function test(a) {
     console.log(a);    // ?
+    // eslint-disable-next-line no-redeclare
     var a = 100;
     console.log(a);    // ?
 }

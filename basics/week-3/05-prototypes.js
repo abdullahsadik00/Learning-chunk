@@ -226,7 +226,9 @@ console.log(myCar.brand);   // "Honda"
 console.log(myCar.wheels);  // 4 — found on prototype
 
 // hasOwnProperty — checks ONLY the object itself:
+// eslint-disable-next-line no-prototype-builtins
 console.log(myCar.hasOwnProperty("brand"));  // true
+// eslint-disable-next-line no-prototype-builtins
 console.log(myCar.hasOwnProperty("wheels")); // false
 
 // in operator — checks the ENTIRE chain:
@@ -236,6 +238,7 @@ console.log("engine" in myCar); // false
 
 // Safe iteration — skip inherited:
 for (const key in myCar) {
+    // eslint-disable-next-line no-prototype-builtins
     if (myCar.hasOwnProperty(key)) {
         console.log("own:", key); // only "brand"
     }
@@ -296,7 +299,9 @@ const base = { x: 1 };
 const child = Object.create(base);
 child.y = 2;
 console.log(child.x);                        // ?  → 1  (inherited)
+// eslint-disable-next-line no-prototype-builtins
 console.log(child.hasOwnProperty("x"));      // ?  → false
+// eslint-disable-next-line no-prototype-builtins
 console.log(child.hasOwnProperty("y"));      // ?  → true
 // Answer: 1, false, true
 
