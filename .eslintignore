@@ -1,6 +1,10 @@
 node_modules/
 paytm/frontend/
 frontend/3-use-ref/
+frontend/react-hooks/use-memo/
+frontend/react-hooks/use-callback/
+frontend/tailwind-learning/finta_landing_page/
+frontend/tailwind-learning/expense-tracker/
 dist/
 build/
 .husky/
