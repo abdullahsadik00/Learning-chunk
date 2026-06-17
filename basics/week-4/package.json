@@ -1,0 +1,16 @@
+{
+  "name": "week-4-polyfills",
+  "version": "1.0.0",
+  "description": "JavaScript polyfill implementations: array methods, bind/call/apply, Promise, debounce/throttle, deep clone, EventEmitter, LRU Cache, curry, memoize",
+  "scripts": {
+    "arrays":   "node 01-array-polyfills.js",
+    "funcs":    "node 02-function-polyfills.js",
+    "promises": "node 03-promise-polyfills.js",
+    "debounce": "node 04-debounce-throttle.js",
+    "clone":    "node 05-deep-clone-equal.js",
+    "emitter":  "node 06-event-emitter-lru.js",
+    "utils":    "node 07-utilities.js",
+    "all":      "node 01-array-polyfills.js && node 02-function-polyfills.js && node 03-promise-polyfills.js && node 04-debounce-throttle.js && node 05-deep-clone-equal.js && node 06-event-emitter-lru.js && node 07-utilities.js"
+  },
+  "license": "ISC"
+}
