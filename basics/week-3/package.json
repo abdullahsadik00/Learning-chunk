@@ -1,0 +1,14 @@
+{
+  "name": "week-3-js-core",
+  "version": "1.0.0",
+  "description": "JS fundamentals: hoisting, scope, closures, this, prototypes",
+  "scripts": {
+    "hoisting":   "node 01-hoisting.js",
+    "scope":      "node 02-scope-chain.js",
+    "closures":   "node 03-closures.js",
+    "this":       "node 04-this-keyword.js",
+    "prototypes": "node 05-prototypes.js",
+    "all":        "node 01-hoisting.js && node 02-scope-chain.js && node 03-closures.js && node 04-this-keyword.js && node 05-prototypes.js"
+  },
+  "license": "ISC"
+}
