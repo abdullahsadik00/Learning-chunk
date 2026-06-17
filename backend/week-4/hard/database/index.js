@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // Connect to MongoDB
-mongoose.connect('your-mongodb-url');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/hard-backend');
 
 // Define schemas
 
