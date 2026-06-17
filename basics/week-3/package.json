@@ -1,14 +1,23 @@
 {
   "name": "week-3-js-core",
   "version": "1.0.0",
-  "description": "JS fundamentals: hoisting, scope, closures, this, prototypes",
+  "description": "JS fundamentals: hoisting, scope, closures, this, prototypes, event loop, promises, ES6+, errors, memory, FP",
   "scripts": {
-    "hoisting":   "node 01-hoisting.js",
-    "scope":      "node 02-scope-chain.js",
-    "closures":   "node 03-closures.js",
-    "this":       "node 04-this-keyword.js",
-    "prototypes": "node 05-prototypes.js",
-    "all":        "node 01-hoisting.js && node 02-scope-chain.js && node 03-closures.js && node 04-this-keyword.js && node 05-prototypes.js"
+    "hoisting":      "node 01-hoisting.js",
+    "scope":         "node 02-scope-chain.js",
+    "closures":      "node 03-closures.js",
+    "this":          "node 04-this-keyword.js",
+    "prototypes":    "node 05-prototypes.js",
+    "event-loop":    "node 06-event-loop.js",
+    "promises":      "node 07-promises-async-await.js",
+    "es6":           "node 08-es6-features.js",
+    "errors":        "node 09-error-handling.js",
+    "memory":        "node 10-memory-management.js",
+    "fp":            "node 11-functional-programming.js",
+    "architecture":  "node 12-architecture-summary.js",
+    "day1":          "node 01-hoisting.js && node 02-scope-chain.js && node 03-closures.js && node 04-this-keyword.js && node 05-prototypes.js",
+    "day2":          "node 06-event-loop.js && node 07-promises-async-await.js && node 08-es6-features.js && node 09-error-handling.js && node 10-memory-management.js && node 11-functional-programming.js && node 12-architecture-summary.js",
+    "all":           "npm run day1 && npm run day2"
   },
   "license": "ISC"
 }
