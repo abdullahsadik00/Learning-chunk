@@ -1,0 +1,32 @@
+{
+  "name": "backend-production",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "ts-node src/day54-logging/server.ts",
+    "day51": "jest --testPathPattern=src/day51-testing --verbose",
+    "day52": "echo 'Day 52 is Docker — see src/day52-docker/README.md'",
+    "day54": "ts-node src/day54-logging/server.ts",
+    "day55": "ts-node src/day55-performance/index.ts",
+    "test": "jest --verbose",
+    "test:coverage": "jest --coverage"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.0.0",
+    "express": "^4.18.0",
+    "pino": "^9.0.0",
+    "pino-pretty": "^11.0.0",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20",
+    "@types/supertest": "^6.0.0",
+    "jest": "^29.7.0",
+    "prisma": "^5.0.0",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5"
+  }
+}

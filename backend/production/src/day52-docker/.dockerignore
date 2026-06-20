@@ -1,0 +1,25 @@
+# ════════════════════════════════════════════════════════════════
+# .dockerignore — Exclude files from the Docker build context
+# ════════════════════════════════════════════════════════════════
+#
+# When you run 'docker build', Docker sends all files in the build context
+# to the Docker daemon. Large contexts = slow builds.
+# .dockerignore works like .gitignore — excluded files are NOT sent.
+#
+# WHAT TO EXCLUDE:
+#   node_modules/ — large (~500MB), rebuilt inside the container anyway
+#   dist/         — compiled output, rebuilt inside the container
+#   .env          — NEVER include secrets in a Docker image
+#   .git/         — git history, useless inside the image
+#   coverage/     — test coverage reports, not needed at runtime
+#   *.md          — documentation, not needed at runtime
+
+node_modules/
+dist/
+.env
+*.md
+.git/
+coverage/
+.DS_Store
+*.log
+npm-debug.log*
