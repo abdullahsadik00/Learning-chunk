@@ -17,6 +17,6 @@
     "noEmit": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src", "*.tsx", "*.ts"],
-  "exclude": ["node_modules"]
+  "include": ["src", "*.tsx", "*.ts", "vite.config.ts"],
+  "exclude": ["node_modules", "dist"]
 }
