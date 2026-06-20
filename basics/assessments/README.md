@@ -1,4 +1,4 @@
-# Progressive Assessment System — Days 1–25
+# Progressive Assessment System — Days 1–35
 
 ## How to use
 
@@ -33,7 +33,9 @@ Complete all days at **Solid (10+)** to claim each badge:
 | 🏅 React | Days 12–17 |
 | 🏅 Next.js | Days 18–21 |
 | 🏅 Frontend System Design | Days 22–25 |
-| 🏆 Full-Stack JS Engineer | All 25 days |
+| 🏅 CSS & Design | Days 26–30 |
+| 🏅 Testing | Days 31–35 |
+| 🏆 Full-Stack JS Engineer | All 35 days |
 
 ---
 
@@ -78,3 +80,13 @@ Complete all days at **Solid (10+)** to claim each badge:
 | [day-23.md](./day-23.md) | System Design | API Client, React Query Advanced, Optimistic Updates, Caching |
 | [day-24.md](./day-24.md) | System Design | Code Splitting, Virtualization, Image Optimization, Render Perf |
 | [day-25.md](./day-25.md) | System Design | Real-Time Systems, WebSocket/SSE/CRDT, Design Interviews |
+| [day-26.md](./day-26.md) | CSS & Design | CSS Layout, Flexbox, Grid, Box Model, Specificity |
+| [day-27.md](./day-27.md) | CSS & Design | CSS Variables, Responsive Design, Dark Mode, Breakpoints |
+| [day-28.md](./day-28.md) | CSS & Design | CSS Architecture — BEM, CSS Modules, Tailwind, CSS-in-JS |
+| [day-29.md](./day-29.md) | CSS & Design | Tailwind Deep Dive — variants, cva, animation, dark mode |
+| [day-30.md](./day-30.md) | CSS & Design | Design Systems — tokens, component library, accessibility |
+| [day-31.md](./day-31.md) | Testing | Unit Testing — Vitest, matchers, mocking, fake timers |
+| [day-32.md](./day-32.md) | Testing | Component Testing — Testing Library, queries, userEvent |
+| [day-33.md](./day-33.md) | Testing | Hook & API Testing — renderHook, MSW, async patterns |
+| [day-34.md](./day-34.md) | Testing | Integration Testing — full flows, Router, React Query |
+| [day-35.md](./day-35.md) | Testing | E2E Testing — Playwright, page objects, CI pipeline |

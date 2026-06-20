@@ -1,0 +1,26 @@
+{
+  "name": "backend-database",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "ts-node src/day42-prisma/index.ts",
+    "day41": "ts-node src/day41-sql/index.ts",
+    "day42": "ts-node src/day42-prisma/index.ts",
+    "day43": "ts-node src/day43-advanced/index.ts",
+    "day44": "ts-node src/day44-redis/index.ts",
+    "day45": "ts-node src/day45-design/index.ts",
+    "db:setup": "prisma migrate dev --name init",
+    "db:seed": "ts-node src/seed.ts",
+    "db:reset": "prisma migrate reset --force && ts-node src/seed.ts",
+    "all": "npm run day41 && npm run day42 && npm run day43"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.0.0",
+    "ioredis": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "prisma": "^5.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5"
+  }
+}
