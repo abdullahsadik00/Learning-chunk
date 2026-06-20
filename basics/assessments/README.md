@@ -1,4 +1,4 @@
-# Progressive Assessment System — Days 1–21
+# Progressive Assessment System — Days 1–25
 
 ## How to use
 
@@ -32,7 +32,8 @@ Complete all days at **Solid (10+)** to claim each badge:
 | 🏅 TypeScript | Days 8–11 |
 | 🏅 React | Days 12–17 |
 | 🏅 Next.js | Days 18–21 |
-| 🏆 Full-Stack JS Engineer | All 21 days |
+| 🏅 Frontend System Design | Days 22–25 |
+| 🏆 Full-Stack JS Engineer | All 25 days |
 
 ---
 
@@ -73,3 +74,7 @@ Complete all days at **Solid (10+)** to claim each badge:
 | [day-19.md](./day-19.md) | Next.js | Server Components, Client Components, Composition |
 | [day-20.md](./day-20.md) | Next.js | Data Fetching, Server Actions, Route Handlers |
 | [day-21.md](./day-21.md) | Next.js | Middleware, Auth, Performance, Image/Font Optimization |
+| [day-22.md](./day-22.md) | System Design | Design Framework, Component Architecture, State Layers, Patterns |
+| [day-23.md](./day-23.md) | System Design | API Client, React Query Advanced, Optimistic Updates, Caching |
+| [day-24.md](./day-24.md) | System Design | Code Splitting, Virtualization, Image Optimization, Render Perf |
+| [day-25.md](./day-25.md) | System Design | Real-Time Systems, WebSocket/SSE/CRDT, Design Interviews |
