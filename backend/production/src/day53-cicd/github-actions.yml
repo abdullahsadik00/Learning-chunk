@@ -1,0 +1,303 @@
+# ════════════════════════════════════════════════════════════════
+# DAY 53 — CI/CD WITH GITHUB ACTIONS
+# ════════════════════════════════════════════════════════════════
+#
+# NOTE: In a real project, this file goes in .github/workflows/ci.yml
+# (the .github/workflows/ directory must be at the repo root).
+# It's stored here for the curriculum — copy it to .github/workflows/
+# to activate it.
+#
+# ── CONCEPTS ─────────────────────────────────────────────────
+#
+# CI (Continuous Integration):
+#   Automatically run tests, linting, and type checks on every push and PR.
+#   Goal: catch bugs before they reach main.
+#
+# CD (Continuous Deployment):
+#   Automatically deploy to production when CI passes on the main branch.
+#   Goal: ship fast, ship often, with confidence.
+#
+# GITHUB ACTIONS BUILDING BLOCKS:
+#
+#   Workflow:  a YAML file in .github/workflows/ — defines when and what to run
+#   Event:     the trigger for a workflow (push, pull_request, schedule, etc.)
+#   Job:       a group of steps running on the same runner (virtual machine)
+#   Step:      a single command or reusable action within a job
+#   Runner:    the virtual machine that runs jobs (ubuntu-latest, macos-latest, etc.)
+#   Action:    a reusable step from the Actions Marketplace (uses: actions/checkout@v4)
+#   Secret:    an encrypted env var stored in repo settings — NEVER commit secrets
+#   Artifact:  a file uploaded from a job — accessible to later jobs or for download
+#
+# JOB SEQUENCING:
+#   By default, all jobs run in parallel.
+#   Use `needs: [job-name]` to create dependencies:
+#   lint → test → build → deploy  (each waits for the previous to pass)
+#
+#   Parallelism example in this file:
+#     lint-and-typecheck runs in parallel with nothing
+#     test: needs: [lint-and-typecheck]        runs after lint passes
+#     build: needs: [test]                     runs after tests pass
+#     deploy: needs: [build], if: main branch  runs only on main, after build
+#
+# MATRIX BUILDS:
+#   Test on multiple Node.js versions simultaneously without duplicating jobs.
+#   strategy:
+#     matrix:
+#       node: [20, 22]
+#   Creates 2 parallel jobs: one with Node 20, one with Node 22.
+#   Each matrix entry is a separate job — they run in parallel.
+#   If Node 22 tests fail but Node 20 passes, you know it's a version-specific bug.
+
+name: CI/CD Pipeline
+
+# ── TRIGGERS ──────────────────────────────────────────────────
+# Run on:
+#   - push to main or develop branches (commits AND merges)
+#   - pull_request targeting main (every PR commit)
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+# ── JOBS ──────────────────────────────────────────────────────
+jobs:
+
+  # ════════════════════════════════════════════════════════════
+  # JOB 1: lint-and-typecheck
+  # Runs first, in parallel with nothing.
+  # Fast feedback: linting takes ~10s vs tests taking ~60s.
+  # ════════════════════════════════════════════════════════════
+  lint-and-typecheck:
+    runs-on: ubuntu-latest
+
+    steps:
+      # actions/checkout@v4: clone the repo into the runner's workspace.
+      # Without this, the runner has no code to work with.
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # actions/setup-node@v4: install Node.js and optionally configure caching.
+      # cache: 'npm' speeds up builds by caching node_modules between runs.
+      # A cache hit saves 30-60s of npm install time.
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: backend/production/package-lock.json
+
+      - name: Install dependencies
+        working-directory: backend/production
+        run: npm ci
+
+      # TypeScript type checking without emitting files.
+      # Catches type errors that ESLint might miss.
+      - name: Type check
+        working-directory: backend/production
+        run: npx tsc --noEmit
+
+  # ════════════════════════════════════════════════════════════
+  # JOB 2: test
+  # Runs after lint-and-typecheck passes.
+  # Uses a matrix to test on two Node.js versions in parallel.
+  # ════════════════════════════════════════════════════════════
+  test:
+    needs: [lint-and-typecheck]
+    runs-on: ubuntu-latest
+
+    strategy:
+      # fail-fast: false → if Node 22 fails, keep running Node 20.
+      # Without this: the first matrix failure cancels all other matrix jobs.
+      fail-fast: false
+      matrix:
+        node: [20, 22]
+
+    # SERVICES:
+    # Spin up Docker containers alongside the job — available for the entire job.
+    # Use for integration tests that need a real database.
+    # Accessible via localhost on the host port.
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: testdb
+        # Expose port 5432 on a random host port → ${{ job.services.postgres.ports[5432] }}
+        ports:
+          - 5432/tcp
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 5
+
+      redis:
+        image: redis:7-alpine
+        ports:
+          - 6379/tcp
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js ${{ matrix.node }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: "npm"
+          cache-dependency-path: backend/production/package-lock.json
+
+      - name: Install dependencies
+        working-directory: backend/production
+        run: npm ci
+
+      - name: Run tests with coverage
+        working-directory: backend/production
+        run: npm run test:coverage
+        env:
+          # Service ports are dynamic — use the mapped host port.
+          # Useful for integration tests that need to talk to postgres/redis.
+          DATABASE_URL: postgresql://postgres:postgres@localhost:${{ job.services.postgres.ports[5432] }}/testdb
+          REDIS_URL: redis://localhost:${{ job.services.redis.ports[6379] }}
+          NODE_ENV: test
+
+      # Upload coverage report as a workflow artifact.
+      # Accessible from the Actions UI for 7 days.
+      # You can also configure Codecov or Coveralls here to track coverage over time.
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v4
+        if: matrix.node == 20  # only upload once, not for every matrix entry
+        with:
+          name: coverage-report
+          path: backend/production/coverage/
+          retention-days: 7
+
+  # ════════════════════════════════════════════════════════════
+  # JOB 3: build
+  # Runs after tests pass.
+  # Builds a Docker image and pushes to GitHub Container Registry (GHCR).
+  # ════════════════════════════════════════════════════════════
+  build:
+    needs: [test]
+    runs-on: ubuntu-latest
+    # Only build on push (not on PRs) — no point building an image for every PR commit
+    if: github.event_name == 'push'
+
+    # Permissions needed to push to GHCR
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # docker/login-action: authenticate to GitHub Container Registry.
+      # GITHUB_TOKEN is automatically available in all Actions runs — no secret needed.
+      # Images are published to: ghcr.io/<owner>/<repo>:<tag>
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      # docker/metadata-action: generate image tags automatically.
+      # Tags generated:
+      #   - latest (on main branch pushes)
+      #   - sha-<git-sha> (every push — immutable, traceable to exact commit)
+      #   - branch name (e.g., develop)
+      # WHY multiple tags?
+      #   'latest' → convenient for pulling the most recent
+      #   sha tag  → rollback to an exact version ("deploy sha-abc123 to fix the bug")
+      - name: Extract Docker metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ghcr.io/${{ github.repository }}
+          tags: |
+            type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' }}
+            type=sha,prefix=sha-
+            type=ref,event=branch
+
+      # docker/build-push-action: build and push the image.
+      # cache-from/cache-to: use GitHub Actions cache to speed up builds.
+      # Without cache: every build re-runs npm ci and tsc from scratch.
+      # With cache: only changed layers are rebuilt (usually just the COPY src + RUN build step).
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: backend/production/src/day52-docker/Dockerfile
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+  # ════════════════════════════════════════════════════════════
+  # JOB 4: deploy
+  # Runs after build, only on pushes to main.
+  # Shows the Railway and Fly.io deployment patterns.
+  # ════════════════════════════════════════════════════════════
+  deploy:
+    needs: [build]
+    runs-on: ubuntu-latest
+    # if: condition — only deploy on pushes to main branch.
+    # Pull requests and pushes to other branches skip this job entirely.
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+
+    # Environment: "production" gates this job with environment protection rules.
+    # In GitHub repo settings, you can require manual approval before deploy runs.
+    # Also enables environment-specific secrets (different DB for prod vs staging).
+    environment:
+      name: production
+      url: https://your-app.railway.app  # shown in the Actions UI
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # ── OPTION A: DEPLOY TO RAILWAY ───────────────────────
+      # Railway detects Node.js apps automatically.
+      # RAILWAY_TOKEN: create in Railway dashboard → Account Settings → Tokens
+      # Store in: GitHub repo → Settings → Secrets and Variables → Actions
+      - name: Deploy to Railway
+        uses: railwayapp/railway-github-action@v1
+        with:
+          railway-token: ${{ secrets.RAILWAY_TOKEN }}
+        # Remove this 'if' to actually deploy to Railway:
+        if: false  # placeholder — set to true when RAILWAY_TOKEN is configured
+
+      # ── OPTION B: DEPLOY TO FLY.IO ────────────────────────
+      # Fly.io: run VMs globally, great for latency-sensitive apps.
+      # flyctl deploy: deploys the current directory using fly.toml config.
+      # FLY_API_TOKEN: run 'flyctl tokens create' and store as a GitHub secret.
+      - name: Deploy to Fly.io
+        uses: superfly/flyctl-actions@1.5
+        with:
+          args: "deploy --remote-only --image ghcr.io/${{ github.repository }}:sha-${{ github.sha }}"
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+        # Remove this 'if' to actually deploy to Fly.io:
+        if: false  # placeholder — set to true when FLY_API_TOKEN is configured
+
+      # ── ROLLBACK STRATEGY ─────────────────────────────────
+      # If a deploy causes errors:
+      # 1. Railway: redeploy a previous deployment from the Railway dashboard
+      # 2. Fly.io:  flyctl releases list → flyctl deploy --image <old-sha-tag>
+      # 3. Both:    revert the commit, push to main → CI/CD redeploys the old code
+      #
+      # The SHA-tagged Docker image makes rollback precise:
+      # you know exactly which code version each image contains.
+      - name: Notify deployment complete
+        run: |
+          echo "Deployed commit ${{ github.sha }} to production"
+          echo "Image: ghcr.io/${{ github.repository }}:sha-${{ github.sha }}"

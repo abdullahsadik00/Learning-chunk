@@ -1,4 +1,4 @@
-# Progressive Assessment System — Days 1–35
+# Progressive Assessment System — Days 1–55
 
 ## How to use
 
@@ -35,7 +35,11 @@ Complete all days at **Solid (10+)** to claim each badge:
 | 🏅 Frontend System Design | Days 22–25 |
 | 🏅 CSS & Design | Days 26–30 |
 | 🏅 Testing | Days 31–35 |
-| 🏆 Full-Stack JS Engineer | All 35 days |
+| 🏅 Backend Node.js & Express | Days 36–40 |
+| 🏅 Backend Databases | Days 41–45 |
+| 🏅 Backend Real-time & Jobs | Days 46–50 |
+| 🏅 Backend Production | Days 51–55 |
+| 🏆 Full-Stack JS Engineer | All 55 days |
 
 ---
 
@@ -90,3 +94,23 @@ Complete all days at **Solid (10+)** to claim each badge:
 | [day-33.md](./day-33.md) | Testing | Hook & API Testing — renderHook, MSW, async patterns |
 | [day-34.md](./day-34.md) | Testing | Integration Testing — full flows, Router, React Query |
 | [day-35.md](./day-35.md) | Testing | E2E Testing — Playwright, page objects, CI pipeline |
+| [day-36.md](./day-36.md) | Backend | Node.js Internals — Streams, Buffers, EventEmitter, Child Processes |
+| [day-37.md](./day-37.md) | Backend | Express.js — Middleware, Routing, Error Handling |
+| [day-38.md](./day-38.md) | Backend | REST API Design — Pagination, Status Codes, Response Contracts |
+| [day-39.md](./day-39.md) | Backend | Authentication — JWT, Sessions, OAuth, Security |
+| [day-40.md](./day-40.md) | Backend | Production Hardening — Validation, Security Headers, File Uploads |
+| [day-41.md](./day-41.md) | Backend | SQL Fundamentals — JOINs, Indexes, Transactions |
+| [day-42.md](./day-42.md) | Backend | Prisma ORM — Schema, Relations, Migrations |
+| [day-43.md](./day-43.md) | Backend | Advanced Queries — Cursor Pagination, Aggregations, Full-Text Search |
+| [day-44.md](./day-44.md) | Backend | Redis — Caching, Pub/Sub, Rate Limiting, Distributed Locks |
+| [day-45.md](./day-45.md) | Backend | Database Design — Normalization, Schema Patterns, Trade-offs |
+| [day-46.md](./day-46.md) | Backend | WebSockets — Rooms, Presence, Horizontal Scaling |
+| [day-47.md](./day-47.md) | Backend | SSE — Server-Sent Events, Long Polling, Protocol Selection |
+| [day-48.md](./day-48.md) | Backend | BullMQ — Job Queues, Retries, Scheduling |
+| [day-49.md](./day-49.md) | Backend | Email — Nodemailer, Templates, File Storage, Presigned URLs |
+| [day-50.md](./day-50.md) | Backend | API Patterns — REST vs GraphQL vs tRPC, Versioning, OpenAPI |
+| [day-51.md](./day-51.md) | Backend | API Testing — Jest, Supertest, Test Isolation |
+| [day-52.md](./day-52.md) | Backend | Docker — Multi-stage Builds, docker-compose, Container Security |
+| [day-53.md](./day-53.md) | Backend | CI/CD — GitHub Actions, Automated Testing, Deployment Pipelines |
+| [day-54.md](./day-54.md) | Backend | Logging — Structured Logs, Health Checks, Graceful Shutdown |
+| [day-55.md](./day-55.md) | Backend | Performance — N+1 Detection, Connection Pooling, Memory Leaks |

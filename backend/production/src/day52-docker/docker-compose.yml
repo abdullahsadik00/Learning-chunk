@@ -1,0 +1,150 @@
+# ════════════════════════════════════════════════════════════════
+# DAY 52 — DOCKER COMPOSE FOR LOCAL DEVELOPMENT
+# ════════════════════════════════════════════════════════════════
+#
+# Docker Compose orchestrates multiple containers as a single application.
+# One command starts everything: your API, database, and cache.
+#
+# COMMANDS:
+#   docker compose up -d          → start all services in background (-d = detach)
+#   docker compose up             → start in foreground (see all logs interleaved)
+#   docker compose logs -f api    → tail logs for the 'api' service
+#   docker compose ps             → show running services and their status
+#   docker compose exec api sh    → open a shell inside the running api container
+#   docker compose exec postgres psql -U postgres appdb  → psql into postgres
+#   docker compose down           → stop and remove containers (volumes preserved)
+#   docker compose down -v        → stop, remove containers AND volumes (data gone!)
+#   docker compose build          → rebuild images without starting
+#   docker compose up --build     → rebuild images AND start
+#
+# NETWORKS:
+#   Compose creates a private network for your services.
+#   Services can reach each other by service name:
+#   - From 'api', postgres is reachable at host: postgres, port: 5432
+#   - From 'api', redis is reachable at host: redis, port: 6379
+#   - From outside: only published ports are accessible (ports: section)
+
+version: "3.9"
+
+services:
+  # ────────────────────────────────────────────────────────────
+  # API SERVICE
+  # ────────────────────────────────────────────────────────────
+  api:
+    # build: tells Compose to build the image from our Dockerfile
+    # instead of pulling from a registry. Use for local development.
+    build:
+      context: ../..       # build context = root of the project
+      dockerfile: src/day52-docker/Dockerfile
+
+    # Map host port 3001 → container port 3001.
+    # Access the API at http://localhost:3001 from your machine.
+    ports:
+      - "3001:3001"
+
+    # Environment variables injected into the container.
+    # These override ENV instructions in the Dockerfile.
+    # For production: use Docker secrets or a secrets manager (AWS Secrets Manager,
+    # Vault, etc.) — never hard-code secrets in docker-compose.yml.
+    environment:
+      NODE_ENV: development
+      PORT: 3001
+      LOG_LEVEL: debug
+      # Connect to postgres using the service name as hostname
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/appdb?connection_limit=10
+      REDIS_URL: redis://redis:6379
+
+    # depends_on with condition: service_healthy means Compose will wait
+    # for postgres to pass its healthcheck before starting the api.
+    # Without this, the api starts while postgres is still initializing
+    # and crashes because it can't connect to the DB.
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_started
+
+    # Restart policy: restart on crash (but not on manual docker compose stop)
+    restart: unless-stopped
+
+    # Connect to the shared network
+    networks:
+      - app-network
+
+  # ────────────────────────────────────────────────────────────
+  # POSTGRES SERVICE
+  # ────────────────────────────────────────────────────────────
+  postgres:
+    image: postgres:16-alpine
+
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: appdb
+
+    # Named volume: data persists across docker compose down/up.
+    # Only docker compose down -v removes it.
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+    # Healthcheck: Compose polls this command every 5s.
+    # pg_isready exits 0 if postgres is accepting connections.
+    # The api's depends_on.condition: service_healthy waits for this to pass.
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d appdb"]
+      interval: 5s      # check every 5 seconds
+      timeout: 5s       # fail if the check takes > 5s
+      retries: 5        # mark unhealthy after 5 consecutive failures
+      start_period: 10s # give postgres 10s to start before counting failures
+
+    # Don't expose postgres to the host by default — only accessible inside
+    # the Docker network. To connect with pgAdmin or psql from your machine,
+    # uncomment:
+    # ports:
+    #   - "5432:5432"
+
+    networks:
+      - app-network
+
+  # ────────────────────────────────────────────────────────────
+  # REDIS SERVICE
+  # ────────────────────────────────────────────────────────────
+  redis:
+    image: redis:7-alpine
+
+    # redis.conf persistence: appendonly yes means writes are logged to disk.
+    # Without this, Redis data is lost on container restart.
+    command: redis-server --appendonly yes
+
+    volumes:
+      - redis-data:/data
+
+    # Don't expose redis to the host (security best practice).
+    # Uncomment to connect with redis-cli from your machine:
+    # ports:
+    #   - "6379:6379"
+
+    networks:
+      - app-network
+
+# ────────────────────────────────────────────────────────────
+# VOLUMES
+# ────────────────────────────────────────────────────────────
+# Named volumes are managed by Docker and persist independently of containers.
+# When you run 'docker compose down', containers are deleted but volumes remain.
+# Run 'docker volume ls' to see all volumes on your machine.
+volumes:
+  postgres-data:
+    driver: local
+  redis-data:
+    driver: local
+
+# ────────────────────────────────────────────────────────────
+# NETWORKS
+# ────────────────────────────────────────────────────────────
+# A custom network lets services communicate by name.
+# All services on the same network can reach each other.
+# Services NOT on the network are isolated.
+networks:
+  app-network:
+    driver: bridge
