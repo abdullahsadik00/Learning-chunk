@@ -40,3 +40,6 @@ out/
 # Coverage
 coverage/
 *.lcov
+
+# Claude Code internal files (worktrees, plans, sessions)
+.claude/

@@ -3,9 +3,11 @@ import { validateEmail } from '@/utils/validators';
 
 interface LoginFormProps {
   onSuccess?: (email: string) => void;
+  /** Delay in ms for the simulated network call. Default 1000. Pass a small value in tests. */
+  loginDelayMs?: number;
 }
 
-export function LoginForm({ onSuccess }: LoginFormProps) {
+export function LoginForm({ onSuccess, loginDelayMs = 1000 }: LoginFormProps) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -31,9 +33,9 @@ export function LoginForm({ onSuccess }: LoginFormProps) {
       return;
     }
 
-    // Simulate async login (1 second network delay)
+    // Simulate async login (configurable delay — use loginDelayMs={0} in tests)
     setIsLoading(true);
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve, loginDelayMs));
     setIsLoading(false);
 
     setSuccessEmail(email);

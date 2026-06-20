@@ -1,0 +1,33 @@
+{
+  "name": "backend-express",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "ts-node src/day37-express/app.ts",
+    "day36": "ts-node src/day36-nodejs/index.ts",
+    "day37": "ts-node src/day37-express/app.ts",
+    "day38": "ts-node src/day38-rest-api/server.ts",
+    "day39": "ts-node src/day39-auth/server.ts",
+    "day40": "ts-node src/day40-production/server.ts",
+    "all": "npm run day36"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.0",
+    "express-rate-limit": "^7.0.0",
+    "helmet": "^7.0.0",
+    "jsonwebtoken": "^9.0.0",
+    "multer": "^1.4.5-lts.1",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/multer": "^1.4.11",
+    "@types/node": "^20",
+    "ts-node": "^10.9.0",
+    "typescript": "^5"
+  }
+}

@@ -1,0 +1,103 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String   @id @default(uuid())
+  email        String   @unique
+  name         String
+  passwordHash String   @map("password_hash")
+  avatarUrl    String?  @map("avatar_url")
+  createdAt    DateTime @default(now()) @map("created_at")
+
+  ownedCollections Collection[]     @relation("CollectionOwner")
+  permissions      Permission[]
+  comments         Comment[]
+  snippetVersions  SnippetVersion[]
+
+  @@map("users")
+}
+
+model Collection {
+  id          String   @id @default(uuid())
+  ownerId     String   @map("owner_id")
+  name        String
+  description String?
+  isPublic    Boolean  @default(false) @map("is_public")
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  owner       User         @relation("CollectionOwner", fields: [ownerId], references: [id], onDelete: Cascade)
+  snippets    Snippet[]
+  permissions Permission[]
+
+  @@index([ownerId])
+  @@map("collections")
+}
+
+model Snippet {
+  id           String                  @id @default(uuid())
+  collectionId String                  @map("collection_id")
+  title        String
+  content      String
+  language     String                  @default("plain")
+  description  String?
+  searchVector Unsupported("tsvector")? @map("search_vector")
+  createdAt    DateTime                @default(now()) @map("created_at")
+  updatedAt    DateTime                @updatedAt @map("updated_at")
+
+  collection Collection       @relation(fields: [collectionId], references: [id], onDelete: Cascade)
+  versions   SnippetVersion[]
+  comments   Comment[]
+
+  @@index([collectionId])
+  @@map("snippets")
+}
+
+model SnippetVersion {
+  id          String   @id @default(uuid())
+  snippetId   String   @map("snippet_id")
+  content     String
+  createdById String   @map("created_by")
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  snippet   Snippet @relation(fields: [snippetId], references: [id], onDelete: Cascade)
+  createdBy User    @relation(fields: [createdById], references: [id])
+
+  @@index([snippetId, createdAt])
+  @@map("snippet_versions")
+}
+
+model Comment {
+  id        String   @id @default(uuid())
+  snippetId String   @map("snippet_id")
+  userId    String   @map("user_id")
+  content   String
+  lineStart Int?     @map("line_start")
+  lineEnd   Int?     @map("line_end")
+  resolved  Boolean  @default(false)
+  createdAt DateTime @default(now()) @map("created_at")
+
+  snippet Snippet @relation(fields: [snippetId], references: [id], onDelete: Cascade)
+  user    User    @relation(fields: [userId], references: [id])
+
+  @@index([snippetId])
+  @@map("comments")
+}
+
+model Permission {
+  userId       String   @map("user_id")
+  collectionId String   @map("collection_id")
+  role         String   // 'owner' | 'editor' | 'viewer'
+  grantedAt    DateTime @default(now()) @map("granted_at")
+
+  user       User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  collection Collection @relation(fields: [collectionId], references: [id], onDelete: Cascade)
+
+  @@id([userId, collectionId])
+  @@map("permissions")
+}
