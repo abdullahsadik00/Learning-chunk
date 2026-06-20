@@ -1,29 +1,26 @@
 {
   "name": "nextjs-mastery",
   "version": "1.0.0",
-  "description": "Phase 4: Next.js & Advanced Frontend curriculum (Days 18–21)",
-  "type": "module",
+  "description": "Phase 4: Next.js curriculum (Days 18–21) — real Next.js 15 app",
   "scripts": {
-    "check": "tsc --noEmit"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "check": "tsc --noEmit",
+    "lint": "next lint"
   },
-  "notes": {
-    "setup": "To run examples: npx create-next-app@latest my-app --typescript --tailwind --eslint --app",
-    "why_reference_files": "These are teaching reference files. Next.js requires a full project to run (file-based routing, server runtime). Read the files, then try patterns in a real Next.js project.",
-    "files": {
-      "01-app-router.tsx":             "Day 18  — App Router, file conventions, dynamic/parallel/intercepting routes",
-      "02-server-client-components.tsx":"Day 19  — Server vs Client Components, RSC composition patterns",
-      "03-data-fetching.tsx":           "Day 20a — Server fetch, parallel fetching, Suspense, caching strategies",
-      "04-server-actions-api.tsx":      "Day 20b — Server Actions, Route Handlers, streaming, webhooks",
-      "05-middleware-auth.tsx":         "Day 21a — Middleware, NextAuth.js, RBAC, i18n, rate limiting",
-      "06-performance.tsx":             "Day 21b — next/image, next/font, next/script, metadata, Web Vitals",
-      "07-practice.tsx":                "Days 18–21 — Easy / Medium / Hard practice Q&A"
-    }
+  "dependencies": {
+    "next": "^15.0.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "zod": "^3.23.0"
   },
   "devDependencies": {
-    "typescript": "^5.0.0",
-    "@types/react": "^18.3.0",
+    "typescript": "^5.5.3",
+    "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
     "@types/node": "^20.0.0",
-    "next": "^15.0.0"
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^15.0.0"
   }
 }
