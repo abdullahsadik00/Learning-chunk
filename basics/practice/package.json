@@ -1,0 +1,14 @@
+{
+  "name": "practice",
+  "scripts": {
+    "hoisting":  "node 01-hoisting.practice.js",
+    "scope":     "node 02-scope-chain.practice.js",
+    "closures":  "node 03-closures.practice.js",
+    "this":      "node 04-this-keyword.practice.js",
+    "proto":     "node 05-prototypes.practice.js",
+    "eventloop": "node 06-event-loop.practice.js",
+    "promises":  "node 07-promises-async-await.practice.js",
+    "fp":        "node 11-functional-programming.practice.js",
+    "polyfills": "node week4-polyfills.practice.js"
+  }
+}
