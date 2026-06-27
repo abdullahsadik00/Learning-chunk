@@ -288,3 +288,42 @@ function RenderCounter({ label }: { label: string }) {
 }
 
 export { SearchWithTransition, DeferredSearch, RenderCounter };
+
+// ─── LIVE DEMO ───────────────────────────────────────────────────
+
+function Box({ title, sub, children }: { title: string; sub?: string; children: React.ReactNode }) {
+    return (
+        <div style={{ border: '1px solid #e5e7eb', borderRadius: 8, padding: 16, marginBottom: 16 }}>
+            <p style={{ margin: '0 0 4px', fontSize: 12, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#6b7280' }}>{title}</p>
+            {sub && <p style={{ margin: '0 0 12px', fontSize: 12, color: '#9ca3af' }}>{sub}</p>}
+            {children}
+        </div>
+    );
+}
+
+export default function Demo() {
+    const SAMPLE_ITEMS = Array.from({ length: 50 }, (_, i) =>
+        ['React', 'Vue', 'Angular', 'Svelte', 'Next.js', 'Nuxt', 'Remix', 'Astro', 'SvelteKit', 'Gatsby'][i % 10] + ` v${i + 1}`
+    );
+    return (
+        <div>
+            <Box
+                title="useTransition — non-urgent update"
+                sub="Type fast — the input stays responsive while the 10 000-item filter runs in background. Watch isPending."
+            >
+                <SearchWithTransition />
+            </Box>
+
+            <Box
+                title="useDeferredValue — deferred filter"
+                sub="Same idea but declarative — React defers re-rendering the stale list until the browser is idle."
+            >
+                <DeferredSearch items={SAMPLE_ITEMS} />
+            </Box>
+
+            <Box title="RenderCounter — how many times has this component rendered?">
+                <RenderCounter label="RenderCounter" />
+            </Box>
+        </div>
+    );
+}

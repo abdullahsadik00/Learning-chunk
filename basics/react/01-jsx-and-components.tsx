@@ -450,3 +450,60 @@ export {
     FragmentExamples,
     UserCard,
 };
+
+// ─── LIVE DEMO ───────────────────────────────────────────────────
+
+function Box({ title, children }: { title: string; children: React.ReactNode }) {
+    return (
+        <div style={{ border: '1px solid #e5e7eb', borderRadius: 8, padding: 16, marginBottom: 16 }}>
+            <p style={{ margin: '0 0 12px', fontSize: 12, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#6b7280' }}>{title}</p>
+            {children}
+        </div>
+    );
+}
+
+export default function Demo() {
+    const [isLoggedIn, setIsLoggedIn] = useState(true);
+    const [isAdmin, setIsAdmin]       = useState(false);
+    const [count, setCount]           = useState(3);
+    const [status, setStatus]         = useState<"idle"|"loading"|"success"|"error">("success");
+
+    return (
+        <div>
+            <Box title="JSX expressions">
+                <JSXExamples />
+            </Box>
+
+            <Box title="Conditional rendering — toggle the controls">
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, marginBottom: 12, padding: '10px 12px', background: '#f9fafb', borderRadius: 6 }}>
+                    <label style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 13 }}>
+                        <input type="checkbox" checked={isLoggedIn} onChange={e => setIsLoggedIn(e.target.checked)} /> Logged in
+                    </label>
+                    <label style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 13 }}>
+                        <input type="checkbox" checked={isAdmin} onChange={e => setIsAdmin(e.target.checked)} /> Admin
+                    </label>
+                    <label style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 13 }}>
+                        Count: <input type="number" value={count} onChange={e => setCount(Number(e.target.value))}
+                            style={{ width: 56, marginLeft: 4, padding: '2px 6px' }} />
+                    </label>
+                    <select value={status} onChange={e => setStatus(e.target.value as typeof status)} style={{ fontSize: 13, padding: '2px 6px' }}>
+                        {(['idle','loading','success','error'] as const).map(s => <option key={s} value={s}>{s}</option>)}
+                    </select>
+                </div>
+                <ConditionalExamples isLoggedIn={isLoggedIn} isAdmin={isAdmin} count={count} status={status} error="Something went wrong" />
+            </Box>
+
+            <Box title="Class component — CounterClass">
+                <CounterClass initialCount={0} />
+            </Box>
+
+            <Box title="UserCard component">
+                <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
+                    <UserCard name="Sadik" email="sadik@example.com" role="admin" />
+                    <UserCard name="Priya" email="priya@example.com" role="user" />
+                    <UserCard name="Guest" email="guest@example.com" role="guest" />
+                </div>
+            </Box>
+        </div>
+    );
+}

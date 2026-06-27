@@ -436,3 +436,80 @@ export {
     useDocumentTitle, EffectMistakes, TooltipPositioner,
     useDebounce, UserCard,
 };
+
+// ─── LIVE DEMO ───────────────────────────────────────────────────
+
+function Box({ title, children }: { title: string; children: React.ReactNode }) {
+    return (
+        <div style={{ border: '1px solid #e5e7eb', borderRadius: 8, padding: 16, marginBottom: 16 }}>
+            <p style={{ margin: '0 0 12px', fontSize: 12, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#6b7280' }}>{title}</p>
+            {children}
+        </div>
+    );
+}
+
+interface TodoItem { id: string; text: string; done: boolean; }
+
+function TodoDemo() {
+    const [todos, setTodos] = useState<TodoItem[]>([
+        { id: '1', text: 'Learn useState', done: true },
+        { id: '2', text: 'Learn useEffect', done: false },
+    ]);
+    const [input, setInput] = useState('');
+
+    const add = () => {
+        if (!input.trim()) return;
+        setTodos(p => [...p, { id: crypto.randomUUID(), text: input.trim(), done: false }]);
+        setInput('');
+    };
+
+    return (
+        <div>
+            <div style={{ display: 'flex', gap: 8, marginBottom: 10 }}>
+                <input value={input} onChange={e => setInput(e.target.value)}
+                    onKeyDown={e => e.key === 'Enter' && add()}
+                    placeholder="New todo…" style={{ flex: 1, padding: '4px 8px' }} />
+                <button onClick={add}>Add</button>
+            </div>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                {todos.map(t => (
+                    <li key={t.id} style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '4px 0' }}>
+                        <input type="checkbox" checked={t.done}
+                            onChange={() => setTodos(p => p.map(x => x.id === t.id ? { ...x, done: !x.done } : x))} />
+                        <span style={{ flex: 1, textDecoration: t.done ? 'line-through' : 'none', color: t.done ? '#9ca3af' : 'inherit' }}>
+                            {t.text}
+                        </span>
+                        <button onClick={() => setTodos(p => p.filter(x => x.id !== t.id))}
+                            style={{ color: '#ef4444', background: 'none', border: 'none', cursor: 'pointer' }}>✕</button>
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
+}
+
+export default function Demo() {
+    return (
+        <div>
+            <Box title="Primitive state — counter + toggle">
+                <PrimitiveState />
+            </Box>
+
+            <Box title="Object state — controlled form fields">
+                <ObjectState />
+            </Box>
+
+            <Box title="Array state — todo list (add / toggle / remove)">
+                <TodoDemo />
+            </Box>
+
+            <Box title="useEffect + timer — Countdown">
+                <Countdown from={10} />
+            </Box>
+
+            <Box title="Effect common mistakes — self-incrementing counter">
+                <EffectMistakes />
+            </Box>
+        </div>
+    );
+}

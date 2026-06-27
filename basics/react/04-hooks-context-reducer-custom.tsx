@@ -509,3 +509,34 @@ export {
     useLocalStorage, useFetch, useToggle, useClickOutside, useAsync, useMediaQuery,
     useWindowSize, useForm,
 };
+
+// ─── LIVE DEMO ───────────────────────────────────────────────────
+
+function Box({ title, children }: { title: string; children: React.ReactNode }) {
+    return (
+        <div style={{ border: '1px solid #e5e7eb', borderRadius: 8, padding: 16, marginBottom: 16 }}>
+            <p style={{ margin: '0 0 12px', fontSize: 12, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#6b7280' }}>{title}</p>
+            {children}
+        </div>
+    );
+}
+
+export default function Demo() {
+    return (
+        <div>
+            <Box title="useContext — theme toggle (ThemeProvider + ThemedButton)">
+                <ThemeProvider>
+                    <ThemedButton>Click to toggle theme</ThemedButton>
+                </ThemeProvider>
+            </Box>
+
+            <Box title="useReducer — counter with typed actions">
+                <CounterWithReducer />
+            </Box>
+
+            <Box title="useReducer — full todo app (add / toggle / filter / clear done)">
+                <TodoApp />
+            </Box>
+        </div>
+    );
+}

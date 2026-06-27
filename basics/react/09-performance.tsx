@@ -94,7 +94,10 @@ function ParentWithPitfalls() {
 // React.lazy + Suspense = dynamic import with automatic loading UI.
 
 // ── 2a. Route-based splitting (most impactful) ──
-const Dashboard  = lazy(() => import('./dashboard'));   // hypothetical module
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore – hypothetical modules for illustration
+const Dashboard  = lazy(() => import('./dashboard'));
+// @ts-ignore
 const Analytics  = lazy(() => import('./analytics'));
 
 function AppRouter() {
@@ -109,7 +112,8 @@ function AppRouter() {
 
 // ── 2b. Component-level splitting ──
 const HeavyChart = lazy(() =>
-    import('./heavy-chart').then(m => ({ default: m.HeavyChart }))
+    // @ts-ignore – hypothetical module for illustration
+    import('./heavy-chart').then((m: any) => ({ default: m.HeavyChart }))
 );
 
 function PageWithChart({ showChart }: { showChart: boolean }) {
@@ -129,6 +133,7 @@ function PageWithChart({ showChart }: { showChart: boolean }) {
 // Trigger the import early (e.g. on hover) so by the time user clicks,
 // the chunk is already cached.
 function preloadDashboard() {
+    // @ts-ignore – hypothetical module
     const mod = import('./dashboard'); // fires network request immediately
     return mod;
 }
@@ -439,3 +444,42 @@ export {
     ProfiledApp, onRenderCallback, useWhyDidYouUpdate, ExpensiveComponent,
     TodoList, TodoItem, TodoApp,
 };
+
+// ─── LIVE DEMO ───────────────────────────────────────────────────
+
+function Box({ title, sub, children }: { title: string; sub?: string; children: React.ReactNode }) {
+    return (
+        <div style={{ border: '1px solid #e5e7eb', borderRadius: 8, padding: 16, marginBottom: 16 }}>
+            <p style={{ margin: '0 0 4px', fontSize: 12, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#6b7280' }}>{title}</p>
+            {sub && <p style={{ margin: '0 0 12px', fontSize: 12, color: '#9ca3af' }}>{sub}</p>}
+            {children}
+        </div>
+    );
+}
+
+export default function Demo() {
+    return (
+        <div>
+            <Box
+                title="React.memo + useCallback — memo'd todo list"
+                sub="Open DevTools console — TodoItem only logs 'rendered' when its own item changes, not when others do."
+            >
+                <TodoApp />
+            </Box>
+
+            <Box
+                title="Infinite scroll — IntersectionObserver loads more as you scroll"
+                sub="Scroll to the bottom of the list to trigger another batch load."
+            >
+                <InfiniteList />
+            </Box>
+
+            <Box
+                title="React.memo pitfalls — inline props break memoization"
+                sub="Click the count button and watch the console — Item re-renders even though its props didn't change (inline onClick)."
+            >
+                <ParentWithPitfalls />
+            </Box>
+        </div>
+    );
+}

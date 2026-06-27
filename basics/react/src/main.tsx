@@ -1,51 +1,91 @@
-import React from 'react';
+import React, { useState, Suspense, lazy } from 'react';
 import { createRoot } from 'react-dom/client';
 
-const curriculum = [
-    { file: '01-jsx-and-components.tsx',             day: 12, topic: 'JSX & Components' },
-    { file: '02-hooks-useState-useEffect.tsx',        day: 13, topic: 'useState · useEffect' },
-    { file: '03-hooks-useRef-useMemo-useCallback.tsx',day: 14, topic: 'useRef · useMemo · useCallback' },
-    { file: '04-hooks-context-reducer-custom.tsx',    day: 14, topic: 'useContext · useReducer · Custom Hooks' },
-    { file: '05-react-internals.tsx',                 day: 15, topic: 'Virtual DOM · Fiber · Reconciliation' },
-    { file: '06-advanced-patterns.tsx',               day: 15, topic: 'Error Boundaries · Portals · ForwardRef' },
-    { file: '07-state-management.tsx',                day: 16, topic: 'Context · Zustand · React Query' },
-    { file: '08-react-patterns.tsx',                  day: 17, topic: 'Compound · HOC · Render Props · Headless' },
-    { file: '09-performance.tsx',                     day: 17, topic: 'memo · Code Splitting · Virtualization' },
-    { file: '10-testing.tsx',                         day: 17, topic: 'Testing Library · Vitest · MSW' },
-    { file: '11-practice.tsx',                        day: 17, topic: 'Practice Q&A — Easy / Medium / Hard' },
+const MODULES = [
+    { id: '01', day: 12, label: 'JSX & Components',                       load: lazy(() => import('../01-jsx-and-components'))              },
+    { id: '02', day: 13, label: 'useState · useEffect',                    load: lazy(() => import('../02-hooks-useState-useEffect'))         },
+    { id: '03', day: 14, label: 'useRef · useMemo · useCallback',          load: lazy(() => import('../03-hooks-useRef-useMemo-useCallback'))  },
+    { id: '04', day: 14, label: 'useContext · useReducer · Custom Hooks',  load: lazy(() => import('../04-hooks-context-reducer-custom'))      },
+    { id: '05', day: 15, label: 'Virtual DOM · Fiber',                     load: lazy(() => import('../05-react-internals'))                  },
+    { id: '06', day: 15, label: 'Error Boundaries · Portals · ForwardRef', load: lazy(() => import('../06-advanced-patterns'))                },
+    { id: '07', day: 16, label: 'State Management',                        load: lazy(() => import('../07-state-management'))                 },
+    { id: '08', day: 17, label: 'React Patterns',                          load: lazy(() => import('../08-react-patterns'))                   },
+    { id: '09', day: 17, label: 'Performance',                             load: lazy(() => import('../09-performance'))                      },
+    { id: '10', day: 17, label: 'Testing (components as demos)',           load: lazy(() => import('../10-testing'))                          },
+    { id: '11', day: 17, label: 'Practice',                                load: lazy(() => import('../11-practice'))                         },
 ];
 
+const S: Record<string, React.CSSProperties> = {
+    sidebar: {
+        width: 230, flexShrink: 0, borderRight: '1px solid #e5e7eb',
+        background: '#f9fafb', display: 'flex', flexDirection: 'column',
+        height: '100vh', overflowY: 'auto',
+    },
+    sidebarHead: { padding: '14px 16px 12px', borderBottom: '1px solid #e5e7eb' },
+    main: { flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' },
+    header: {
+        borderBottom: '1px solid #e5e7eb', padding: '10px 24px',
+        background: '#fff', display: 'flex', alignItems: 'center', gap: 10, flexShrink: 0,
+    },
+    content: { flex: 1, overflowY: 'auto', padding: 24, maxWidth: 900 },
+};
+
 function App() {
+    const [active, setActive] = useState('01');
+    const mod = MODULES.find(m => m.id === active)!;
+    const Demo = mod.load;
+
     return (
-        <div style={{ fontFamily: 'system-ui, sans-serif', maxWidth: 700, margin: '48px auto', padding: '0 24px' }}>
-            <h1 style={{ marginBottom: 4 }}>React Mastery</h1>
-            <p style={{ color: '#666', marginTop: 0 }}>Phase 3 — Days 12–17</p>
-            <p style={{ background: '#f0f4ff', padding: '12px 16px', borderRadius: 6, fontSize: 14 }}>
-                These files are <strong>teaching modules</strong> — open them in your editor.
-                Run <code>npm run check</code> to type-check all 11 files, or
-                <code> npm run lint</code> to lint them.
-            </p>
-            <table style={{ width: '100%', borderCollapse: 'collapse', marginTop: 24 }}>
-                <thead>
-                    <tr style={{ textAlign: 'left', borderBottom: '2px solid #e5e7eb' }}>
-                        <th style={{ padding: '8px 12px' }}>Day</th>
-                        <th style={{ padding: '8px 12px' }}>File</th>
-                        <th style={{ padding: '8px 12px' }}>Topic</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {curriculum.map((row, i) => (
-                        <tr key={i} style={{ borderBottom: '1px solid #e5e7eb' }}>
-                            <td style={{ padding: '8px 12px', color: '#6366f1', fontWeight: 600 }}>{row.day}</td>
-                            <td style={{ padding: '8px 12px', fontFamily: 'monospace', fontSize: 13 }}>{row.file}</td>
-                            <td style={{ padding: '8px 12px', color: '#374151' }}>{row.topic}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
+        <div style={{ display: 'flex', height: '100vh', fontFamily: 'system-ui, sans-serif' }}>
+            {/* Sidebar */}
+            <nav style={S.sidebar}>
+                <div style={S.sidebarHead}>
+                    <div style={{ fontWeight: 700, fontSize: 15, color: '#111827' }}>React Mastery</div>
+                    <div style={{ fontSize: 12, color: '#6b7280', marginTop: 2 }}>Days 12–17 · live demos</div>
+                </div>
+                {MODULES.map(m => (
+                    <button
+                        key={m.id}
+                        onClick={() => setActive(m.id)}
+                        style={{
+                            display: 'block', width: '100%', textAlign: 'left',
+                            padding: '9px 16px', border: 'none', cursor: 'pointer',
+                            background: active === m.id ? '#e0e7ff' : 'transparent',
+                            color: active === m.id ? '#3730a3' : '#374151',
+                            fontWeight: active === m.id ? 600 : 400,
+                            fontSize: 13, lineHeight: 1.4,
+                            borderLeft: active === m.id ? '3px solid #6366f1' : '3px solid transparent',
+                        }}
+                    >
+                        <span style={{ color: '#9ca3af', fontSize: 11 }}>Day {m.day} · </span>
+                        {m.label}
+                    </button>
+                ))}
+            </nav>
+
+            {/* Main */}
+            <div style={S.main}>
+                <div style={S.header}>
+                    <span style={{ background: '#e0e7ff', color: '#4338ca', borderRadius: 4, padding: '2px 8px', fontSize: 11, fontWeight: 700 }}>
+                        Day {mod.day}
+                    </span>
+                    <span style={{ fontWeight: 600, fontSize: 15, color: '#111827' }}>{mod.label}</span>
+                    <code style={{ marginLeft: 'auto', fontSize: 11, color: '#9ca3af', background: '#f3f4f6', padding: '2px 6px', borderRadius: 4 }}>
+                        {mod.id}-*.tsx
+                    </code>
+                </div>
+                <div style={S.content}>
+                    <Suspense fallback={
+                        <div style={{ padding: 60, textAlign: 'center', color: '#9ca3af' }}>Loading demo…</div>
+                    }>
+                        <Demo />
+                    </Suspense>
+                </div>
+            </div>
         </div>
     );
 }
 
-const root = document.getElementById('root')!;
-createRoot(root).render(<React.StrictMode><App /></React.StrictMode>);
+createRoot(document.getElementById('root')!).render(
+    <React.StrictMode><App /></React.StrictMode>
+);

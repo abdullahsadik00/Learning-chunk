@@ -5,8 +5,9 @@
 import React, {
     Component, ErrorInfo, ReactNode, useState, useEffect,
     useCallback, useRef, createContext, useContext,
-    forwardRef, useImperativeHandle, createPortal
+    forwardRef, useImperativeHandle,
 } from 'react';
+import { createPortal } from 'react-dom';
 
 // ───────────────────────────────────────────────────────────────
 // 1. ERROR BOUNDARIES
@@ -372,3 +373,63 @@ export {
     Portal, Modal, ToastProvider, useToast, Tooltip,
     useConfirm,
 };
+
+// ─── LIVE DEMO ───────────────────────────────────────────────────
+
+function Box({ title, sub, children }: { title: string; sub?: string; children: React.ReactNode }) {
+    return (
+        <div style={{ border: '1px solid #e5e7eb', borderRadius: 8, padding: 16, marginBottom: 16 }}>
+            <p style={{ margin: '0 0 4px', fontSize: 12, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#6b7280' }}>{title}</p>
+            {sub && <p style={{ margin: '0 0 12px', fontSize: 12, color: '#9ca3af' }}>{sub}</p>}
+            {children}
+        </div>
+    );
+}
+
+function CrashButton() {
+    const [crash, setCrash] = useState(false);
+    if (crash) throw new Error("Intentional crash from CrashButton");
+    return <button onClick={() => setCrash(true)} style={{ color: '#ef4444' }}>💥 Throw an error</button>;
+}
+
+function ModalDemo() {
+    const [open, setOpen] = useState(false);
+    return (
+        <>
+            <button onClick={() => setOpen(true)}>Open Modal</button>
+            <Modal isOpen={open} onClose={() => setOpen(false)} title="Portal Modal">
+                <p>This modal is rendered into <code>document.body</code> via a portal — outside the React tree visually but inside it logically.</p>
+                <p>Press <kbd>Escape</kbd> or click the backdrop to close.</p>
+                <button onClick={() => setOpen(false)}>Close</button>
+            </Modal>
+        </>
+    );
+}
+
+export default function Demo() {
+    return (
+        <div>
+            <Box
+                title="ErrorBoundary — catch render errors"
+                sub="Click the button to throw. The boundary catches it and shows a fallback with a Reset button."
+            >
+                <ErrorBoundary>
+                    <CrashButton />
+                </ErrorBoundary>
+            </Box>
+
+            <Box
+                title="Portal — render outside the DOM hierarchy"
+                sub="The Modal is painted at document.body level, but React events still bubble through the component tree."
+            >
+                <ModalDemo />
+            </Box>
+
+            <Box title="Tooltip — portal-based hover overlay">
+                <Tooltip label="I'm rendered at body level!">
+                    <button>Hover me</button>
+                </Tooltip>
+            </Box>
+        </div>
+    );
+}

@@ -517,3 +517,62 @@ export {
     CounterWithExternalStore, counterStore, createStore,
     ProtectedPage,
 };
+
+// ─── LIVE DEMO ───────────────────────────────────────────────────
+
+function Box({ title, sub, children }: { title: string; sub?: string; children: React.ReactNode }) {
+    return (
+        <div style={{ border: '1px solid #e5e7eb', borderRadius: 8, padding: 16, marginBottom: 16 }}>
+            <p style={{ margin: '0 0 4px', fontSize: 12, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#6b7280' }}>{title}</p>
+            {sub && <p style={{ margin: '0 0 12px', fontSize: 12, color: '#9ca3af' }}>{sub}</p>}
+            {children}
+        </div>
+    );
+}
+
+function AuthDemo() {
+    const state    = useAuthState();
+    const dispatch = useAuthDispatch();
+
+    if (state.isLoading) return <p>Checking session…</p>;
+
+    return state.user ? (
+        <div>
+            <p>Logged in as <strong>{state.user.name}</strong> ({state.user.role})</p>
+            <LogoutButton />
+        </div>
+    ) : (
+        <div>
+            <p>Not logged in.</p>
+            <button onClick={() => dispatch({ type: 'LOGIN', user: { id: '1', name: 'Sadik', role: 'admin' } })}>
+                Simulate Login
+            </button>
+        </div>
+    );
+}
+
+export default function Demo() {
+    return (
+        <div>
+            <Box
+                title="useSyncExternalStore — external counter"
+                sub="State lives completely outside React. Multiple components can subscribe to the same store."
+            >
+                <div style={{ display: 'flex', gap: 16 }}>
+                    <CounterWithExternalStore />
+                    <CounterWithExternalStore />
+                </div>
+                <p style={{ fontSize: 12, color: '#9ca3af', marginBottom: 0 }}>Both instances share the same external store — click + in one to see the other update.</p>
+            </Box>
+
+            <Box
+                title="Split-context auth — state and dispatch in separate contexts"
+                sub="LogoutButton only subscribes to dispatch — it never re-renders when user data changes."
+            >
+                <AuthProvider>
+                    <AuthDemo />
+                </AuthProvider>
+            </Box>
+        </div>
+    );
+}
