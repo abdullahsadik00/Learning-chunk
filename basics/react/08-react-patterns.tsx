@@ -566,3 +566,41 @@ export {
     useCombobox, CityAutocomplete,
     Tabs,
 };
+
+// ─── LIVE DEMO ───────────────────────────────────────────────────
+
+function Box({ title, sub, children }: { title: string; sub?: string; children: React.ReactNode }) {
+    return (
+        <div style={{ border: '1px solid #e5e7eb', borderRadius: 8, padding: 16, marginBottom: 16 }}>
+            <p style={{ margin: '0 0 4px', fontSize: 12, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#6b7280' }}>{title}</p>
+            {sub && <p style={{ margin: '0 0 12px', fontSize: 12, color: '#9ca3af' }}>{sub}</p>}
+            {children}
+        </div>
+    );
+}
+
+export default function Demo() {
+    return (
+        <div>
+            <Box title="Compound components — Accordion" sub="Sub-components share implicit state through Context. No giant props object.">
+                <FAQSection />
+            </Box>
+
+            <Box title="Compound components — Select / Dropdown" sub="Fully composed from SelectTrigger + SelectList + SelectOption.">
+                <SelectDemo />
+            </Box>
+
+            <Box title="Render props — MouseTracker" sub="Move your mouse over the box below.">
+                <CrosshairDemo />
+            </Box>
+
+            <Box title="Headless components — useToggle + useDisclosure" sub="Pure logic hook — the consumer owns all the UI.">
+                <ToggleDemo />
+            </Box>
+
+            <Box title="Headless combobox — CityAutocomplete" sub="Keyboard navigation (↑ ↓ Enter Escape) built into the hook.">
+                <CityAutocomplete />
+            </Box>
+        </div>
+    );
+}

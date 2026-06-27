@@ -450,3 +450,67 @@ export {
     ProductList, ParentRefEquality, ExpensiveList, ParentWithCallback,
     OptimizationExamples, useMousePosition, SearchBox, useDebounce,
 };
+
+// ─── LIVE DEMO ───────────────────────────────────────────────────
+
+function Box({ title, children }: { title: string; children: React.ReactNode }) {
+    return (
+        <div style={{ border: '1px solid #e5e7eb', borderRadius: 8, padding: 16, marginBottom: 16 }}>
+            <p style={{ margin: '0 0 12px', fontSize: 12, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#6b7280' }}>{title}</p>
+            {children}
+        </div>
+    );
+}
+
+const SAMPLE_PRODUCTS: Product[] = [
+    { id: '1', name: 'MacBook Pro',  price: 2499, category: 'laptop'  },
+    { id: '2', name: 'iPhone 15',    price: 999,  category: 'phone'   },
+    { id: '3', name: 'AirPods Pro',  price: 249,  category: 'audio'   },
+    { id: '4', name: 'iPad Air',     price: 749,  category: 'tablet'  },
+    { id: '5', name: 'Apple Watch',  price: 399,  category: 'wearable'},
+];
+
+function ProductListDemo() {
+    const [filter, setFilter]   = useState('');
+    const [sortBy, setSortBy]   = useState<'name' | 'price'>('name');
+
+    return (
+        <div>
+            <div style={{ display: 'flex', gap: 8, marginBottom: 10 }}>
+                <input value={filter} onChange={e => setFilter(e.target.value)}
+                    placeholder="Filter by name or category…" style={{ flex: 1, padding: '4px 8px' }} />
+                <select value={sortBy} onChange={e => setSortBy(e.target.value as 'name' | 'price')} style={{ padding: '4px 8px' }}>
+                    <option value="name">Sort by name</option>
+                    <option value="price">Sort by price</option>
+                </select>
+            </div>
+            <ProductList products={SAMPLE_PRODUCTS} filter={filter} sortBy={sortBy} />
+        </div>
+    );
+}
+
+export default function Demo() {
+    return (
+        <div>
+            <Box title="useRef — DOM access (focus / select / clear)">
+                <FocusInput />
+            </Box>
+
+            <Box title="useRef — mutable timer ref (StopWatch)">
+                <StopWatch />
+            </Box>
+
+            <Box title="useRef — usePrevious hook">
+                <PreviousCounter />
+            </Box>
+
+            <Box title="forwardRef — parent controls child input">
+                <ParentWithRef />
+            </Box>
+
+            <Box title="useMemo — filter + sort (open DevTools console to see render logs)">
+                <ProductListDemo />
+            </Box>
+        </div>
+    );
+}

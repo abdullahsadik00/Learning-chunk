@@ -423,3 +423,51 @@ function ThemedButton({ onClick, children }: { onClick: () => void; children: Re
 //    React's event system (e.g. calling hook methods directly via renderHook).
 
 export { Counter, LoginForm, UserCard, useCounter, useLocalStorage, ThemedButton, ThemeContext };
+
+// ─── LIVE DEMO ───────────────────────────────────────────────────
+
+function Box({ title, sub, children }: { title: string; sub?: string; children: React.ReactNode }) {
+    return (
+        <div style={{ border: '1px solid #e5e7eb', borderRadius: 8, padding: 16, marginBottom: 16 }}>
+            <p style={{ margin: '0 0 4px', fontSize: 12, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#6b7280' }}>{title}</p>
+            {sub && <p style={{ margin: '0 0 12px', fontSize: 12, color: '#9ca3af' }}>{sub}</p>}
+            {children}
+        </div>
+    );
+}
+
+export default function Demo() {
+    const [lastSubmit, setLastSubmit] = useState<{ email: string; password: string } | null>(null);
+
+    return (
+        <div>
+            <Box
+                title="Counter — the canonical testing example"
+                sub="Run tests with: cd basics/react && npx vitest. These components are tested via React Testing Library."
+            >
+                <Counter initialCount={0} />
+            </Box>
+
+            <Box
+                title="LoginForm — controlled form with validation"
+                sub="Try submitting empty, or a bad email. Tests use userEvent to simulate typing."
+            >
+                <LoginForm onSubmit={data => setLastSubmit(data)} />
+                {lastSubmit && (
+                    <pre style={{ marginTop: 8, background: '#f0fdf4', padding: 10, borderRadius: 4, fontSize: 12 }}>
+                        {JSON.stringify(lastSubmit, null, 2)}
+                    </pre>
+                )}
+            </Box>
+
+            <Box
+                title="ThemeContext — testing context consumers"
+                sub="Tests use a wrapper option in render() to provide the context."
+            >
+                <ThemeContext.Provider value="dark">
+                    <ThemedButton onClick={() => {}}>Themed button</ThemedButton>
+                </ThemeContext.Provider>
+            </Box>
+        </div>
+    );
+}

@@ -420,7 +420,7 @@ function ModalProvider({ children }: { children: ReactNode }) {
     // Escape key closes top modal
     useEffect(() => {
         if (!stack.length) return;
-        const handler = (e: KeyboardEvent) => {
+        const handler = (e: globalThis.KeyboardEvent) => {
             if (e.key === "Escape") {
                 const top = stack[stack.length - 1];
                 top.onClose?.();
@@ -578,3 +578,64 @@ export {
     DragList, ModalProvider, useModal, ModalDemo,
     useUndoReducer, TextEditorWithHistory,
 };
+
+// ─── LIVE DEMO ───────────────────────────────────────────────────
+
+function Box({ title, sub, children }: { title: string; sub?: string; children: React.ReactNode }) {
+    return (
+        <div style={{ border: '1px solid #e5e7eb', borderRadius: 8, padding: 16, marginBottom: 16 }}>
+            <p style={{ margin: '0 0 4px', fontSize: 12, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#6b7280' }}>{title}</p>
+            {sub && <p style={{ margin: '0 0 12px', fontSize: 12, color: '#9ca3af' }}>{sub}</p>}
+            {children}
+        </div>
+    );
+}
+
+export default function Demo() {
+    const [searches, setSearches] = useState<string[]>([]);
+
+    return (
+        <div>
+            <Box title="Easy — Toggle component" sub="Space or Enter also toggles. Try multiple.">
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                    <Toggle label="Notifications" defaultOn />
+                    <Toggle label="Dark mode" onChange={v => console.log('dark mode:', v)} />
+                    <Toggle label="Auto-save" />
+                </div>
+            </Box>
+
+            <Box title="Easy — SearchInput with 300 ms debounce" sub="Watch the search log — it only fires after you stop typing.">
+                <SearchInput onSearch={q => q && setSearches(p => [`"${q}"`, ...p].slice(0, 5))} />
+                {searches.length > 0 && (
+                    <p style={{ fontSize: 12, color: '#6b7280', marginTop: 8 }}>
+                        Debounced searches: {searches.join(', ')}
+                    </p>
+                )}
+            </Box>
+
+            <Box title="Medium — DynamicForm" sub="Add / remove fields, then submit. Each field value is independent.">
+                <DynamicForm onSubmit={data => console.log('submitted', data)} />
+            </Box>
+
+            <Box title="Hard — DragList" sub="Drag items to reorder.">
+                <DragList items={[
+                    { id: '1', label: 'Learn JSX' },
+                    { id: '2', label: 'Master hooks' },
+                    { id: '3', label: 'Understand Fiber' },
+                    { id: '4', label: 'Build patterns' },
+                    { id: '5', label: 'Optimise performance' },
+                ]} />
+            </Box>
+
+            <Box title="Hard — TextEditorWithHistory (undo / redo)" sub="Type, then use the Undo / Redo buttons.">
+                <TextEditorWithHistory />
+            </Box>
+
+            <Box title="Hard — Modal stacking system" sub="Open a modal, then open another from inside it. Escape closes the top one.">
+                <ModalProvider>
+                    <ModalDemo />
+                </ModalProvider>
+            </Box>
+        </div>
+    );
+}
