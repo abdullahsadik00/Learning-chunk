@@ -455,8 +455,8 @@ export {
 
 function Box({ title, children }: { title: string; children: React.ReactNode }) {
     return (
-        <div style={{ border: '1px solid #e5e7eb', borderRadius: 8, padding: 16, marginBottom: 16 }}>
-            <p style={{ margin: '0 0 12px', fontSize: 12, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#6b7280' }}>{title}</p>
+        <div className="border border-zinc-200 dark:border-zinc-700 rounded-xl p-5 mb-4 bg-white dark:bg-zinc-900 shadow-sm transition-colors">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">{title}</p>
             {children}
         </div>
     );
