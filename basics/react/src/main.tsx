@@ -2,8 +2,7 @@ import React, { useState, useEffect, Suspense, lazy, ReactNode } from 'react';
 import { createRoot } from 'react-dom/client';
 import {
     Search, X, Menu, Moon, Sun, ChevronRight, ChevronLeft,
-    Clock, Target, Play, CheckCircle2, BookOpen, Circle,
-    Check, Loader2,
+    Clock, BookOpen, Circle, Check, CheckCircle2, Loader2,
 } from 'lucide-react';
 import './index.css';
 
@@ -181,9 +180,10 @@ const MODULES: Mod[] = [
     },
 ];
 
-// ─── Utility ─────────────────────────────────────────────────────────────────
+// ─── Utilities ────────────────────────────────────────────────────────────────
 
 const STORAGE_KEY = 'react-mastery-completed';
+const THEME_KEY   = 'react-mastery-theme';
 
 function loadCompleted(): Set<string> {
     try { return new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) ?? '[]')); }
@@ -193,13 +193,13 @@ function loadCompleted(): Set<string> {
 // ─── Badges ──────────────────────────────────────────────────────────────────
 
 function DifficultyBadge({ difficulty }: { difficulty: Difficulty }) {
-    const styles: Record<Difficulty, string> = {
-        Beginner:     'bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-950/40 dark:text-emerald-400 dark:border-emerald-900/60',
-        Intermediate: 'bg-amber-50   text-amber-700   border-amber-200   dark:bg-amber-950/40   dark:text-amber-400   dark:border-amber-900/60',
-        Advanced:     'bg-red-50     text-red-700     border-red-200     dark:bg-red-950/40     dark:text-red-400     dark:border-red-900/60',
+    const cls: Record<Difficulty, string> = {
+        Beginner:     'bg-emerald-50   text-emerald-700  border-emerald-200   dark:bg-emerald-500/10  dark:text-emerald-400  dark:border-emerald-500/20',
+        Intermediate: 'bg-amber-50     text-amber-700    border-amber-200     dark:bg-amber-500/10    dark:text-amber-400    dark:border-amber-500/20',
+        Advanced:     'bg-red-50       text-red-700      border-red-200       dark:bg-red-500/10      dark:text-red-400      dark:border-red-500/20',
     };
     return (
-        <span className={`inline-flex items-center text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full border ${styles[difficulty]}`}>
+        <span className={`inline-flex items-center text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full border ${cls[difficulty]}`}>
             {difficulty}
         </span>
     );
@@ -207,18 +207,18 @@ function DifficultyBadge({ difficulty }: { difficulty: Difficulty }) {
 
 function DayBadge({ day }: { day: number }) {
     return (
-        <span className="inline-flex items-center text-[10px] font-mono font-medium px-2 py-0.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400 border border-zinc-200 dark:border-zinc-700">
+        <span className="inline-flex items-center text-[10px] font-mono px-2 py-0.5 rounded-md bg-[#EDECEB] text-[#78716C] border border-[#E4E3E0] dark:bg-[#1E1E22] dark:text-[#8C8C9A] dark:border-white/[0.07]">
             Day {day}
         </span>
     );
 }
 
-// ─── Loading spinner ──────────────────────────────────────────────────────────
+// ─── Loading ──────────────────────────────────────────────────────────────────
 
 function LoadingSpinner() {
     return (
-        <div className="flex items-center justify-center py-24">
-            <Loader2 className="w-7 h-7 text-blue-500 animate-spin" />
+        <div className="flex items-center justify-center py-20">
+            <Loader2 className="w-5 h-5 text-[#7C3AED] dark:text-[#A78BFA] animate-spin" />
         </div>
     );
 }
@@ -239,146 +239,154 @@ interface SidebarProps {
 
 function Sidebar({ allModules, filteredModules, activeId, completed, search, onSearch, onSelect, mobileOpen, onClose }: SidebarProps) {
     const days = [...new Set(allModules.map(m => m.day))];
-    const progress = Math.round((completed.size / allModules.length) * 100);
+    const progress = (completed.size / allModules.length) * 100;
 
     return (
         <>
-            {/* Mobile backdrop */}
             {mobileOpen && (
                 <div
-                    className="fixed inset-0 z-20 bg-black/50 backdrop-blur-sm lg:hidden"
+                    className="fixed inset-0 z-20 bg-[#1C1917]/30 backdrop-blur-sm lg:hidden"
                     onClick={onClose}
                 />
             )}
 
-            <aside
-                className={[
-                    'fixed inset-y-0 left-0 z-30 flex flex-col w-64 shrink-0',
-                    'bg-white dark:bg-zinc-900',
-                    'border-r border-zinc-200 dark:border-zinc-800',
-                    'transition-transform duration-200 ease-in-out',
-                    'lg:static lg:translate-x-0',
-                    mobileOpen ? 'translate-x-0' : '-translate-x-full',
-                ].join(' ')}
-            >
-                {/* Logo */}
-                <div className="flex items-center gap-2.5 px-4 py-4 border-b border-zinc-200 dark:border-zinc-800 shrink-0">
-                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shrink-0 shadow-sm">
-                        <BookOpen className="w-4 h-4 text-white" />
+            <aside className={[
+                'fixed inset-y-0 left-0 z-30 flex flex-col w-[244px] shrink-0',
+                'bg-[#EDECEB] dark:bg-[#18181B]',
+                'border-r border-[#E0DFDB] dark:border-white/[0.06]',
+                'transition-transform duration-200 ease-in-out',
+                'lg:static lg:translate-x-0',
+                mobileOpen ? 'translate-x-0' : '-translate-x-full',
+            ].join(' ')}>
+
+                {/* ── Logo ── */}
+                <div className="flex items-center gap-2.5 px-3.5 py-3.5 border-b border-[#E0DFDB] dark:border-white/[0.06] shrink-0">
+                    <div className="w-7 h-7 rounded-[8px] bg-gradient-to-br from-[#FF7B54] to-[#FF3B3B] flex items-center justify-center shrink-0 shadow-sm">
+                        <BookOpen className="w-3.5 h-3.5 text-white" />
                     </div>
                     <div className="flex-1 min-w-0">
-                        <p className="text-sm font-semibold text-zinc-900 dark:text-zinc-100 leading-none truncate">React Mastery</p>
-                        <p className="text-xs text-zinc-400 dark:text-zinc-500 mt-0.5">Days 12–17 · live demos</p>
+                        <p className="text-[13px] font-semibold text-[#1C1917] dark:text-[#F4F3F9] leading-none">React Mastery</p>
+                        <p className="text-[11px] text-[#A8A29E] dark:text-[#555560] mt-[3px]">Days 12–17</p>
                     </div>
                     <button
                         onClick={onClose}
-                        className="lg:hidden p-1.5 rounded-md hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-400 dark:text-zinc-500 transition-colors"
+                        className="lg:hidden p-1.5 rounded-md hover:bg-[#E4E3E0] dark:hover:bg-[#26262A] text-[#A8A29E] transition-colors"
                         aria-label="Close sidebar"
                     >
-                        <X className="w-4 h-4" />
+                        <X className="w-3.5 h-3.5" />
                     </button>
                 </div>
 
-                {/* Progress */}
-                <div className="px-4 py-3 border-b border-zinc-100 dark:border-zinc-800 shrink-0">
-                    <div className="flex items-center justify-between mb-2">
-                        <span className="text-xs text-zinc-500 dark:text-zinc-400">Progress</span>
-                        <span className="text-xs font-semibold text-zinc-700 dark:text-zinc-300 tabular-nums">
-                            {completed.size}/{allModules.length}
-                        </span>
-                    </div>
-                    <div className="h-1.5 bg-zinc-100 dark:bg-zinc-800 rounded-full overflow-hidden">
-                        <div
-                            className="h-full bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full transition-all duration-500"
-                            style={{ width: `${progress}%` }}
-                        />
-                    </div>
-                    {progress === 100 && (
-                        <p className="mt-1.5 text-xs text-emerald-600 dark:text-emerald-400 font-medium">🎉 Curriculum complete!</p>
-                    )}
-                </div>
-
-                {/* Search */}
-                <div className="px-3 py-2.5 border-b border-zinc-100 dark:border-zinc-800 shrink-0">
+                {/* ── Search ── */}
+                <div className="px-3 pt-2.5 pb-2 shrink-0">
                     <div className="relative">
-                        <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-zinc-400" />
+                        <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-[#A8A29E] dark:text-[#55555F] pointer-events-none" />
                         <input
                             type="search"
                             value={search}
                             onChange={e => onSearch(e.target.value)}
                             placeholder="Search lessons…"
-                            className="w-full pl-8 pr-7 py-1.5 text-xs rounded-lg bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 dark:placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                            className="w-full pl-8 pr-6 py-1.5 text-[12px] rounded-md bg-white dark:bg-[#111113] border border-[#E4E3E0] dark:border-white/[0.08] text-[#1C1917] dark:text-[#F4F3F9] placeholder-[#C4BEB8] dark:placeholder-[#3A3A42] focus:outline-none focus:border-[#7C3AED]/40 dark:focus:border-[#A78BFA]/30 focus:ring-2 focus:ring-[#7C3AED]/8 dark:focus:ring-[#A78BFA]/8 transition-all"
                         />
                         {search && (
                             <button
                                 onClick={() => onSearch('')}
-                                className="absolute right-2 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300"
+                                className="absolute right-2 top-1/2 -translate-y-1/2 text-[#A8A29E] hover:text-[#78716C] dark:hover:text-[#8C8C9A]"
                                 aria-label="Clear search"
                             >
-                                <X className="w-3.5 h-3.5" />
+                                <X className="w-3 h-3" />
                             </button>
                         )}
                     </div>
                 </div>
 
-                {/* Nav list */}
-                <nav className="flex-1 overflow-y-auto py-2" aria-label="Curriculum lessons">
+                {/* ── Progress ── */}
+                <div className="px-3.5 pb-2.5 shrink-0">
+                    <div className="flex items-center justify-between mb-1.5">
+                        <span className="text-[11px] text-[#A8A29E] dark:text-[#55555F]">Progress</span>
+                        <span className="text-[11px] font-medium text-[#78716C] dark:text-[#8C8C9A] tabular-nums">
+                            {completed.size} / {allModules.length}
+                        </span>
+                    </div>
+                    <div className="h-[3px] bg-[#E4E3E0] dark:bg-[#26262A] rounded-full overflow-hidden">
+                        <div
+                            className="h-full bg-[#7C3AED] dark:bg-[#A78BFA] rounded-full transition-all duration-500"
+                            style={{ width: `${progress}%` }}
+                        />
+                    </div>
+                </div>
+
+                <div className="h-px bg-[#E0DFDB] dark:bg-white/[0.06] mx-3 shrink-0" />
+
+                {/* ── Nav ── */}
+                <nav className="flex-1 overflow-y-auto py-1.5 px-2" aria-label="Curriculum lessons">
                     {filteredModules.length === 0 ? (
-                        <p className="px-4 py-6 text-xs text-zinc-400 dark:text-zinc-500 text-center">
-                            No lessons match "{search}"
+                        <p className="px-3 py-8 text-[12px] text-[#A8A29E] dark:text-[#55555F] text-center leading-relaxed">
+                            No lessons match<br />"{search}"
                         </p>
                     ) : (
                         days.map(day => {
                             const dayMods = filteredModules.filter(m => m.day === day);
                             if (!dayMods.length) return null;
                             return (
-                                <div key={day} className="mb-1 px-2">
-                                    <p className="px-2 py-1 text-[10px] font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-600 select-none">
+                                <div key={day} className="mb-1">
+                                    <p className="px-2 pt-2.5 pb-1 text-[9.5px] font-semibold uppercase tracking-[0.1em] text-[#C4BEB8] dark:text-[#3A3A42] select-none">
                                         Day {day}
                                     </p>
-                                    <div className="space-y-0.5">
-                                        {dayMods.map(m => {
-                                            const isActive = m.id === activeId;
-                                            const isDone = completed.has(m.id);
-                                            return (
-                                                <button
-                                                    key={m.id}
-                                                    onClick={() => onSelect(m.id)}
-                                                    aria-current={isActive ? 'page' : undefined}
-                                                    className={[
-                                                        'w-full flex items-center gap-2.5 px-2.5 py-2 rounded-lg text-left text-sm transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500',
-                                                        isActive
-                                                            ? 'bg-blue-50 dark:bg-blue-950/50 text-blue-700 dark:text-blue-300 font-medium shadow-sm'
-                                                            : 'text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:text-zinc-900 dark:hover:text-zinc-200',
-                                                    ].join(' ')}
-                                                >
-                                                    <span
-                                                        className={[
-                                                            'shrink-0 w-5 h-5 flex items-center justify-center rounded-full text-[10px] font-mono transition-colors',
-                                                            isDone
-                                                                ? 'bg-emerald-100 dark:bg-emerald-900/50 text-emerald-600 dark:text-emerald-400'
-                                                                : isActive
-                                                                    ? 'bg-blue-100 dark:bg-blue-900/60 text-blue-600 dark:text-blue-400'
-                                                                    : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-500',
-                                                        ].join(' ')}
-                                                    >
-                                                        {isDone ? <Check className="w-3 h-3" /> : m.id}
-                                                    </span>
-                                                    <span className="leading-snug">{m.label}</span>
-                                                </button>
-                                            );
-                                        })}
-                                    </div>
+                                    {dayMods.map(m => {
+                                        const isActive = m.id === activeId;
+                                        const isDone   = completed.has(m.id);
+                                        return (
+                                            <button
+                                                key={m.id}
+                                                onClick={() => onSelect(m.id)}
+                                                aria-current={isActive ? 'page' : undefined}
+                                                className={[
+                                                    'group w-full flex items-center gap-2 px-2.5 py-[6px] rounded-md text-left text-[12.5px] transition-colors',
+                                                    'focus:outline-none focus-visible:ring-2 focus-visible:ring-[#7C3AED]/30',
+                                                    isActive
+                                                        ? 'bg-white dark:bg-[#26262A] text-[#5B21B6] dark:text-[#C4B5FD] font-medium shadow-[0_1px_2px_rgba(28,25,23,0.08)] dark:shadow-none'
+                                                        : 'text-[#78716C] dark:text-[#8C8C9A] hover:bg-[#E8E7E3] dark:hover:bg-[#1E1E22] hover:text-[#1C1917] dark:hover:text-[#F4F3F9]',
+                                                ].join(' ')}
+                                            >
+                                                {/* Completion / active indicator */}
+                                                <span className={[
+                                                    'shrink-0 w-[18px] h-[18px] flex items-center justify-center rounded-full text-[9px] font-mono transition-colors',
+                                                    isDone
+                                                        ? 'bg-emerald-100 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400'
+                                                        : isActive
+                                                            ? 'bg-[#7C3AED]/12 dark:bg-[#A78BFA]/15 text-[#7C3AED] dark:text-[#A78BFA]'
+                                                            : 'bg-[#E4E3E0] dark:bg-[#26262A] text-[#A8A29E] dark:text-[#3A3A42]',
+                                                ].join(' ')}>
+                                                    {isDone ? <Check className="w-2.5 h-2.5" /> : m.id}
+                                                </span>
+
+                                                {/* Label */}
+                                                <span className="flex-1 leading-snug">{m.label}</span>
+
+                                                {/* Raycast-style hover-reveal kbd chip */}
+                                                <kbd className={[
+                                                    'shrink-0 text-[9px] font-mono px-1 py-[1px] rounded border transition-opacity',
+                                                    isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100',
+                                                    isActive
+                                                        ? 'border-[#7C3AED]/20 dark:border-[#A78BFA]/20 text-[#7C3AED] dark:text-[#A78BFA] bg-[#F3EFFF] dark:bg-[#A78BFA]/8'
+                                                        : 'border-[#E4E3E0] dark:border-white/[0.08] text-[#A8A29E] dark:text-[#3A3A42] bg-[#F7F6F5] dark:bg-[#1C1C1F]',
+                                                ].join(' ')}>
+                                                    {m.id}
+                                                </kbd>
+                                            </button>
+                                        );
+                                    })}
                                 </div>
                             );
                         })
                     )}
                 </nav>
 
-                {/* Footer */}
-                <div className="px-4 py-3 border-t border-zinc-100 dark:border-zinc-800 shrink-0">
-                    <p className="text-[10px] text-zinc-400 dark:text-zinc-600 leading-relaxed">
-                        Phase 3 of SDE Learning Path · React 18 · TypeScript
+                {/* ── Footer ── */}
+                <div className="px-3.5 py-2.5 border-t border-[#E0DFDB] dark:border-white/[0.06] shrink-0">
+                    <p className="text-[10px] text-[#C4BEB8] dark:text-[#3A3A42]">
+                        Phase 3 · React 18 · TypeScript
                     </p>
                 </div>
             </aside>
@@ -397,35 +405,35 @@ interface TopBarProps {
 
 function TopBar({ mod, dark, onToggleDark, onOpenSidebar }: TopBarProps) {
     return (
-        <header className="shrink-0 flex items-center gap-3 px-4 h-12 border-b border-zinc-200 dark:border-zinc-800 bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm z-10">
+        <header className="shrink-0 flex items-center gap-3 px-4 h-11 border-b border-[#E4E3E0] dark:border-white/[0.06] bg-[#F7F6F5]/95 dark:bg-[#111113]/95 backdrop-blur-sm">
             <button
                 onClick={onOpenSidebar}
-                className="lg:hidden p-1.5 rounded-md hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-500 dark:text-zinc-400 transition-colors"
+                className="lg:hidden p-1.5 rounded-md hover:bg-[#EDECEB] dark:hover:bg-[#26262A] text-[#A8A29E] dark:text-[#55555F] transition-colors"
                 aria-label="Open sidebar"
             >
                 <Menu className="w-4 h-4" />
             </button>
 
             {/* Breadcrumb */}
-            <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 min-w-0 flex-1 text-sm">
-                <span className="text-zinc-400 dark:text-zinc-600 hidden sm:block shrink-0">React Mastery</span>
-                <ChevronRight className="w-3.5 h-3.5 text-zinc-300 dark:text-zinc-700 hidden sm:block shrink-0" />
-                <span className="font-medium text-zinc-700 dark:text-zinc-200 truncate">{mod.label}</span>
+            <nav className="flex items-center gap-1.5 flex-1 min-w-0" aria-label="Breadcrumb">
+                <span className="text-[12px] text-[#C4BEB8] dark:text-[#3A3A42] hidden sm:block shrink-0">React Mastery</span>
+                <ChevronRight className="w-3 h-3 text-[#D8D5D0] dark:text-[#2A2A32] hidden sm:block shrink-0" />
+                <span className="text-[13px] font-medium text-[#1C1917] dark:text-[#F4F3F9] truncate">{mod.label}</span>
             </nav>
 
-            {/* Right controls */}
             <div className="flex items-center gap-2 shrink-0">
                 <DifficultyBadge difficulty={mod.difficulty} />
-                <span className="hidden md:flex items-center gap-1 text-xs text-zinc-400 dark:text-zinc-500">
+                <span className="hidden md:flex items-center gap-1 text-[11px] text-[#A8A29E] dark:text-[#55555F]">
                     <Clock className="w-3 h-3" />
                     {mod.readingTime}
                 </span>
+                <div className="w-px h-3.5 bg-[#E4E3E0] dark:bg-white/[0.08] hidden sm:block" />
                 <button
                     onClick={onToggleDark}
-                    className="p-1.5 rounded-md hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-500 dark:text-zinc-400 transition-colors"
-                    aria-label={dark ? 'Switch to light mode' : 'Switch to dark mode'}
+                    className="p-1.5 rounded-md hover:bg-[#EDECEB] dark:hover:bg-[#26262A] text-[#A8A29E] dark:text-[#55555F] transition-colors"
+                    aria-label={dark ? 'Light mode' : 'Dark mode'}
                 >
-                    {dark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+                    {dark ? <Sun className="w-3.5 h-3.5" /> : <Moon className="w-3.5 h-3.5" />}
                 </button>
             </div>
         </header>
@@ -444,113 +452,111 @@ interface LessonLayoutProps {
 }
 
 function LessonLayout({ mod, allMods, completed, onNavigate, onToggleComplete, children }: LessonLayoutProps) {
-    const idx = allMods.findIndex(m => m.id === mod.id);
+    const idx  = allMods.findIndex(m => m.id === mod.id);
     const prev = allMods[idx - 1];
     const next = allMods[idx + 1];
     const done = completed.has(mod.id);
 
     return (
-        <article className="max-w-3xl mx-auto px-6 py-10 pb-20">
+        <article className="max-w-[740px] mx-auto px-6 py-9 pb-16">
 
             {/* ── Lesson header ── */}
             <header className="mb-8">
                 <div className="flex flex-wrap items-center gap-2 mb-4">
                     <DayBadge day={mod.day} />
-                    <span className="text-xs text-zinc-400 dark:text-zinc-600 font-mono">Module {mod.id} of {allMods.length}</span>
+                    <span className="text-[10px] font-mono text-[#C4BEB8] dark:text-[#3A3A42]">{mod.id} of {allMods.length}</span>
                     <DifficultyBadge difficulty={mod.difficulty} />
-                    <span className="flex items-center gap-1 text-xs text-zinc-400 dark:text-zinc-500 ml-auto">
+                    <span className="ml-auto flex items-center gap-1 text-[11px] text-[#A8A29E] dark:text-[#55555F]">
                         <Clock className="w-3 h-3" />
                         {mod.readingTime}
                     </span>
                 </div>
-                <h1 className="text-3xl font-bold text-zinc-900 dark:text-zinc-50 mb-3 leading-tight tracking-tight">
+                <h1
+                    className="text-[28px] font-semibold text-[#1C1917] dark:text-[#F4F3F9] leading-tight mb-3"
+                    style={{ letterSpacing: '-0.018em', textWrap: 'balance' } as React.CSSProperties}
+                >
                     {mod.label}
                 </h1>
-                <p className="text-base text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-2xl">
+                <p className="text-[14px] text-[#78716C] dark:text-[#8C8C9A] leading-relaxed max-w-[580px]">
                     {mod.description}
                 </p>
             </header>
 
-            {/* ── Learning objectives ── */}
-            <section
-                aria-label="Learning objectives"
-                className="mb-8 rounded-xl border border-blue-200 dark:border-blue-900/50 bg-blue-50/60 dark:bg-blue-950/20 p-5"
-            >
-                <h2 className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400 mb-4">
-                    <Target className="w-3.5 h-3.5" />
+            {/* ── Learning objectives — Raycast left-border style ── */}
+            <section className="mb-8 pl-4 border-l-2 border-[#7C3AED]/20 dark:border-[#A78BFA]/20">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.1em] text-[#7C3AED] dark:text-[#A78BFA] mb-3">
                     Learning Objectives
-                </h2>
-                <ol className="space-y-2.5">
+                </p>
+                <ol className="space-y-2">
                     {mod.objectives.map((obj, i) => (
-                        <li key={i} className="flex items-start gap-3 text-sm text-zinc-700 dark:text-zinc-300">
-                            <span className="shrink-0 w-5 h-5 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900/60 text-blue-600 dark:text-blue-400 text-[10px] font-mono font-semibold mt-0.5">
-                                {i + 1}
+                        <li key={i} className="flex items-start gap-2.5 text-[13px] text-[#78716C] dark:text-[#8C8C9A] leading-relaxed">
+                            <span className="shrink-0 text-[9.5px] font-mono text-[#C4BEB8] dark:text-[#3A3A42] mt-[3px] w-5 tabular-nums">
+                                {String(i + 1).padStart(2, '0')}
                             </span>
-                            <span className="leading-relaxed">{obj}</span>
+                            {obj}
                         </li>
                     ))}
                 </ol>
             </section>
 
-            {/* ── Interactive demos ── */}
-            <section aria-label="Interactive demos" className="mb-10">
-                <div className="flex items-center gap-2 mb-5">
-                    <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">
-                        <Play className="w-3.5 h-3.5" />
-                        Interactive Demos
-                    </div>
-                    <div className="flex-1 h-px bg-zinc-100 dark:bg-zinc-800" />
-                </div>
-                {children}
-            </section>
+            {/* ── Demos separator ── */}
+            <div className="flex items-center gap-3 mb-5">
+                <span className="text-[9.5px] font-semibold uppercase tracking-[0.1em] text-[#C4BEB8] dark:text-[#3A3A42] shrink-0">
+                    Interactive Demos
+                </span>
+                <div className="flex-1 h-px bg-[#E4E3E0] dark:bg-white/[0.06]" />
+            </div>
 
-            {/* ── Footer actions ── */}
-            <footer className="border-t border-zinc-200 dark:border-zinc-800 pt-8">
+            {/* ── Demo content ── */}
+            {children}
+
+            {/* ── Footer ── */}
+            <footer className="mt-10 pt-6 border-t border-[#E4E3E0] dark:border-white/[0.06]">
                 {/* Mark complete */}
                 <button
                     onClick={onToggleComplete}
                     className={[
-                        'inline-flex items-center gap-2 text-sm px-4 py-2 rounded-lg font-medium transition-all mb-6 border focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500',
+                        'flex items-center gap-2 text-[12.5px] font-medium px-3 py-1.5 rounded-md border transition-all mb-6',
                         done
-                            ? 'bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-400 border-emerald-200 dark:border-emerald-900/60'
-                            : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 border-zinc-200 dark:border-zinc-700 hover:bg-zinc-200 dark:hover:bg-zinc-700 hover:text-zinc-900 dark:hover:text-zinc-200',
+                            ? 'bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-emerald-200 dark:border-emerald-500/20'
+                            : 'bg-[#F7F6F5] dark:bg-[#1E1E22] text-[#78716C] dark:text-[#8C8C9A] border-[#E4E3E0] dark:border-white/[0.07] hover:bg-[#EDECEB] dark:hover:bg-[#26262A] hover:text-[#1C1917] dark:hover:text-[#F4F3F9]',
                     ].join(' ')}
                 >
                     {done
-                        ? <CheckCircle2 className="w-4 h-4 text-emerald-500" />
-                        : <Circle className="w-4 h-4" />
+                        ? <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
+                        : <Circle className="w-3.5 h-3.5" />
                     }
-                    {done ? 'Marked as Complete' : 'Mark as Complete'}
+                    {done ? 'Marked Complete' : 'Mark Complete'}
                 </button>
 
-                {/* Prev / Next navigation */}
-                <div className="grid grid-cols-2 gap-3">
+                {/* Prev / Next */}
+                <div className="grid grid-cols-2 gap-2.5">
                     {prev ? (
                         <button
                             onClick={() => onNavigate(prev.id)}
-                            className="flex flex-col items-start gap-0.5 p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-800/60 transition-all text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+                            className="flex flex-col items-start gap-0.5 p-4 rounded-xl text-left border border-[#E4E3E0] dark:border-white/[0.07] bg-white dark:bg-[#1E1E22] hover:border-[#D0CEC9] dark:hover:border-white/[0.12] hover:shadow-sm transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[#7C3AED]/30"
                         >
-                            <span className="flex items-center gap-1 text-[10px] uppercase tracking-wider font-semibold text-zinc-400 dark:text-zinc-500">
+                            <span className="flex items-center gap-1 text-[9.5px] uppercase tracking-[0.08em] font-semibold text-[#C4BEB8] dark:text-[#3A3A42]">
                                 <ChevronLeft className="w-3 h-3" />Previous
                             </span>
-                            <span className="text-sm font-medium text-zinc-700 dark:text-zinc-300 leading-snug">{prev.label}</span>
+                            <span className="text-[12.5px] font-medium text-[#1C1917] dark:text-[#F4F3F9] leading-snug mt-0.5">{prev.label}</span>
                         </button>
                     ) : <div />}
 
                     {next ? (
                         <button
                             onClick={() => onNavigate(next.id)}
-                            className="flex flex-col items-end gap-0.5 p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-800/60 transition-all text-right focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+                            className="flex flex-col items-end gap-0.5 p-4 rounded-xl text-right border border-[#E4E3E0] dark:border-white/[0.07] bg-white dark:bg-[#1E1E22] hover:border-[#D0CEC9] dark:hover:border-white/[0.12] hover:shadow-sm transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[#7C3AED]/30"
                         >
-                            <span className="flex items-center gap-1 text-[10px] uppercase tracking-wider font-semibold text-zinc-400 dark:text-zinc-500">
+                            <span className="flex items-center gap-1 text-[9.5px] uppercase tracking-[0.08em] font-semibold text-[#C4BEB8] dark:text-[#3A3A42]">
                                 Next<ChevronRight className="w-3 h-3" />
                             </span>
-                            <span className="text-sm font-medium text-zinc-700 dark:text-zinc-300 leading-snug">{next.label}</span>
+                            <span className="text-[12.5px] font-medium text-[#1C1917] dark:text-[#F4F3F9] leading-snug mt-0.5">{next.label}</span>
                         </button>
                     ) : (
-                        <div className="flex flex-col items-end gap-0.5 p-4 rounded-xl border border-dashed border-zinc-200 dark:border-zinc-800 text-right">
-                            <span className="text-[10px] uppercase tracking-wider font-semibold text-zinc-300 dark:text-zinc-600">🎓 Curriculum complete</span>
-                            <span className="text-sm text-zinc-400 dark:text-zinc-600">You made it!</span>
+                        <div className="flex flex-col items-end justify-center p-4 rounded-xl border border-dashed border-[#E4E3E0] dark:border-white/[0.05] text-right">
+                            <span className="text-[11px] text-[#C4BEB8] dark:text-[#3A3A42] font-medium">🎓 Complete!</span>
+                            <span className="text-[11px] text-[#D8D5D0] dark:text-[#2A2A32] mt-0.5">All modules done</span>
                         </div>
                     )}
                 </div>
@@ -563,21 +569,23 @@ function LessonLayout({ mod, allMods, completed, onNavigate, onToggleComplete, c
 
 function App() {
     const [activeId, setActiveId] = useState('01');
-    const [dark, setDark] = useState(() =>
-        typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches
-    );
-    const [search, setSearch] = useState('');
+    const [dark, setDark] = useState<boolean>(() => {
+        try { return localStorage.getItem(THEME_KEY) === 'dark'; }
+        catch { return false; }   // light by default
+    });
+    const [search, setSearch]       = useState('');
     const [mobileOpen, setMobileOpen] = useState(false);
     const [completed, setCompleted] = useState<Set<string>>(loadCompleted);
 
-    // Sync dark class on html element
+    // Sync dark class
     useEffect(() => {
         document.documentElement.classList.toggle('dark', dark);
+        try { localStorage.setItem(THEME_KEY, dark ? 'dark' : 'light'); } catch { /* */ }
     }, [dark]);
 
     // Persist progress
     useEffect(() => {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify([...completed]));
+        try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...completed])); } catch { /* */ }
     }, [completed]);
 
     const filteredModules = MODULES.filter(m =>
@@ -585,14 +593,13 @@ function App() {
         m.description.toLowerCase().includes(search.toLowerCase())
     );
 
-    const mod = MODULES.find(m => m.id === activeId) ?? MODULES[0];
+    const mod  = MODULES.find(m => m.id === activeId) ?? MODULES[0];
     const Demo = mod.load;
 
     function navigate(id: string) {
         setActiveId(id);
         setMobileOpen(false);
-        // Scroll content area to top
-        document.getElementById('lesson-content')?.scrollTo(0, 0);
+        document.getElementById('lesson-scroll')?.scrollTo(0, 0);
     }
 
     function toggleComplete() {
@@ -605,7 +612,7 @@ function App() {
     }
 
     return (
-        <div className="flex h-screen overflow-hidden bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 font-sans antialiased">
+        <div className="flex h-screen overflow-hidden bg-[#F7F6F5] dark:bg-[#111113] text-[#1C1917] dark:text-[#F4F3F9] font-sans antialiased">
             <Sidebar
                 allModules={MODULES}
                 filteredModules={filteredModules}
@@ -618,14 +625,17 @@ function App() {
                 onClose={() => setMobileOpen(false)}
             />
 
-            <div className="flex flex-col flex-1 overflow-hidden min-w-0 lg:ml-0">
+            <div className="flex flex-col flex-1 overflow-hidden min-w-0">
                 <TopBar
                     mod={mod}
                     dark={dark}
                     onToggleDark={() => setDark(d => !d)}
                     onOpenSidebar={() => setMobileOpen(true)}
                 />
-                <main id="lesson-content" className="flex-1 overflow-y-auto bg-zinc-50 dark:bg-zinc-950">
+                <main
+                    id="lesson-scroll"
+                    className="flex-1 overflow-y-auto bg-[#F7F6F5] dark:bg-[#111113]"
+                >
                     <LessonLayout
                         mod={mod}
                         allMods={MODULES}
