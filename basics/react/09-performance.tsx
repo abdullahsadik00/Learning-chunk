@@ -449,9 +449,9 @@ export {
 
 function Box({ title, sub, children }: { title: string; sub?: string; children: React.ReactNode }) {
     return (
-        <div className="border border-zinc-200 dark:border-zinc-700 rounded-xl p-5 mb-4 bg-white dark:bg-zinc-900 shadow-sm transition-colors">
-            <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">{title}</p>
-            {sub && <p className="mb-3 text-xs text-zinc-400 dark:text-zinc-500 leading-relaxed">{sub}</p>}
+        <div className="rounded-xl p-5 mb-3.5 bg-white dark:bg-[#1E1E22] border border-[#E4E3E0] dark:border-white/[0.07] shadow-[0_1px_2px_rgba(28,25,23,0.05)] dark:shadow-none">
+            <p className="mb-1 text-[10px] font-semibold uppercase tracking-[0.09em] text-[#A8A29E] dark:text-[#55555F]">{title}</p>
+            {sub && <p className="mb-3 text-[12px] text-[#A8A29E] dark:text-[#3A3A42] leading-relaxed">{sub}</p>}
             {children}
         </div>
     );
