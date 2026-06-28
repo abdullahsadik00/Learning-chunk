@@ -7,18 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "check": "tsc --noEmit",
-    "lint": "eslint . --ext ts,tsx",
-    "run:01": "vite --open '/runner.html?m=01'",
-    "run:02": "vite --open '/runner.html?m=02'",
-    "run:03": "vite --open '/runner.html?m=03'",
-    "run:04": "vite --open '/runner.html?m=04'",
-    "run:05": "vite --open '/runner.html?m=05'",
-    "run:06": "vite --open '/runner.html?m=06'",
-    "run:07": "vite --open '/runner.html?m=07'",
-    "run:08": "vite --open '/runner.html?m=08'",
-    "run:09": "vite --open '/runner.html?m=09'",
-    "run:10": "vite --open '/runner.html?m=10'",
-    "run:11": "vite --open '/runner.html?m=11'"
+    "lint": "eslint . --ext ts,tsx"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.51.0",
