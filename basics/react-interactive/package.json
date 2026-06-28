@@ -1,0 +1,30 @@
+{
+  "name": "react-interactive",
+  "version": "1.0.0",
+  "description": "Interactive demos for all 11 React curriculum files (Days 12–17)",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "check": "tsc --noEmit",
+    "lint": "eslint . --ext ts,tsx"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.51.0",
+    "immer": "^10.1.1",
+    "lucide-react": "^1.21.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "react-router-dom": "^6.26.0",
+    "zustand": "^4.5.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.1",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "tailwindcss": "^4.3.1",
+    "typescript": "^5.5.0",
+    "vite": "^5.4.0"
+  }
+}
