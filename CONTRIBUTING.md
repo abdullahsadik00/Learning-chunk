@@ -16,7 +16,7 @@ To maintain the quality of this repository, please follow these guidelines:
 
 1. **Branch Naming**: Use descriptive branch names (e.g., `feature/add-sql-joins` or `fix/async-bug`).
 2. **Standardization**: Ensure your code follows the root `.eslintrc.json` guidelines. Run `npm run lint` before committing.
-3. **Documentation**: Every new project or lesson MUST include a `README.md` based on the [README Template](./docs/README_TEMPLATE.md).
+3. **Documentation**: Every new project or lesson MUST include a `README.md` describing how to run it.
 4. **Kebab-Case**: All files and directories must use `kebab-case`.
 5. **Atomic Commits**: Keep your commits small and focused on a single change.
 

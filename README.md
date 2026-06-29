@@ -1,10 +1,18 @@
 # Learning Chunk: Zero → SDE-2
 
-[![Status](https://img.shields.io/badge/Status-In_Progress-orange)](https://github.com/abdullahsadik00/Learning-chunk)
+[![Stars](https://img.shields.io/github/stars/abdullahsadik00/Learning-chunk?style=social)](https://github.com/abdullahsadik00/Learning-chunk/stargazers)
+[![Forks](https://img.shields.io/github/forks/abdullahsadik00/Learning-chunk?style=social)](https://github.com/abdullahsadik00/Learning-chunk/network/members)
+[![Last Commit](https://img.shields.io/github/last-commit/abdullahsadik00/Learning-chunk)](https://github.com/abdullahsadik00/Learning-chunk/commits/main)
+[![CI](https://github.com/abdullahsadik00/Learning-chunk/actions/workflows/lint.yml/badge.svg)](https://github.com/abdullahsadik00/Learning-chunk/actions/workflows/lint.yml)
 [![Days](https://img.shields.io/badge/Curriculum-55_Days-blue)](./basics/assessments/README.md)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 A structured SDE learning path from **zero to SDE-2** covering the full stack — JS, TypeScript, React, Next.js, CSS, System Design, Testing, Backend (Node/Express/PostgreSQL/Redis), DSA, Git, and DevOps. Every concept has a runnable teaching file, live demos, practice challenges, and a self-assessment.
+
+> **Fork this repo, follow the 55-day plan, and track your own journey to SDE-2.**
+> Every day has a teaching file, a runnable demo, and a 15-question self-assessment.
+
+**[⭐ Star it](https://github.com/abdullahsadik00/Learning-chunk)** if it's useful · **[Fork it](https://github.com/abdullahsadik00/Learning-chunk/fork)** to follow the same path yourself
 
 ---
 
@@ -33,29 +41,46 @@ Each sub-project has its own `package.json`. You run `npm install` inside the fo
 
 ---
 
-## Learning flow
+## 55-Day Roadmap
 
-The curriculum is 55 days split into phases. Follow them in order — each phase builds on the previous one.
+> Follow phases in order — each builds on the last.
+> Fork the repo and check off days as you go.
 
-```
-Phase 0  → JS Refresher (before Day 1)   basics/js-refresher/
-Phase 1  → JS Core (Days 1–5)            basics/week-3/, basics/week-4/
-Phase 2  → TypeScript (Days 8–11)        basics/typescript/
-Phase 3  → React (Days 12–17)            basics/react/ (files 01–11)
-Phase 4  → Next.js (Days 18–21)          basics/nextjs/
-Phase 5  → System Design (Days 22–25)    basics/react/ (files 12–15) + basics/system-design/
-Phase 6  → CSS & Design (Days 26–30)     basics/css-design/
-Phase 7  → Testing (Days 31–36)          basics/testing/
-Phase 8  → Backend (Days 36–55)          basics/backend/ (files 01–20)
-Phase 9  → DSA                           basics/dsa/
-Phase 10 → Git & Workflow                basics/git/
-```
+| Day(s) | Phase | Topic | Folder | Key Concepts |
+|--------|-------|-------|--------|--------------|
+| Pre | 0 | JS Refresher | `basics/js-refresher/` | var/let/const, async/await, ES modules |
+| 1–5 | 1 | JS Core | `basics/week-3/` | Closures, `this`, prototypes, event loop |
+| 6–7 | 1 | JS Polyfills | `basics/week-4/` | map/filter/reduce, Promise.all, debounce |
+| 8–11 | 2 | TypeScript | `basics/typescript/` | Types, generics, decorators, OOP |
+| 12–17 | 3 | React | `basics/react/` | Hooks, state mgmt, Zustand, TanStack Query |
+| 18–21 | 4 | Next.js | `basics/nextjs/` | App Router, SSR, RSC, deployment |
+| 22–25 | 5 | System Design | `basics/system-design/` | Frontend architecture, realtime patterns |
+| 26–30 | 6 | CSS & Design | `basics/css-design/` | Flexbox, Grid, Tailwind, design tokens |
+| 31–35 | 7 | Testing | `basics/testing/` | Vitest, Testing Library, MSW, Playwright |
+| 36–40 | 8a | Backend Core | `basics/backend/` (01–05) | Express, auth, JWT, Zod, prod hardening |
+| 41–45 | 8b | Databases | `basics/backend/` (06–10) | SQL, Prisma, Redis, caching |
+| 46–50 | 8c | Real-time & Jobs | `basics/backend/` (11–15) | WebSockets, SSE, BullMQ, S3 |
+| 51–55 | 8d | DevOps | `basics/backend/` (16–20) | Docker, GitHub Actions, Prometheus, perf |
+| Anytime | 9 | DSA | `basics/dsa/` | Two pointers, DP, trees/graphs |
+| Anytime | 10 | Git Workflow | `basics/git/` | Branching, rebasing, conventional commits |
 
-**After completing Days 1–35** you can work on capstone projects alongside backend days:
+**Capstone:** After Day 35, build the [Paytm clone](./paytm/) alongside backend days — full-stack Express + PostgreSQL + React.
 
-```
-paytm/   — full-stack Paytm clone (Express + PostgreSQL/Prisma + React)
-```
+---
+
+## How to Use This Repo
+
+### Following the curriculum yourself
+
+1. **[Fork this repo](https://github.com/abdullahsadik00/Learning-chunk/fork)** — click Fork or use that link
+2. Clone your fork locally
+3. Work through each day's teaching file → run it → take the assessment in `basics/assessments/day-XX.md`
+4. Score 10+/15 on the assessment before moving to the next day
+5. Log your practice: `cp practice/_template.md practice/$(date +%Y-%m-%d).md`
+
+### Suggesting improvements
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md). Most useful contributions: typo fixes, broken command corrections, additional practice problems.
 
 ---
 
@@ -379,6 +404,22 @@ Run `npx prisma generate` inside the project that uses Prisma (`backend/database
 
 **TypeScript errors**
 Run `npm run typecheck` or `tsc --noEmit` inside the folder. Do not run `tsc` at the root — each sub-project has its own `tsconfig.json`.
+
+---
+
+## Learners Using This Curriculum
+
+Following this in your own fork? Add yourself here via a PR — it signals to the next person that the path works.
+
+| GitHub | Started | Notes |
+|--------|---------|-------|
+| [@abdullahsadik00](https://github.com/abdullahsadik00) | Jun 2025 | Original author |
+| _your name here_ | | [open a PR →](https://github.com/abdullahsadik00/Learning-chunk/compare) |
+
+---
+
+> **GitHub topics on this repo:** `javascript` `typescript` `react` `nodejs` `learning-path` `sde` `interview-prep` `full-stack` `roadmap` `web-development`
+> _(Add these in Settings → Topics on the repo page — this is how people discover repos via GitHub Explore)_
 
 ---
 
