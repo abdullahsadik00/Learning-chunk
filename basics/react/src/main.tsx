@@ -178,6 +178,20 @@ const MODULES: Mod[] = [
         ],
         load: lazy(() => import('../11-practice')),
     },
+    {
+        id: '13', day: 23,
+        label: 'React Query Advanced',
+        difficulty: 'Advanced',
+        readingTime: '40 min',
+        description: 'Master advanced React Query patterns — optimistic updates, cache invalidation, infinite queries, parallel/dependent queries, and testing.',
+        objectives: [
+            'Understand the stale-while-revalidate mental model and QueryClient lifecycle',
+            'Design cache key factories and use dependent + prefetched queries',
+            'Implement optimistic updates with snapshot/rollback on error',
+            'Build infinite scroll feeds and test React Query hooks correctly',
+        ],
+        load: lazy(() => import('../13-react-query-advanced')),
+    },
 ];
 
 // ─── Utilities ────────────────────────────────────────────────────────────────
