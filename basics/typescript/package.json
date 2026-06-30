@@ -3,21 +3,23 @@
   "version": "1.0.0",
   "description": "Phase 2: TypeScript Mastery — Days 8-11. Fundamentals through advanced patterns.",
   "scripts": {
+    "setup":         "npx ts-node 00-setup-and-tooling.ts",
     "fundamentals":  "npx ts-node 01-fundamentals.ts",
-    "type-system":   "npx ts-node 02-type-system.ts",
-    "functions":     "npx ts-node 03-functions.ts",
-    "generics":      "npx ts-node 04-generics.ts",
-    "utility":       "npx ts-node 05-utility-types.ts",
-    "classes":       "npx ts-node 06-classes-oop.ts",
-    "decorators":    "npx ts-node 07-decorators.ts",
-    "guards":        "npx ts-node 08-type-guards.ts",
-    "practice":      "npx ts-node 09-practice.ts",
-    "typecheck":     "npx tsc --noEmit",
-    "all":           "npx ts-node 01-fundamentals.ts && npx ts-node 02-type-system.ts && npx ts-node 03-functions.ts && npx ts-node 04-generics.ts && npx ts-node 05-utility-types.ts && npx ts-node 06-classes-oop.ts && npx ts-node 07-decorators.ts && npx ts-node 08-type-guards.ts && npx ts-node 09-practice.ts"
+    "type-system": "npx ts-node 02-type-system.ts",
+    "functions": "npx ts-node 03-functions.ts",
+    "generics": "npx ts-node 04-generics.ts",
+    "utility": "npx ts-node 05-utility-types.ts",
+    "classes": "npx ts-node 06-classes-oop.ts",
+    "decorators": "npx ts-node 07-decorators.ts",
+    "guards": "npx ts-node 08-type-guards.ts",
+    "practice": "npx ts-node 09-practice.ts",
+    "typecheck": "npx tsc --noEmit",
+    "all": "npx ts-node 01-fundamentals.ts && npx ts-node 02-type-system.ts && npx ts-node 03-functions.ts && npx ts-node 04-generics.ts && npx ts-node 05-utility-types.ts && npx ts-node 06-classes-oop.ts && npx ts-node 07-decorators.ts && npx ts-node 08-type-guards.ts && npx ts-node 09-practice.ts"
   },
   "devDependencies": {
-    "typescript": "^5.0.0",
-    "ts-node": "^10.0.0"
+    "@types/node": "^26.0.1",
+    "ts-node": "^10.0.0",
+    "typescript": "^5.0.0"
   },
   "license": "ISC"
 }

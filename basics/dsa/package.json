@@ -1,0 +1,15 @@
+{
+  "name": "dsa-interview-prep",
+  "version": "1.0.0",
+  "description": "SDE-2 DSA interview prep — pattern-first approach.",
+  "scripts": {
+    "trees-graphs": "npx ts-node 02-trees-graphs.ts",
+    "typecheck": "npx tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "license": "ISC"
+}

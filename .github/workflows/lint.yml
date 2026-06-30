@@ -26,6 +26,10 @@ jobs:
       - name: Run ESLint
         run: npm run lint
 
+      - name: Lint React project
+        working-directory: basics/react
+        run: npm install && npm run lint
+
   test:
     runs-on: ubuntu-latest
 
