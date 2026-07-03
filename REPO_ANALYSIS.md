@@ -1,5 +1,7 @@
 # Repository State & Gap Analysis Report
 
+> ⚠️ **Historical — superseded.** This is a point-in-time gap analysis from *before* the repo was restructured. Most gaps it identifies (no root `README.md`, no `LICENSE`, no CI, no linting, missing `Week3`, loose root files, `Course_Ratting_App`) have since been resolved: there is now a root `README.md`, `LICENSE` (MIT), `.github/workflows/lint.yml`, root ESLint, and all content lives under `basics/`, `frontend/`, `backend/`, etc. Kept for provenance — do **not** treat its "Current State" / "Missing" sections as accurate today. For the current layout, see `README.md` and `CLAUDE.md`.
+
 ## 1. Current State Analysis
 The repository currently serves as a chronological log of learning activities. 
 

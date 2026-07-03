@@ -119,7 +119,7 @@ node basics/js-refresher/00-modern-javascript.js
 
 ---
 
-### Phase 1 & 2 — JS Core + Internals (Days 1–7)
+### Phase 1 — JS Core + Internals (Days 1–7)
 
 Teaching files live in `basics/week-3/` (Days 1–5) and `basics/week-4/` (Days 6–7).
 
@@ -140,7 +140,7 @@ Assessment: [`basics/assessments/day-01.md`](./basics/assessments/day-01.md) →
 
 ---
 
-### Phase 3 — TypeScript (Days 8–11)
+### Phase 2 — TypeScript (Days 8–11)
 
 ```bash
 cd basics/typescript
@@ -158,7 +158,7 @@ Assessment: [`day-08.md`](./basics/assessments/day-08.md) → [`day-11.md`](./ba
 
 ---
 
-### Phase 4 — React (Days 12–17)
+### Phase 3 — React (Days 12–17)
 
 ```bash
 cd basics/react
@@ -170,13 +170,15 @@ npm run dev           # Vite dev server → http://localhost:5173
 npm run check         # TypeScript type-check (zero errors expected)
 npm run lint          # ESLint
 npm run test          # Vitest unit tests
+npm run challenge     # Vitest challenges (self-checking exercises)
+npm run challenge:16  # TypeScript-in-React capstone challenge (Day 17d)
 ```
 
-Assessment: [`day-12.md`](./basics/assessments/day-12.md) → [`day-17.md`](./basics/assessments/day-17.md)
+Assessment: [`day-12.md`](./basics/assessments/day-12.md) → [`day-17.md`](./basics/assessments/day-17.md), plus the bonus [`day-17d-typescript-in-react.md`](./basics/assessments/day-17d-typescript-in-react.md) capstone (pairs with `16-typescript-in-react.tsx`)
 
 ---
 
-### Phase 5 — Next.js (Days 18–21)
+### Phase 4 — Next.js (Days 18–21)
 
 ```bash
 cd basics/nextjs
@@ -228,7 +230,7 @@ Assessment: [`day-26.md`](./basics/assessments/day-26.md) → [`day-30.md`](./ba
 
 ---
 
-### Phase 7 — Testing (Days 31–36)
+### Phase 7 — Testing (Days 31–35)
 
 ```bash
 cd basics/testing
@@ -240,7 +242,7 @@ npm run dev           # Start app (needed for Playwright E2E)
 npm run test:e2e      # Playwright E2E (requires dev server running)
 ```
 
-Assessment: [`day-31.md`](./basics/assessments/day-31.md) → [`day-36.md`](./basics/assessments/day-36.md)
+Assessment: [`day-31.md`](./basics/assessments/day-31.md) → [`day-35.md`](./basics/assessments/day-35.md)
 
 ---
 
@@ -344,21 +346,21 @@ Learning-chunk/
 │   ├── week-4/          # JS polyfill implementations (Days 6–7)
 │   ├── typescript/      # TypeScript mastery (Days 8–11)
 │   │   └── 00-setup-and-tooling.ts  ← start here
-│   ├── react/           # React deep dive — Vite app (Days 12–25)
+│   ├── react/           # React deep dive — Vite app (Days 12–17; files 12–15 cover System Design Days 22–25)
 │   │   └── 00-setup-and-tooling.tsx ← start here
 │   ├── nextjs/          # Next.js App Router (Days 18–21)
 │   ├── system-design/   # Frontend system design demos (Days 22–25)
 │   ├── css-design/      # CSS + Tailwind + design systems (Days 26–30)
 │   │   └── 01-layout.ts, 02-responsive.ts, 03-architecture.ts ...
-│   ├── testing/         # Vitest + Playwright (Days 31–36)
-│   │   └── 01-unit.ts ... 06-backend-testing.ts
+│   ├── testing/         # Vitest + Playwright (Days 31–35)
+│   │   └── 01-unit-testing.ts ... 06-backend-testing.ts
 │   ├── backend/         # Node.js → Production (Days 36–55)
 │   │   └── 01-nodejs-internals.ts ... 20-performance.ts
 │   ├── dsa/             # Data structures & algorithms (interview prep)
 │   │   └── 01-arrays-strings.ts, 02-trees-graphs.ts, 03-dynamic-programming.ts
 │   ├── git/             # Professional git workflow
 │   │   └── 01-git-workflow.ts
-│   └── assessments/     # 55 assessment files (one per day)
+│   └── assessments/     # 56 assessment files (days 1–55, + Day 17d bonus capstone)
 │
 ├── practice/            # Daily practice logs (fill in every day)
 │   ├── README.md
