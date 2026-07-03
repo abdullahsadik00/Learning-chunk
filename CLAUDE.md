@@ -39,6 +39,9 @@ cd basics/react
 npm run dev           # Vite dev server at localhost:5173
 npm run check         # tsc --noEmit
 npm run lint          # eslint on .ts/.tsx
+npm test              # vitest run — all specs (incl. challenges)
+npm run challenge:16  # run the TypeScript-in-React challenge (Vitest)
+npm run challenge     # run all challenges under challenges/
 ```
 `.tsx` files cannot run with `ts-node` — they require the Vite bundler.
 
@@ -67,7 +70,9 @@ node index.js
 Nine files numbered `01`–`09` run in order: fundamentals → type system → functions → generics → utility types → classes/OOP → decorators → type guards → practice.
 
 ### Phase 3 — React Deep Dive (Days 12–17, `basics/react/`)
-Eleven `.tsx` files numbered `01`–`11`. Dependencies: React 18, React Router 6, TanStack Query 5, Zustand 4, Immer, Vitest 2, Testing Library.
+Core curriculum is `.tsx` files `01`–`11` (Days 12–17). Files `12`–`15` extend into the Frontend System Design phase (Days 22–25: system design, React Query advanced, code-splitting, real-time). File `16-typescript-in-react.tsx` (Day 17d) is a bonus capstone re-applying every TypeScript topic from Phase 2 (TS files `01`–`08`) inside real React patterns. Dependencies: React 18, React Router 6, TanStack Query 5, Zustand 4, Immer, Vitest 2, Testing Library.
+
+Challenges live in `basics/react/challenges/` as self-checking Vitest specs (shipped unsolved with type-valid TODO stubs) — the React analog of the ts-node `assert()` challenges under `basics/typescript/challenges/`. Run one with `npm run challenge:16`, or all with `npm run challenge`.
 
 ### Assessments (`basics/assessments/`)
 One `.md` file per day (day-01 through day-17). Each has 15 questions with acceptance criteria. Scoring: 0–4 re-study, 5–9 progressing, 10–12 solid, 13–15 ready to advance.

@@ -76,6 +76,7 @@ Complete all days at **Solid (10+)** to claim each badge:
 | [day-15.md](./day-15.md) | React | Internals, Error Boundaries, Portals |
 | [day-16.md](./day-16.md) | React | State Management, Patterns |
 | [day-17.md](./day-17.md) | React | Performance, Testing |
+| [day-17d-typescript-in-react.md](./day-17d-typescript-in-react.md) | React (bonus capstone) | TypeScript in React — every TS topic (Days 8–11) applied. Pairs with `react/16-typescript-in-react.tsx`; sits after Day 17, does not renumber the sequence. |
 | [day-18.md](./day-18.md) | Next.js | App Router, Routing, Rendering Strategies |
 | [day-19.md](./day-19.md) | Next.js | Server Components, Client Components, Composition |
 | [day-20.md](./day-20.md) | Next.js | Data Fetching, Server Actions, Route Handlers |

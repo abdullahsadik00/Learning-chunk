@@ -7,7 +7,11 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "check": "tsc --noEmit",
-    "lint": "eslint . --ext ts,tsx"
+    "lint": "eslint . --ext ts,tsx",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "challenge:16": "vitest run challenges/c16-typescript-in-react.test.tsx",
+    "challenge": "vitest run challenges"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.51.0",
