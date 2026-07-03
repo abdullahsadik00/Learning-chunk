@@ -14,7 +14,16 @@
     "guards": "npx ts-node 08-type-guards.ts",
     "practice": "npx ts-node 09-practice.ts",
     "typecheck": "npx tsc --noEmit",
-    "all": "npx ts-node 01-fundamentals.ts && npx ts-node 02-type-system.ts && npx ts-node 03-functions.ts && npx ts-node 04-generics.ts && npx ts-node 05-utility-types.ts && npx ts-node 06-classes-oop.ts && npx ts-node 07-decorators.ts && npx ts-node 08-type-guards.ts && npx ts-node 09-practice.ts"
+    "all": "npx ts-node 01-fundamentals.ts && npx ts-node 02-type-system.ts && npx ts-node 03-functions.ts && npx ts-node 04-generics.ts && npx ts-node 05-utility-types.ts && npx ts-node 06-classes-oop.ts && npx ts-node 07-decorators.ts && npx ts-node 08-type-guards.ts && npx ts-node 09-practice.ts",
+    "challenge:01": "npx ts-node --transpile-only challenges/c01-fundamentals.ts",
+    "challenge:02": "npx ts-node --transpile-only challenges/c02-type-system.ts",
+    "challenge:03": "npx ts-node --transpile-only challenges/c03-functions.ts",
+    "challenge:04": "npx ts-node --transpile-only challenges/c04-generics.ts",
+    "challenge:05": "npx ts-node --transpile-only challenges/c05-utility-types.ts",
+    "challenge:06": "npx ts-node --transpile-only challenges/c06-classes-oop.ts",
+    "challenge:07": "npx ts-node --transpile-only challenges/c07-decorators.ts",
+    "challenge:08": "npx ts-node --transpile-only challenges/c08-type-guards.ts",
+    "challenge:all": "npx ts-node --transpile-only challenges/c01-fundamentals.ts && npx ts-node --transpile-only challenges/c02-type-system.ts && npx ts-node --transpile-only challenges/c03-functions.ts && npx ts-node --transpile-only challenges/c04-generics.ts && npx ts-node --transpile-only challenges/c05-utility-types.ts && npx ts-node --transpile-only challenges/c06-classes-oop.ts && npx ts-node --transpile-only challenges/c07-decorators.ts && npx ts-node --transpile-only challenges/c08-type-guards.ts"
   },
   "devDependencies": {
     "@types/node": "^26.0.1",
