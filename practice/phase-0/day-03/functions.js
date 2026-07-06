@@ -14,6 +14,7 @@ function myCall(func, obj, ...args) {
 }
 
 myCall(whoAmI, { name: "Sam" }, "Hi")
+console.assert(myCall(whoAmI, { name: "Sam" }, "Hi") === "Hi Sam", "myCall failed");
 
 
 function myApply(func, context, args) {
@@ -30,11 +31,12 @@ function myApply(func, context, args) {
 }
 
 function max(...args) {
-
+    
     return Math.max(...args);
 }
 let x1 = myApply(max, null, [1, 3, 5, 7, 9])
 console.log(x1)
+console.assert(myApply(max, null, [1, 3, 5, 7, 9]) === 9, "myApply failed");
 
 
 function myBind(func, context, ...args) {
@@ -46,27 +48,26 @@ function myBind(func, context, ...args) {
 let boundFunction = myBind(whoAmI, { name: "Sam" });
 boundFunction("Hi");
 
-const myCounter = () => {
+console.assert(boundFunction("Hi") === "Hi Sam", "myBind failed");
+
+function makeCounter() {
     let count = 0;
-    return {
-        increment: function()  {
-            count++;
-            return this;
-        },
-        decrement:  function()  {
-            count--;
-            return this;
-        },
-        getCount:  function()  {
-            return count;
-        }
-    }
+
+    return function () {
+        count++;
+        return count;
+    };
 }
 
-let counter = myCounter();
-counter.increment().increment().decrement();
-console.log(counter.getCount()); // Output: 1
+const c = makeCounter();
 
+console.assert(c() === 1, "First call should return 1");
+console.assert(c() === 2, "Second call should return 2");
+
+const d = makeCounter();
+
+console.assert(d() === 1, "Second counter should start at 1");
+console.assert(c() === 3, "First counter should continue independently");
 function greet() {
     console.log("called")
     return "hello"
@@ -93,6 +94,13 @@ console.log(on())
 console.log(on())
 console.log(on())
 
+// once spec: fn runs a single time; every call returns that first result
+let runs = 0;
+const onceCounter = once(() => { runs++; return runs; });
+console.assert(onceCounter() === 1, "once should return the first result");
+console.assert(onceCounter() === 1, "once should keep returning the first result");
+console.assert(runs === 1, "once should call the wrapped fn exactly once");
+
 function memoize(fun) {
     let cache = {}
     return function (...arg) {
@@ -118,14 +126,26 @@ let memoziedAdd = memoize(add)
 console.log(memoziedAdd(1, 5))
 console.log(memoziedAdd(1, 5))
 console.log(memoziedAdd(1, 5))
-
-function curry(a){
-    return function (b){
-        return function (c){
-            return a + b + c
+console.assert(memoziedAdd(1, 5) === 6, "memoize failed");
+function curry(fn) {
+    return function curried(...args) {
+        if (args.length >= fn.length) {
+            return fn(...args);
         }
-    }
+
+        return (...nextArgs) => curried(...args, ...nextArgs);
+    };
 }
 
-let x = curry(1)(4)(3);
-console.log(x)
+function sum(a, b, c) {
+    return a + b + c;
+}
+
+const curriedSum = curry(sum);
+
+console.assert(curriedSum(1)(2)(3) === 6, "(1)(2)(3) failed");
+console.assert(curriedSum(1, 2)(3) === 6, "(1,2)(3) failed");
+console.assert(curriedSum(1)(2, 3) === 6, "(1)(2,3) failed");
+console.assert(curriedSum(1, 2, 3) === 6, "(1,2,3) failed");
+
+console.log(curriedSum(1)(2)(3));
