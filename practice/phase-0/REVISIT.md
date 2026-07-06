@@ -31,12 +31,12 @@ only what's still shaky. Anything you've since internalized on your own gets cro
   all four forms `(1)(2)(3)/(1,2)(3)/(1)(2,3)/(1,2,3)` assert to 6. Was hint-assisted before — now his.
 - [x] **C — `reduce` with no initial value.** _(2026-07-06)_ Day 2 `myReduce` now throws `TypeError`
   on empty-array + no-init, seeds from `arr[0]` otherwise, with a try/catch assert proving the throw.
-- [ ] **C — Faithful polyfill signatures.** Native callbacks receive `(element, index, array)`.
-  myMap/myFilter/myFind/mySome/myEvery now pass all three; `myForEach` STILL passes only the element.
-  Small but it's what separates "works" from "correct" — last one to fix.
-- [ ] **C — `call`/`apply` via temp-property trick.** _(myCall Symbol version done; was hint-assisted —
-  wants one cold rep to confirm it's his, not memorized.)_ `myCall`/`myApply` now both clean with
-  Symbol/temp-prop cleanup and spec asserts.
+- [x] **C — Faithful polyfill signatures.** _(2026-07-06)_ `myForEach` now iterates by index and passes
+  `(element, index, array)`, with a spec assert collecting the args to prove it. All six polyfills
+  (map/filter/find/some/every/forEach) faithful now.
+- [ ] **C — `call`/`apply` via temp-property trick.** _(myCall Symbol version done; was hint-assisted.)_
+  Cold rep STAGED in `day-03/cold-reps.js` — spec asserts written (correct behaviour + temp-key cleanup),
+  body left empty. Fill it blind, run it green, then move this to resolved as "his".
 
 ---
 

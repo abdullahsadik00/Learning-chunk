@@ -9,12 +9,17 @@ const myMap = (arr, callback) => {
 console.assert(JSON.stringify(myMap([1,2,3],(num) => num * 2)) === JSON.stringify([2,4,6]), 'myMap failed')
 console.log(myMap([1,2,3],(num) => num * 2))
 
-const myForEach = (arr,cb) =>{
- for(const a of arr){
-    cb(a)
- }   
+const myForEach = (arr, cb) => {
+    for (let i = 0; i < arr.length; i++) {
+        cb(arr[i], i, arr)
+    }
 }
 console.assert(JSON.stringify(myForEach([1,2,3],(num) => num * 2)) === JSON.stringify(undefined), 'myForEach failed')
+
+// faithful signature: callback receives (element, index, array)
+const seen = [];
+myForEach([10, 20], (el, i, arr) => seen.push([el, i, arr.length]));
+console.assert(JSON.stringify(seen) === JSON.stringify([[10,0,2],[20,1,2]]), 'myForEach should pass (element, index, array)')
 
 const myFilter = (arr, cb) => {
     const resultArr = [];
