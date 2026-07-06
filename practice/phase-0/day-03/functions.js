@@ -6,8 +6,11 @@ function whoAmI(greeting) {
 whoAmI.call({ name: "Sadik" }, "Salam")
 
 function myCall(func, obj, ...args) {
-    obj.func = func;
-    return obj.func(...args);
+    const key = Symbol("func");
+    obj[key] = func;
+    const res = obj[key](...args);
+    delete obj[key];
+    return res;
 }
 
 myCall(whoAmI, { name: "Sam" }, "Hi")
@@ -30,8 +33,8 @@ function max(...args) {
 
     return Math.max(...args);
 }
-let x = myApply(max, null, [1, 3, 5, 7, 9])
-console.log(x)
+let x1 = myApply(max, null, [1, 3, 5, 7, 9])
+console.log(x1)
 
 
 function myBind(func, context, ...args) {
@@ -46,15 +49,15 @@ boundFunction("Hi");
 const myCounter = () => {
     let count = 0;
     return {
-        increment: () => {
+        increment: function()  {
             count++;
             return this;
         },
-        decrement: () => {
+        decrement:  function()  {
             count--;
             return this;
         },
-        getCount: () => {
+        getCount:  function()  {
             return count;
         }
     }
@@ -126,4 +129,3 @@ function curry(a){
 
 let x = curry(1)(4)(3);
 console.log(x)
-console.log(curry(1,3)(1))
