@@ -1,0 +1,14 @@
+{
+  "name": "backend-mastery",
+  "version": "1.0.0",
+  "description": "Phase: Backend — Node/Express/REST/Auth/DB/Redis/DevOps teaching files (01-20).",
+  "scripts": {
+    "typecheck": "npx tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.1",
+    "ts-node": "^10.0.0",
+    "typescript": "^5.0.0"
+  },
+  "license": "ISC"
+}

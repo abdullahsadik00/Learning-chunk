@@ -362,48 +362,46 @@ console.log("  [Retry logic reference printed — see code comments for full sni
 
 console.log("\n=== 5. Scheduling (Repeatable Jobs) ===");
 
-/*
-  BullMQ can replace cron jobs entirely. Repeatable jobs are stored
-  in Redis and survive worker restarts.
-
-  CRON SYNTAX
-  ───────────
-    '* * * * *'      every minute
-    '0 9 * * *'      every day at 09:00
-    '0 0 * * 1'      every Monday at midnight
-    '0 */6 * * *'    every 6 hours
-    '0 0 1 * *'      1st day of every month at midnight
-
-  INTERVAL (ms)
-  ─────────────
-    { every: 60_000 }   every 60 seconds
-    { every: 3_600_000 } every hour
-
-  TIMEZONE
-  ────────
-    { pattern: '0 9 * * *', tz: 'America/New_York' }
-    Requires the 'luxon' peer dependency in some BullMQ versions.
-
-  MANAGING REPEATABLE JOBS
-  ────────────────────────
-    // Add:
-    await queue.add("daily-report", {}, {
-      repeat: { pattern: "0 9 * * *", tz: "UTC" }
-    });
-
-    // List all:
-    const jobs = await queue.getRepeatableJobs();
-    jobs.forEach(j => console.log(j.key, j.pattern));
-
-    // Remove by key (key comes from getRepeatableJobs):
-    await queue.removeRepeatableByKey(jobs[0].key);
-
-  KEY INSIGHT
-  ───────────
-  A repeatable job definition lives in Redis.
-  Each time it fires, BullMQ creates a normal job and adds it
-  to the waiting list — so all retry / monitoring features apply.
-*/
+// BullMQ can replace cron jobs entirely. Repeatable jobs are stored
+// in Redis and survive worker restarts.
+//
+// CRON SYNTAX
+// ───────────
+//   '* * * * *'      every minute
+//   '0 9 * * *'      every day at 09:00
+//   '0 0 * * 1'      every Monday at midnight
+//   '0 */6 * * *'    every 6 hours
+//   '0 0 1 * *'      1st day of every month at midnight
+//
+// INTERVAL (ms)
+// ─────────────
+//   { every: 60_000 }   every 60 seconds
+//   { every: 3_600_000 } every hour
+//
+// TIMEZONE
+// ────────
+//   { pattern: '0 9 * * *', tz: 'America/New_York' }
+//   Requires the 'luxon' peer dependency in some BullMQ versions.
+//
+// MANAGING REPEATABLE JOBS
+// ────────────────────────
+//   // Add:
+//   await queue.add("daily-report", {}, {
+//     repeat: { pattern: "0 9 * * *", tz: "UTC" }
+//   });
+//
+//   // List all:
+//   const jobs = await queue.getRepeatableJobs();
+//   jobs.forEach(j => console.log(j.key, j.pattern));
+//
+//   // Remove by key (key comes from getRepeatableJobs):
+//   await queue.removeRepeatableByKey(jobs[0].key);
+//
+// KEY INSIGHT
+// ───────────
+// A repeatable job definition lives in Redis.
+// Each time it fires, BullMQ creates a normal job and adds it
+// to the waiting list — so all retry / monitoring features apply.
 
 interface RepeatableJobConfig {
   name: string;
