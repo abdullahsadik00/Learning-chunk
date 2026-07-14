@@ -60,7 +60,7 @@ export async function demo1_readStream(): Promise<void> {
     chunkCount++;
     totalBytes += Buffer.byteLength(chunk as string, 'utf8');
     // Uncomment to see each chunk:
-    // console.log(`  Chunk ${chunkCount}: ${Buffer.byteLength(chunk, 'utf8')} bytes`);
+    console.log(`  Chunk ${chunkCount}: ${Buffer.byteLength(chunk, 'utf8')} bytes`);
   });
 
   // 'end' fires when all data has been consumed

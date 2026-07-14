@@ -12,6 +12,8 @@
 
 **Task:** Explain the four stream types (Readable, Writable, Transform, Duplex). Identify which type `req` and `res` are in an Express handler. Give one real-world example of each type.
 
+**Ans:** we add .pipe on req/res because first in node most of them are object and in some cases we get the res which are very big like (file upload/ video stream,downloading ) which can be off like 1gb and it can slow the next process so we break them in chunks(streams) and then use it in stream we've 4 types readable which is used to read, writable which is used to write duplex can be used for both reading and writing these 3 we don't hard-code it we just use it in library and then we've transform which we used to modify the data in midle like converting the csv to json
+
 **Acceptance Criteria:**
 - [ ] Readable: produces data, can be consumed with `.on('data')` or `.pipe()` — example: `fs.createReadStream()`
 - [ ] Writable: accepts data written to it — example: `fs.createWriteStream()`
@@ -29,6 +31,8 @@
 
 **Task:** Explain the difference between `Buffer.alloc(n)` and `Buffer.allocUnsafe(n)`. Demonstrate why `allocUnsafe` can expose old memory contents. Show a base64 encode → decode round-trip for the string `"pipeline-secret"`.
 
+**Ans:** Buffer.alloc(8) is used to allocate the buffer of size 8 with initailized as 00 and Buffer.allocUnsafe(8) it clear the data but it didn't release the memory and it can store previous value or garbage value. for encodding we first create a buffer from string and then transform it to base64 like Buffer.from("SECRET").toString('base64) ->"sdfsjkfhrwiueh" and then to decode it Buffer.from("sdfsjkfhrwiueh", 'base64') 
+
 **Acceptance Criteria:**
 - [ ] `Buffer.alloc(n)` zeroes out memory before returning — safe but slightly slower
 - [ ] `Buffer.allocUnsafe(n)` skips zeroing — faster but the buffer may contain arbitrary data from the process heap
@@ -44,6 +48,21 @@
 **Scenario:** A microservice crashes overnight with `Error: Unhandled 'error' event`. The on-call engineer doesn't know why this is different from other unhandled errors.
 
 **Task:** Show how to use `emit`, `on`, `once`, and `off` on a Node.js `EventEmitter`. Explain why the `'error'` event is special and what happens if it fires with no listener attached.
+
+**Ans**
+
+const e = new Emmiter()
+e.on('on',()=>{console.log("on emmiter fires evertime when called)})
+e.once('on',()=>{console.log("once emmiter fires only one time then it goes away)})
+every emmiter can have events upto 10 and if in recursion or on loop we add e.on() as this still remains on "e" it eventually will throw and error and if we don't have any event on error  then this will crash as emitter runs sync so if 2nd emiter crash and we dont have error event handled then rest of emetter will never get called
+
+
+e.off('on')
+
+
+
+
+
 
 **Acceptance Criteria:**
 - [ ] `emitter.on('event', handler)` registers a persistent listener that fires every time
@@ -78,7 +97,9 @@
 **Scenario:** A log-shipping script reads a 50 GB access log file and writes it to a slow network socket. After 10 minutes it crashes with `ENOMEM` (out of memory).
 
 **Task:** Explain what backpressure is and trace exactly how this OOM crash happens. Show the `.pipe()` fix and then show the manual fix using the `writable.write()` return value and the `'drain'` event.
+**Ans:** backpressure says if write speed is slow due (cpu/network) then read speed then you need to stop as this will create memory leak and also spoil whole reason to use this. to resolve this issue you could use .pipe() 
 
+writetable.write(chunk).pipe().write(chunk) you could also do if writable.write(chunk) === false then readable.pause() this is manual fix but instead you could .pipeLineAsyns 
 **Acceptance Criteria:**
 - [ ] Backpressure: the writable side cannot accept data as fast as the readable side produces it
 - [ ] Without backpressure handling, Node.js buffers all pending chunks in memory until the writable catches up — this causes OOM on large files
@@ -130,6 +151,17 @@
 
 **Task:** Explain what this warning means, give three real coding patterns that cause it, and provide three fixes.
 
+**Ans:** we got this warning because we've set setMaxListeners(11) and as it reaches the 11 event it fires this warning to resolve this issue instead of using .on() we could you've used .once or once in a while we could've add .off() to remove the event that are not required or we could do removeAllListeners
+
+
+
+
+
+
+
+
+
+
 **Acceptance Criteria:**
 - [ ] The warning fires when more than 10 listeners (default limit) are registered for the same event on one emitter — Node.js suspects a listener is being added in a loop without cleanup
 - [ ] Cause 1: registering a listener inside a function that is called repeatedly without calling `off()` to remove the previous one
@@ -180,6 +212,12 @@
 **Scenario:** A performance review flags "inconsistent timer resolution" in the pipeline's scheduler. The code mixes `setImmediate`, `setTimeout(fn, 0)`, and `process.nextTick` in ways the author didn't fully understand.
 
 **Task:** List the six event loop phases in order. State which phase `setImmediate` fires in vs `setTimeout(fn, 0)`. Explain where `process.nextTick` fits (it is not a phase).
+
+**Ans:** sync -> process.nextTick()->promise->setImidiate->setTimeout
+
+
+
+
 
 **Acceptance Criteria:**
 - [ ] Phase 1 — Timers: executes `setTimeout` and `setInterval` callbacks whose delay has elapsed
