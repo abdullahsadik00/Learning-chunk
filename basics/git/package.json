@@ -1,0 +1,17 @@
+{
+  "name": "git-workflow-mastery",
+  "version": "1.0.0",
+  "description": "Phase: Git — professional Git workflow teaching file (01) + self-checking pure-logic challenges (c01-c02).",
+  "scripts": {
+    "typecheck": "npx tsc --noEmit",
+    "challenge:01": "npx ts-node --transpile-only --project challenges/tsconfig.json challenges/c01-git-workflow.ts",
+    "challenge:02": "npx ts-node --transpile-only --project challenges/tsconfig.json challenges/c02-git-operations.ts",
+    "challenge:all": "npm run challenge:01 && npm run challenge:02"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "license": "ISC"
+}

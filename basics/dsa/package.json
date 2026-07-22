@@ -4,7 +4,11 @@
   "description": "SDE-2 DSA interview prep — pattern-first approach.",
   "scripts": {
     "trees-graphs": "npx ts-node 02-trees-graphs.ts",
-    "typecheck": "npx tsc --noEmit"
+    "typecheck": "npx tsc --noEmit",
+    "challenge:01": "npx ts-node --transpile-only --project challenges/tsconfig.json challenges/c01-arrays-strings.ts",
+    "challenge:02": "npx ts-node --transpile-only --project challenges/tsconfig.json challenges/c02-trees-graphs.ts",
+    "challenge:03": "npx ts-node --transpile-only --project challenges/tsconfig.json challenges/c03-dynamic-programming.ts",
+    "challenge:all": "npm run challenge:01 && npm run challenge:02 && npm run challenge:03"
   },
   "devDependencies": {
     "@types/node": "^26.0.1",

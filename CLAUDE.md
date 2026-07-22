@@ -50,6 +50,19 @@ npm run challenge     # run all challenges under challenges/
 ```
 `.tsx` files cannot run with `ts-node` — they require the Vite bundler.
 
+### basics/backend — Backend curriculum (Node/Express/DB/DevOps)
+```bash
+cd basics/backend
+npm run typecheck     # tsc --noEmit (teaching files 01–20; challenges/ are excluded)
+npm run challenge:01  # ts-node --transpile-only challenges/c01-nodejs-internals.ts
+npm run challenge:all # run all twenty challenge files in sequence
+```
+Teaching files `01`–`20` use top-level `await`, so the track's `tsconfig.json` is `module: ES2022`.
+Challenges run as CommonJS via their own `challenges/tsconfig.json` (`--project`), because ts-node
+executes them in a CJS context. Challenges (`challenges/c01`–`c20`) ship unsolved with type-valid
+TODO stubs and self-check via runtime `assert()` (PASS/FAIL, non-zero exit on failure); they are the
+pure-logic kernel of each infra-heavy day, so they need no Redis/Postgres/Docker to run.
+
 ### backend/week-4/middlewares — Express middleware tests
 ```bash
 cd backend/week-4/middlewares

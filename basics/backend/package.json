@@ -1,9 +1,30 @@
 {
   "name": "backend-mastery",
   "version": "1.0.0",
-  "description": "Phase: Backend — Node/Express/REST/Auth/DB/Redis/DevOps teaching files (01-20).",
+  "description": "Phase: Backend — Node/Express/REST/Auth/DB/Redis/DevOps teaching files (01-20) + self-checking challenges.",
   "scripts": {
-    "typecheck": "npx tsc --noEmit"
+    "typecheck": "npx tsc --noEmit",
+    "challenge:01": "npx ts-node --transpile-only --project challenges/tsconfig.json challenges/c01-nodejs-internals.ts",
+    "challenge:02": "npx ts-node --transpile-only --project challenges/tsconfig.json challenges/c02-express-middleware.ts",
+    "challenge:03": "npx ts-node --transpile-only --project challenges/tsconfig.json challenges/c03-rest-api-design.ts",
+    "challenge:04": "npx ts-node --transpile-only --project challenges/tsconfig.json challenges/c04-auth-jwt.ts",
+    "challenge:05": "npx ts-node --transpile-only --project challenges/tsconfig.json challenges/c05-production-hardening.ts",
+    "challenge:06": "npx ts-node --transpile-only --project challenges/tsconfig.json challenges/c06-sql-fundamentals.ts",
+    "challenge:07": "npx ts-node --transpile-only --project challenges/tsconfig.json challenges/c07-prisma-orm.ts",
+    "challenge:08": "npx ts-node --transpile-only --project challenges/tsconfig.json challenges/c08-advanced-queries.ts",
+    "challenge:09": "npx ts-node --transpile-only --project challenges/tsconfig.json challenges/c09-redis-caching.ts",
+    "challenge:10": "npx ts-node --transpile-only --project challenges/tsconfig.json challenges/c10-database-design.ts",
+    "challenge:11": "npx ts-node --transpile-only --project challenges/tsconfig.json challenges/c11-websockets.ts",
+    "challenge:12": "npx ts-node --transpile-only --project challenges/tsconfig.json challenges/c12-sse-realtime.ts",
+    "challenge:13": "npx ts-node --transpile-only --project challenges/tsconfig.json challenges/c13-job-queues.ts",
+    "challenge:14": "npx ts-node --transpile-only --project challenges/tsconfig.json challenges/c14-email-storage.ts",
+    "challenge:15": "npx ts-node --transpile-only --project challenges/tsconfig.json challenges/c15-api-paradigms.ts",
+    "challenge:16": "npx ts-node --transpile-only --project challenges/tsconfig.json challenges/c16-api-testing.ts",
+    "challenge:17": "npx ts-node --transpile-only --project challenges/tsconfig.json challenges/c17-docker.ts",
+    "challenge:18": "npx ts-node --transpile-only --project challenges/tsconfig.json challenges/c18-cicd.ts",
+    "challenge:19": "npx ts-node --transpile-only --project challenges/tsconfig.json challenges/c19-observability.ts",
+    "challenge:20": "npx ts-node --transpile-only --project challenges/tsconfig.json challenges/c20-performance.ts",
+    "challenge:all": "npm run challenge:01 && npm run challenge:02 && npm run challenge:03 && npm run challenge:04 && npm run challenge:05 && npm run challenge:06 && npm run challenge:07 && npm run challenge:08 && npm run challenge:09 && npm run challenge:10 && npm run challenge:11 && npm run challenge:12 && npm run challenge:13 && npm run challenge:14 && npm run challenge:15 && npm run challenge:16 && npm run challenge:17 && npm run challenge:18 && npm run challenge:19 && npm run challenge:20"
   },
   "devDependencies": {
     "@types/node": "^26.0.1",

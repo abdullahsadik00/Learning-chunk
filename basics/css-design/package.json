@@ -7,7 +7,13 @@
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
-    "check": "tsc --noEmit"
+    "check": "tsc --noEmit",
+    "challenge:01": "npx ts-node --transpile-only --project challenges/tsconfig.json challenges/c01-layout.ts",
+    "challenge:02": "npx ts-node --transpile-only --project challenges/tsconfig.json challenges/c02-grid.ts",
+    "challenge:03": "npx ts-node --transpile-only --project challenges/tsconfig.json challenges/c03-responsive.ts",
+    "challenge:04": "npx ts-node --transpile-only --project challenges/tsconfig.json challenges/c04-tailwind.ts",
+    "challenge:05": "npx ts-node --transpile-only --project challenges/tsconfig.json challenges/c05-design-systems.ts",
+    "challenge:all": "npm run challenge:01 && npm run challenge:02 && npm run challenge:03 && npm run challenge:04 && npm run challenge:05"
   },
   "dependencies": {
     "react": "^18.3.0",
@@ -17,8 +23,10 @@
     "tailwind-merge": "^2.5.2"
   },
   "devDependencies": {
+    "@types/node": "^20.14.0",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
+    "ts-node": "^10.9.2",
     "@vitejs/plugin-react": "^4.3.1",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",

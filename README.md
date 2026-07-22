@@ -282,6 +282,17 @@ npx ts-node 19-observability.ts      # Pino, Prometheus, tracing, Sentry
 npx ts-node 20-performance.ts        # N+1 fixes, connection pooling, memory leaks
 ```
 
+**Practice challenges** — each day has a self-checking exercise in `basics/backend/challenges/`
+(`c01`–`c20`). They ship unsolved with TODO stubs and verify your work with runtime `assert()`
+(all PASS = done). Because backend is infra-heavy, each challenge is the pure-logic kernel of that
+day, so it runs with no Redis/Postgres/Docker:
+
+```bash
+cd basics/backend
+npm run challenge:04   # e.g. build a mini JWT: sign, verify, detect tampering, enforce expiry
+npm run challenge:all  # run all twenty in sequence
+```
+
 Assessment: [`day-36.md`](./basics/assessments/day-36.md) → [`day-55.md`](./basics/assessments/day-55.md)
 
 ---

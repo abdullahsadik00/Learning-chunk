@@ -11,7 +11,13 @@
     "test:ui": "vitest --ui",
     "test:coverage": "vitest run --coverage",
     "test:e2e": "playwright test",
-    "test:e2e:ui": "playwright test --ui"
+    "test:e2e:ui": "playwright test --ui",
+    "challenge": "vitest run --config vitest.challenges.config.ts",
+    "challenge:01": "vitest run --config vitest.challenges.config.ts challenges/c01-unit.test.ts",
+    "challenge:02": "vitest run --config vitest.challenges.config.ts challenges/c02-component.test.tsx",
+    "challenge:03": "vitest run --config vitest.challenges.config.ts challenges/c03-hooks.test.ts",
+    "challenge:04": "vitest run --config vitest.challenges.config.ts challenges/c04-integration.test.ts",
+    "challenge:05": "vitest run --config vitest.challenges.config.ts challenges/c05-backend.test.ts"
   },
   "dependencies": {
     "react": "^18.3.0",
